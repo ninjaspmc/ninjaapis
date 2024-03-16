@@ -1,157 +1,691 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+
+<html lang="pt-br" class="">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ninja Supremacy</title>
-  
-  <!-- Meta tags para melhorar SEO -->
-  <meta name="description" content="Explore os projetos sendo desenvolvidos por Ninja Spmc">
-  <meta name="keywords" content="ninja spmc, ninja supremacy, ninja, ninja supremo, supremacy, supremacia">
-  
-  <!-- Microdados Schema.org -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Ninja Supremacy",
-      "url": "https://ninjaspmc.com.br",
-      "logo": "https://i.ibb.co/gj5L2ym/logo2-10-114812.png"
-    }
-  </script>
-  
-  <!-- Logo markup para identificar sua marca para mecanismos de busca -->
-  <link rel="logo" type="image/png" href="https://i.ibb.co/gj5L2ym/logo2-10-114812.png">
+ 
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta property="og:url" name="og:url" content="Site de APIs sendo desenvolvido por Ninja Spmc.">
+<script src="js/twk-main.js" charset="UTF-8" crossorigin="*"></script><script src="js/twk-vendor.js" charset="UTF-8" crossorigin="*"></script><script src="js/twk-chunk-vendors.js" charset="UTF-8" crossorigin="*"></script><script src="js/twk-chunk-common.js" charset="UTF-8" crossorigin="*"></script><script src="js/twk-runtime.js" charset="UTF-8" crossorigin="*"></script><script src="js/twk-app.js" charset="UTF-8" crossorigin="*"></script><script async="" src="js/1f3t1darb" charset="UTF-8" crossorigin="*"></script>
 
-  <!-- Meta tags para compartilhamento em redes sociais -->
-  <meta property="og:title" content="Ninja Supremacy">
-  <meta property="og:description" content="Explore os projetos sendo desenvolvidos por Ninja Spmc">
-  <meta property="og:image" content="https://i.ibb.co/gj5L2ym/logo2-10-114812.png">
-  <meta property="og:url" content="https://ninjaspmc.com.br">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ninja Supremacy">
-  <meta name="twitter:description" content="Explore os projetos sendo desenvolvidos por Ninja Spmc">
-  <meta name="twitter:image" content="https://i.ibb.co/gj5L2ym/logo2-10-114812.png">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: url('https://telegra.ph/file/5d3ed8550a4c7454cd9e9.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #ecf0f1; /* Cor do texto principal */
-    }
+<!--FIM-->
+<title>Ninja APIs | Dashboard</title>
+<title>Ninja APIs | Dashboard</title>
+<link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+<link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+<link rel="stylesheet" href="vendors/owl-carousel-2/owl.carousel.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Original+Surfer&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendors/owl-carousel-2/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="https://telegra.ph/file/3583ed44b06a5a34ea071.jpg"><link rel="stylesheet" href="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+<link rel="shortcut icon" href="https://telegra.ph/file/3583ed44b06a5a34ea071.jpg"><link rel="stylesheet" href="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+<script src="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
+<meta property="og:title" content="Ninja APIs | Dashboard">  
+<meta name="description" content="Diversas APIs para desenvolvedores de bots.">
+<meta property="og:image" content="https://telegra.ph/file/3583ed44b06a5a34ea071.jpg">
+<script charset="utf-8" src="js/twk-chunk-2d0d2b7c.js"></script><script charset="utf-8" src="js/twk-chunk-2d224aff.js"></script><script charset="utf-8" src="js/twk-chunk-f1596d96.js"></script><script charset="utf-8" src="js/twk-chunk-48f46bef.js"></script><script charset="utf-8" src="js/twk-chunk-4fe9d5dd.js"></script><script charset="utf-8" src="js/twk-chunk-2d0b9454.js"></script><script charset="utf-8" src="js/twk-chunk-f163fcd0.js"></script><script charset="utf-8" src="js/twk-chunk-32507910.js"></script>
 
-    .container {
-      text-align: center;
-      padding: 20px;
-    }
 
-    .frames {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
-
-    .frame {
-      width: 180px;
-      height: 130px;
-      background-color: rgba(255, 255, 255, 0.2);
-      margin: 10px;
-      padding: 10px;
-      border-radius: 20px;
-      transition: transform 0.5s, background-color 0.5s, opacity 0.5s;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      position: relative;
-    }
-
-    .frame:hover {
-      transform: scale(1.1);
-      background-color: rgba(255, 255, 255, 0.5);
-    }
-
-    h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      font-weight: bold;
-      color: #fff;
-      text-transform: uppercase;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.4;
-      color: #ecf0f1;
-      margin-bottom: 20px;
-    }
-
-    .logo {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background-color: #fff;
-      position: absolute;
-      top: -30px;
-      left: calc(50% - 30px);
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    .logo img {
-      max-width: 100%;
-      max-height: 100%;
-    }
-
-    .frame h2 {
-      color: #ffffff;
-      margin-top: 10px;
-      font-size: 16px;
-    }
-
-    .frame p {
-      color: #ecf0f1;
-      font-size: 12px;
-    }
-
-    .copyright {
-      font-size: 12px;
-      color: #ffffff;
-      font-style: italic;
-      text-align: center;
-      width: 100%;
-    }
-  </style>
-</head>
-<body>
-
-<div class="container">
-  <h1>Seja bem-vindo(a)!</h1>
-  <p>Conheça nossos serviços:</p>
-  <div class="frames">
-    <div class="frame" onclick="location.href='https://ninjaspmc.com.br/ninjaapis'">
-      <div class="logo"><img src="https://telegra.ph/file/3583ed44b06a5a34ea071.jpg"></div>
-      <h2>Ninja APIs</h2>
-      <p>Site de APIs diversas para desenvolvedores com token personalizada</p>
-    </div>
-    <div class="frame" onclick="location.href='https://ninjaspmc.com.br/drex'">
-      <div class="logo"><img src="https://telegra.ph/file/608b51914a693f50cb6d0.jpg"></div>
-      <h2>Drex</h2>
-      <p>Site do melhor bot de WhatsApp com muitas funcionalidades</p>
-    </div>
-  </div>
+<div class="container-scroller">
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+<div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+<a class="sidebar-brand brand-logo rounded-circle" href="/"><img src="https://telegra.ph/file/3583ed44b06a5a34ea071.jpg" alt="logo"></a>
+<a class="sidebar-brand brand-logo-mini" href="/"><img src="https://telegra.ph/file/3583ed44b06a5a34ea071.jpg" class="rounded-circle" alt="logo"></a>
+</div>
+<font face="Original Surfer">
+<ul class="nav">
+<li class="nav-item profile">
+<div class="profile-desc">
+<div class="profile-pic">
+<div class="count-indicator">
+<img class="img-xs rounded-circle " src="https://telegra.ph/file/3c247cf33eb3e99abd8b5.jpg" alt="">
+<span class="count bg-success"></span>
+</div>
+<div class="profile-name">
+<h5 class="mb-0 font-weight-normal">Ninja APIs</h5>
+<span>2024</span>
+</div>
+</div>
+</div>
+</li>
+<li class="nav-item nav-category">
+<span class="nav-link">Funções</span>
+</li>
+<li class="nav-item menu-items">
+<a class="nav-link" href="https://youtube.com/channel/UC-Ae5hKACBsuMj-w7uxIUKg">
+<span class="menu-icon">
+<i class="mdi mdi-home"></i>
+</span>
+<span class="menu-title">Home</span>
+</a>
+<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
 </div>
 
-<p class="copyright">&#169; 2024 Ninja Spmc. All rights reserved.</p>
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-downloads" aria-expanded="false" aria-controls="ui-nome">
+<span class="menu-icon">
+<i class="mdi mdi-download"></i>
+</span>
+<span class="menu-title" style="font-family: Arial;">DOWNLOADERS</span>
+<i class="menu-arrow"></i>
+</a>
+<div class="collapse" id="ui-downloads">
+<ul class="nav flex-column sub-menu"> 
+<!-- DOWNLOADS-APIS -->
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/downloaders/multidownload?url=https://www.instagram.com/reel/CZIV8TyBbTA/?utm_medium=copy_link&token=seu-token">MULTI DOWNLOAD</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/instagram?url=https://www.instagram.com/reel/CZIV8TyBbTA/?utm_medium=copy_link&token=seu-token">INSTAGRAM</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/downloaders/instagram/story?usuario=alok&token=seu-token">INSTAGRAM - STORY</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/downloaders/capcut?url=https://www.capcut.com/t/ZmFV5QjkS/&token=seu-token">CAPCUT</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/downloaders/threads?url=https://www.threads.net/@fasesdejupiter/post/CyZOfCOvLOJ/?igshid=NTc4MTIwNjQ2YQ==&token=seu-token">THREADS</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/downloaders/spotify/url?url=https://open.spotify.com/intl-pt/track/4o6v3Oooyt7HF20idztRD4?si=hUO2jAqhQK-GNCGvhODXHw&utm_source=copy-link&utm_medium=copy-link&nd=1&_branch_match_id=1031345276177705583&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXLy7IL8lMq9TLyczL1nc1dfJIKvbNDHVJAgBnsSWcIAAAAA%3D%3D&token=seu-token">SPOTIFY - URL</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/downloaders/spotify/busca?query=Medo Mc Kevin&token=seu-token">SPOTIFY - BUSCA</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/downloaders/facebook?url=https://www.facebook.com/100044504793351/posts/pfbid0kCmg2FKtsY4keLLizgd7VemUaoZw79B9WXDyraoXwB3qDQds1XWoQvUFRkrEPo6Al/?app=fbl&token=seu-token">FACEBOOK</a></li>
+<li class="nav-item"> <a class="nav-link"href="/download/tiktok?url=https://vm.tiktok.com/ZMjeYUGTb/&token=seu-token">TIKTOK</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/downloaders/x?url=https://x.com/alapuchatches/status/1486246112432467970?s=20&token=seu-token">X (TWITTER)</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/mediafire?url=https://www.mediafire.com/file/39o3dijk4tqyk2f/Acode_base.apk/file&token=seu-token">MEDIAFIRE</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/downloaders/drive?url=https://drive.google.com/file/d/1JVgw6va70J4N5Scft6KIXau1tAmFbOFm/view?usp=drivesdk&token=seu-token">DRIVE</a>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/downloaders/audiomeme?query=lula&token=seu-token">ÁUDIO MEME</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/downloaders/youtube/play?query=MC Hariel Cupido&token=seu-token">YOUTUBE - PLAY</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/downloaders/ytaudio?url=https://youtu.be/Bo3cPISQrXA?si=qwxH5ho6_wzoCbrj&token=seu-token">YOUTUBE - ÁUDIO</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/downloaders/youtube/video?url=https://youtu.be/Bo3cPISQrXA?si=qwxH5ho6_wzoCbrj&token=seu-token">YOUTUBE - VÍDEO</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/soundcloud?url=https://m.soundcloud.com/raptrapbrasil/teto-mustang-preto/&token=seu-token">SOUNDCLOUD</a>
+</ul>
+</div>
+</li>     
 
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-montagem" aria-expanded="false" aria-controls="ui-url">
+<span class="menu-icon">
+<i class="mdi mdi-star-circle"></i>
+</span>
+<span class="menu-title" style="font-family: Arial;">CANVAS</span>
+<i class="menu-arrow"></i>
+</a>
+<div class="collapse" id="ui-montagem">
+<ul class="nav flex-column sub-menu">     
+
+    <!--MONTAGEM - EFEITOS -->
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/legenda?url=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&texto1=Ninja&texto2=Ofc&token=seu-token">LEGENDA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/affect?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">AFFECT</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/comunismo?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">COMUNISMO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/mms?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">MMS</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/bobross?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">BOBROSS</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/bobross?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">KARABA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/bolsonaro?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">BOLSONARO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/blur?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">BLUR</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/beautiful?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">BEAUTIFUL</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/circle?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">CIRCLE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/del?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">DEL</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/invert?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">INVERT</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/facepalm?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">FACEPALM</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/jail?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">JAIL</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/rip?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">RIP</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/wasted?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">WASTED</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/wanted?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">WANTED</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/trash?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">TRASH</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/sepia?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">SEPIA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/pixelate?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">PIXELATE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/hitler?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">HITLER</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/canvas/lgbt?link=https://telegra.ph/file/3583ed44b06a5a34ea071.jpg&token=seu-token">LGBT</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/ttp?texto=sad&token=seu-token">TTP</a></li>
+</ul>
+</div>
+</li> 
+
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-logos" aria-expanded="false" aria-controls="ui-txt">
+<span class="menu-icon">
+<i class="mdi mdi-folder-multiple-image"></i>
+</span>
+<span class="menu-title" style="font-family: Arial;">LOGOS</span>
+<i class="menu-arrow"></i>
+</a>
+<div class="collapse" id="ui-logos">
+<ul class="nav flex-column sub-menu">     
+
+<span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;" class="font-weight-bold text-success text-uppercase">LOGOS DE 2 TEXTOS</span>
+
+    <!-- LOGOS DE 2 TEXTO -->
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/logos/marvel?texto=Ninja&texto2=Ofc&token=seu-token">MARVEL</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/logos/pornhub?texto=Ninja&texto2=Ofc&token=seu-token">PORNHUB</a></li>  
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/logos/stone?texto=Ninja&texto2=Ofc&token=seu-token">STONE</a></li>  
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/logos/space?texto=Ninja&texto2=Ofc&token=seu-token">ESPAÇO</a></li> 
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/logos/america?texto=Ninja&texto2=Ofc&token=seu-token">AMERICA</a></li> 
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/logos/steel?texto=Ninja&texto2=Ofc&token=seu-token">AÇO</a></li> 
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/logos/grafity?texto=Ninja&texto2=Ofc&token=seu-token">GRAFITY</a></li> 
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/logos/glitch3?texto=Ninja&texto2=Ofc&token=seu-token">GLITCH-3</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/logos/gameplay?texto=Ninja&texto2=Ofc&token=seu-token">GAMEPLAY</a></li>
+
+
+<span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;" class="font-weight-bold text-success text-uppercase">LOGOS DE 1 TEXTO</span>
+
+    <!-- LOGOS DE 1 TEXTO -->
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/logos/shadow?texto=Ninja&token=seu-token">SHADOW</a></li> 
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/logosefeitoneon?texto=Ninja&token=seu-token">EFEITO NEON</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/cemiterio?texto=Ninja&token=seu-token">CEMITÉRIO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/metalgold?texto=Ninja&token=seu-token">METAL GOLD</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/narutologo?texto=Ninja&token=seu-token">NARUTO LOGO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/fire?texto=Ninja&token=seu-token">FIRE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/romantic?texto=Ninja&token=seu-token">ROMANTIC</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/smoke?texto=Ninja&token=seu-token">SMOKE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/papel?texto=Ninja&token=seu-token">PAPEL</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/lovemsg?texto=Ninja&token=seu-token">LOVE MSG</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/lovemsg2?texto=Ninja&token=seu-token">LOVE MSG 2</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/lovemsg3?texto=Ninja&token=seu-token">LOVE MSG 3</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/coffecup?texto=Ninja&token=seu-token">COFFE CUP</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/coffecup2?texto=Ninja&token=seu-token">COFFE CUP 2</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/cup?texto=Ninja&token=seu-token">CUP</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/florwooden?texto=Ninja&token=seu-token">FLOR WOODEN</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/madeira?texto=Ninja&token=seu-token">MADEIRA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/lobometal?texto=Ninja&token=seu-token">LOBO METAL</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/harryp?texto=Ninja&token=seu-token">HARRY POTTER</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/txtborboleta?texto=Ninja&token=seu-token">TXT BORBOLETA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/transformer?texto=Ninja&token=seu-token">TRANSFORMER</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/glitch?texto=Ninja&token=seu-token">GLITCH</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/glitch2?texto=Ninja&token=seu-token">GLITCH 2</a></li>      
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/3dgold?texto=Ninja&token=seu-token">3D GOLD</a></li>    
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/lava?texto=Ninja&token=seu-token">LAVA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/toxic?texto=Ninja&token=seu-token">TOXIC</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/lapis?texto=Ninja&token=seu-token">LÁPIS</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/halloween?texto=Ninja&token=seu-token">HALLOWEEN</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/demongreen?texto=Ninja&token=seu-token">DEMON GREEN</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/metalfire?texto=Ninja&token=seu-token">METAL FIRE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/thunder?texto=Ninja&token=seu-token">TROVÃO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/thunderv2?texto=Ninja&token=seu-token">TROVÃO 2</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/neongreen?texto=Ninja&token=seu-token">NEON GREEN</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/neon?texto=Ninja&token=seu-token">NEON</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/neon1?texto=Ninja&token=seu-token">NEON 2</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/neon2?texto=Ninja&token=seu-token">NEON 3</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/neon3d?texto=Ninja&token=seu-token">NEON 3D</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/rainbow?texto=Ninja&token=seu-token">RAINBOW</a></li>
+</ul>
+</div>
+</li> 
+
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-randkm" aria-expanded="false" aria-controls="ui-importante">
+<span class="menu-icon">
+<i class="mdi mdi-directions-fork"></i>
+</span>
+<span class="menu-title" style="font-family: Arial;">ANIMES</span>
+<i class="menu-arrow"></i>
+</a>
+<div class="collapse" id="ui-randkm">
+<ul class="nav flex-column sub-menu">     
+       <!-- RANDOM -->
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/metadinha?token=seu-token">METADINHA</a></li>      
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/cosplay?token=seu-token">COSPLAY</a></li>       
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/waifu?token=seu-token">WAIFU</a></li>       
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/waifu2?token=seu-token">WAIFU 2</a></li>      
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/loli?token=seu-token">LOLI</a></li>    
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/shota?token=seu-token">SHOTA</a></li>    
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/yotsuba?token=seu-token">YOTSUBA</a></li>        
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/shinomiya?token=seu-token">SHINOMIYA</a></li>   
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/yumeko?token=seu-token">YUMEKO</a></li>    
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/tejina?token=seu-token">TEJINA</a></li>        
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/chiho?token=seu-token">CHIHO</a></li>      
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/boruto?token=seu-token">BORUTO</a></li>       
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/kaori?token=seu-token">KAORI</a></li>   
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/shizuka?token=seu-token">SHIZUKA</a></li>     
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/kaga?token=seu-token">KAGA</a></li>     
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/kotori?token=seu-token">KOTORI</a></li>     
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/mikasa?token=seu-token">MIKASA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/akiyama?token=seu-token">AKIYAMA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/gremory?token=seu-token">GREMORY</a></li>                     
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/isuzu?token=seu-token">IZUKU</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/shina?token=seu-token">SHINA</a></li>        
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/kagura?token=seu-token">KAGURA</a></li>                                <li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/shinka?token=seu-token">SHINKA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/eba?token=seu-token">EBA</a></li>                 
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/yuri?token=seu-token">YURI</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/erza?token=seu-token">ERZA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/elaina?token=seu-token">ELAINA</a></li> 
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/hinata?token=seu-token">HINATA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/naruto?token=seu-token">NARUTO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/minato?token=seu-token">MINATO</a></li> 
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/sagari?token=seu-token">SAGARI</a></li>      
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/nezuko?token=seu-token">NEZUKO</a></li>                  
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/rize?token=seu-token">RIZE</a></li>         
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/anna?token=seu-token">ANNA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/deidara?token=seu-token">DEIDARA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/asuna?token=seu-token">ASUNA</a></li>    
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/ayuzawa?token=seu-token">AYUZAWA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/emilia?token=seu-token">EMILIA</a></li>                             
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/chitoge?token=seu-token">CHITOGE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/hestia?token=seu-token">HESTIA</a></li> 
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/inori?token=seu-token">INORI</a></li>   
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/itachi?token=seu-token">ITACHI</a></li>                                  
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/madara?token=seu-token">MADARA</a></li>                                <li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/sakura?token=seu-token">SAKURA</a></li>                                
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/sasuke?token=seu-token">SASUKE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/tsunade?token=seu-token">TSUNADE</a></li>                               
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/onepiece?token=seu-token">ONEPIECE</a></li>     
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/mobil?token=seu-token">MOBIL</a></li>              
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/montor?token=seu-token">MONTOR</a></li>    
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/keneki?token=seu-token">KENEKI</a></li>    
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/megumin?token=seu-token">MEGUMIN</a></li>    
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/toukachan?token=seu-token">TOUKACHAN</a></li>   
+</ul>
+</div>
+</li> 
+
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-consultas" aria-expanded="false" aria-controls="ui-urlenome">
+<span class="menu-icon">
+<i class="mdi mdi-magnify"></i>
+</span>
+<span class="menu-title" style="font-family: Arial;">CONSULTAS</span>
+<i class="menu-arrow"></i>
+</a>
+<div class="collapse" id="ui-consultas">
+<ul class="nav flex-column sub-menu"> 
+
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/nome?query=Jair%20Messias%20Bolsonaro&token=seu-token">NOME</a></li>  
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/cpf?query=03244275222&token=seu-token">CPF</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/cns?query=82726262615151&token=seu-token">CNS</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/pai?query=Jair%20Messias%20Bolsonaro&token=seu-token">PAI</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/mae?query=Jair%20Messias%20Bolsonaro&token=seu-token">MÃE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/nascimento?query=01/01/1990&token=seu-token">NASCIMENTO</a>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/telefone?query=91991461726&token=seu-token">TELEFONE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/cnpj?cnpj=13347016000117&token=seu-token">CNPJ</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/cep?code=82726262615151&token=seu-token">CEP</a></li>
+</li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/ip?query=3.80.195.132&token=seu-token">IP</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/titulo?query=14431210116&token=seu-token">TÍTULO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/email?query=ninjaspmc@gmail.com&token=seu-token">E-MAIL</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/moradores?query=10105070&token=seu-token">MORADORES</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/placa?query=KMM2551&token=seu-token">PLACA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/score?query=03244275222&token=seu-token">SCORE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/rg?query=15205495&token=seu-token">RG</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/logs?query=https://netflix.com&token=seu-token">LOGS</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/inss?query=7243543&token=seu-token">INSS</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/parentes?query=03244275222&token=seu-token">PARENTES</a>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/beneficios?query=03244275222&token=seu-token">BENEFÍCIOS</a>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/bin?query=520586&token=seu-token">BIN</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/feriados?query=33&token=seu-token">FERIADOS</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/municipios?sigla_uf=pa&token=seu-token">MUNICÍPIOS (IBGE)</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/dominio?domain=33&token=seu-token">DOMÍNIO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/banco?code=33&token=seu-token">BANCO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/listadebancos&token=seu-token">LISTA DE BANCOS</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/operadora?numero=5582988279194&token=seu-token">OPERADORA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/consultas/ddd?ddd=82&token=seu-token">DDD</a></li>
+</ul>
+</div>
+</li> 
+
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-ia" aria-expanded="false" aria-controls="ui-urlenome">
+<span class="menu-icon">
+<i class="mdi mdi-robot"></i>
+</span>
+<span class="menu-title" style="font-family: Arial;">IA</span>
+<i class="menu-arrow"></i>
+</a>
+<div class="collapse" id="ui-ia">
+<ul class="nav flex-column sub-menu"> 
+
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/ia/bard?query=Quem é você?&token=seu-token">BARD</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/ia/removebg?link=https://telegra.ph/file/9d4bb76c1b8a62e109eae.jpg&token=seu-token">REMOVE BG</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/ia/tozombie?link=https://telegra.ph/file/9d4bb76c1b8a62e109eae.jpg&token=seu-token">ZOMBIE AI</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/ia/remini?link=https://telegra.ph/file/9d4bb76c1b8a62e109eae.jpg&token=seu-token">REMINI</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/ia/googletradutor?texto=i%20love%20you&ling=pt&token=seu-token">GOOGLE TRADUTOR</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/ia/chatgpt?query=Quem%20descobriu%20o%20Brasil?&token=seu-token">CHATGPT</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/ia/DALL-E?TOKEN_GPT=&q=Macaco%20em%20cima%20de%20uma%20bicicleta%20azul">DALL-E</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/ia/midjourney?query=Macaco%20em%20cima%20de%20uma%20bicicleta%20azul&token=seu-token">MIDJOURNEY</a></li>
+</ul>
+</div>
+</li> 
+
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-stickers" aria-expanded="false" aria-controls="ui-urlenome">
+<span class="menu-icon">
+<i class="mdi mdi-sticker-emoji"></i>
+</span>
+<span class="menu-title" style="font-family: Arial;">FIGURINHAS</span>
+<i class="menu-arrow"></i>
+</a>
+<div class="collapse" id="ui-stickers">
+<ul class="nav flex-column sub-menu"> 
+
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/attp?texto=Ninja&token=seu-token">ATTP</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/ttp?texto=Ninja&token=seu-token">TTP</a></li> 
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/emoji/apple?emj=😜&token=seu-token">EMOJI - APPLE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/emoji/google?emj=😜&token=seu-token">EMOJI - GOOGLE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/emoji/samsung?emj=😜&token=seu-token">EMOJI - SAMSUNG</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/emoji/microsoft?emj=😜&token=seu-token">EMOJI - MICROSOFT</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/emoji/whatsapp?emj=😜&token=seu-token">EMOJI - WHATSAPP</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/emoji/x?emj=😜&token=seu-token">EMOJI - X (TWITTER)</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/emoji/facebook?emj=😜&token=seu-token">EMOJI - FACEBOOK</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/emoji/skype?emj=😜&token=seu-token">EMOJI - SKYPE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/emoji/mix?emoji1=😭&emoji2=🤣&token=seu-token">EMOJI - MIX</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/pack/emoji&token=seu-token">PACK - EMOJI</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/pack/flork&token=seu-token">PACK - FLORK</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/pack/memes&token=seu-token">PACK - MEMES</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/pack/anime&token=seu-token">PACK - ANIME</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/pack/coreana&token=seu-token">PACK - COREANA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/pack/bebe&token=seu-token">PACK - BEBÊ</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/pack/desenho&token=seu-token">PACK - DESENHO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/pack/animais&token=seu-token">PACK - ANIMAIS</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/pack/engracado&token=seu-token">PACK - ENGRAÇADO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/pack/raiva&token=seu-token">PACK - RAIVA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/figurinhas/pack/roblox&token=seu-token">PACK - ROBLOX</a></li>
+</ul>
+</div>
+</li> 
+
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-pesquisas" aria-expanded="false" aria-controls="ui-urlenome">
+<span class="menu-icon">
+<i class="mdi mdi-emoticon-happy"></i>
+</span>
+<span class="menu-title" style="font-family: Arial;">PESQUISAS</span>
+<i class="menu-arrow"></i>
+</a>
+<div class="collapse" id="ui-pesquisas">
+<ul class="nav flex-column sub-menu"> 
+  
+    <!--PARTE DE PESQUISAS -->
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/youtube?q=m4%20matue&token=seu-token">YOUTUBE - BUSCA GERAL</a></li>  
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/youtube/videos?q=m4%20matue&token=seu-token">YOUTUBE - BUSCA DE VÍDEO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/youtube?url=https://youtube.com/playlist?list=PL4fGSI1pDJn4Gs2meaJRo9O8PNYvhjHIg&si=bEbyftuXny8iag0M&token=seu-token">YOUTUBE - PLAYLIST</a></li>  
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/spotify?query=m4%20matue&token=seu-token">SPOTIFY SEARCH</a></li>  
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pinterest?text=cat&token=seu-token">PINTEREST</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/igstalk?usuario=alok&token=seu-token">INSTAGRAM - STALKER</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/imdb/busca?query=Barbie&token=seu-token">IMDB - BUSCA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/search/imdb/info?url=&token=seu-token">IMDB - INFO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/animetv/busca?query=Naruto&token=seu-token">ANIMETV - BUSCA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/animetv/info?url=https://animetvonline.cx/anime-1/naruto/&token=seu-token">ANIMETV - INFO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/googleimage?txt=cat&token=seu-token">GOOGLE IMAGE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/googlesearch?query=Canal Tech&token=seu-token">GOOGLE SEARCH</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/letrasdemusicas?query=Mc Hariel Cupido querido&token=seu-token">LETRAS DE MÚSICAS</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/playstore?nome=whatsapp&token=seu-token">PLAY STORE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/cybercook/busca?query=Bolo de Chocolate&token=seu-token">CYBERCOOK - BUSCA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/cybercook/info?url=https://cybercook.com.br/receitas/bolos/receita-de-bolo-de-chocolate-13595&token=seu-token">CYBERCOOK - INFO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/uptodown/busca?query=WhatsApp&token=seu-token">UPTODOWN - BUSCA</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/uptodown/info?url=https://whatsapp-messenger.br.uptodown.com&token=seu-token">UPTODOWN - INFO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/nerding?q=lolis&token=seu-token">NERDING</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/happymod?q=pou&token=seu-token">HAPPY MOD</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/pensador?query=Amor&token=seu-token">PENSADOR</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/amazon?nome=livro&token=seu-token">AMAZON</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/pesquisas/horoscopo?signo=aries&token=seu-token">HORÓSCOPO</a></li>
+</ul>
+</div>
+</li> 
+
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-noticias" aria-expanded="false" aria-controls="ui-urlenome">
+<span class="menu-icon">
+<i class="mdi mdi-newspaper"></i>
+</span>
+<span class="menu-title" style="font-family: Arial;">NOTÍCIAS</span>
+<i class="menu-arrow"></i>
+</a>
+<div class="collapse" id="ui-noticias">
+<ul class="nav flex-column sub-menu"> 
+<!--PARTE DAS NOTICIAS -->
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/noticias/g1?token=seu-token">G1</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/noticias/poder360?token=seu-token">PODER360</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/noticias/jovempannews?token=seu-token">JOVEM PAN NEWS</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/noticias/uol?token=seu-token">UOL</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/noticias/cnnbrasil?token=seu-token">CNN BRASIL</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/noticias/estadao?token=seu-token">ESTADÃO</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/noticia/ge?esporte=futebol&token=seu-token">GE</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/noticias/brasileirao?token=seu-token">BRASILEIRÃO️</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/noticias/e-sports?query=game&token=seu-token">E-SPORTS</a></li>
+</ul>
+</div>
+</li> 
+                
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-nsfw" aria-expanded="false" aria-controls="ui-urlenome">
+<span class="menu-icon">
+<i class="mdi mdi-fire"></i>
+</span>
+<span class="menu-title" style="font-family: Arial;">NSFW</span>
+<i class="menu-arrow"></i>
+</a>
+<div class="collapse" id="ui-nsfw">
+<ul class="nav flex-column sub-menu"> 
+<!--PARTE DE NSFW -->
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/nsfw/xvideos/pesquisa?query=mia%20khalifa&token=seu-token">XVIDEOS - PESQUISA</a></li> 
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/nsfw/xvideos/download?link=https://www.xvideos.com/video79565865/33804325/0/mi_novia_me_dejo_plantado_pero_mi_hermanastra_esta_en_casa_para_subirme_el_animo_y_darme_consuelo_con_una_buena_chupada_a_mi_verga_y_una_follada_a_su_cono=&token=seu-token">XVIDEOS - DOWNLOAD</a></li>  
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/nsfw/pornhub?q=gostosa%20novinha&token=seu-token">PORNHUB</a></li>       
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/xnxx/pesquisa?query=novinha&token=seu-token">XNXX - PESQUISA</a></li>   
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/animes/xnxx/download?link=https://www.xnxx.com/video-1b1d452c/novinha_real_amador&token=seu-token">XNXX - DOWNLOAD</a></li> 
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/nsfw/pornogratis?q=novinha&token=seu-token">PORNO GRÁTIS</a></li>              <li class="nav-item"> <a class="nav-link" href="/ninjaapis/nsfw/hentaitube?q=masturbation&token=seu-token">HENTAI TUBE</a></li> 
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/loli?token=seu-token">LOLI</a></li>   
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/ahegao?token=seu-token">AHEGÃO</a></li>   
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/ass?token=seu-token">ASS</a></li>   
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/bdsm?token=seu-token">BDSM</a></li>   
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/blowjob?token=seu-token">BLOWJOB</a></li>   
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/cuckold?token=seu-token">CUCKOLD</a></li>   
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/cum?token=seu-token">CUM</a></li>   
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/ero?token=seu-token">ERO</a></li> 
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/femdom?token=seu-token">FEMDOM</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/foot?token=seu-token">FOOT</a></li>            
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/gangbang?token=seu-token">GANGBANG</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/glasses?token=seu-token">GLASSES</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/hentai?token=seu-token">HENTAI</a></li>    
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/jahy?token=seu-token">JAHY</a></li>
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/manga?token=seu-token">MANGA</a></li> 
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/neko?token=seu-token">NEKO</a></li>     
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/neko2?token=seu-token">NEKO 2</a></li>                           
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/orgy?token=seu-token">ORGY</a></li>  
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/panties?token=seu-token">PANTIES</a></li>  
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/pussy?token=seu-token">PUSSY</a></li>  
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/tentacles?token=seu-token">TENTACLES</a></li>  
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/thighs?token=seu-token">THIGHS</a></li>  
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/yuri?token=seu-token">YURI</a></li>  
+<li class="nav-item"> <a class="nav-link"href="/ninjaapis/nsfw/zettairyouiki?token=seu-token">ZETTAIRYOUIKI</a></li>  
+</ul>
+</div>
+</li> 
+
+<li class="nav-item menu-items">
+<a class="nav-link" data-toggle="collapse" href="#ui-funcoes" aria-expanded="false" aria-controls="ui-importante">
+<span class="menu-icon">
+<i class="mdi mdi-wrench"></i>
+</span>
+<span class="menu-title" style="font-family: Arial;">OUTROS</span>
+<i class="menu-arrow"></i>
+</a>
+<div class="collapse" id="ui-funcoes">
+<ul class="nav flex-column sub-menu">     
+<!-- FUNÇÕES -->
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/rastreio?code=&token=seu-token">RASTREIO DOS CORREIOS</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/rastreio/aliexpress?id=&token=seu-token">RASTREIO DO ALIEXPRESS</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/icms?valor=50.00&ddd=82&token=seu-token">CALCULAR ICMS</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/ssweb?link=https://www.google.com/&token=seu-token">PRINT DE URL</a></li>
+<li class="nav-item"> <a class="nav-link" href="/ninjaapis/fazernick?nome=Ninja&token=seu-token">GERAR NICK</a></li> 
+</ul>
+</div>
+</li>    
+<li class="nav-item nav-category">
+<span class="nav-link">Redes sociais:</span>
+</li>
+<li class="nav-item menu-items">
+<a class="nav-link" href="https://youtube.com/channel/UC-Ae5hKACBsuMj-w7uxIUKg">
+<span class="menu-icon">
+<i class="mdi mdi-youtube"></i>
+</span>
+<span class="menu-title">YouTube</span>
+</a>
+</li>
+<li class="nav-item menu-items">
+<a class="nav-link" href="https://wa.me/559182577902">
+<span class="menu-icon">
+<i class="mdi mdi-whatsapp"></i>
+</span>
+<span class="menu-title">WhatsApp</span>
+</a>
+</li>
+         
+</ul>
+</font>
+</nav>
+<div class="container-fluid page-body-wrapper">
+<nav class="navbar p-0 fixed-top d-flex flex-row">
+<div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+<a class="navbar-brand brand-logo-mini" href="docs.html"><big><i class="mdi mdi-biohazard text-primary"></i></big></a>
+</div>
+<div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+<button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+<span class="mdi mdi-menu"></span>
+</button>
+<ul class="navbar-nav w-100">
+<li class="nav-item w-100">
+<form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+<input type="text" class="form-control" placeholder="© 2024 Ninja APIs. All Rights Reserved.">
+</form>
+</li>
+</ul>
+<ul class="navbar-nav navbar-nav-right">
+<li class="nav-item nav-settings d-none d-lg-block">
+<a class="nav-link" href="#">
+<i class="mdi mdi-view-grid"></i>
+</a>
+</li>
+<li class="nav-item dropdown border-left">
+<a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+<i class="mdi mdi-bell"></i>
+<span class="count bg-danger"></span>
+</a>
+<div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+<h6 class="p-3 mb-0">Info</h6>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item preview-item">
+<div class="preview-thumbnail">
+<div class="preview-icon bg-dark rounded-circle">
+<i class="mdi mdi-wrench text-danger"></i>
+</div>
+</div>
+<div class="preview-item-content">
+<p class="preview-subject mb-1">Ninja APIs</p>
+<p class="text-muted ellipsis mb-0"></p>
+</div>
+</a>
+</div></li>
+<li class="nav-item dropdown">
+<a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+<div class="navbar-profile">
+<img class="img-xs rounded-circle" src="https://telegra.ph/file/3583ed44b06a5a34ea071.jpg" alt="">
+<p class="mb-0 d-none d-sm-block navbar-profile-name">By Ninja</p>
+</div>
+</a>
+</li>
+
+</ul>
+<button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+<span class="mdi mdi-format-line-spacing"></span>
+</button>
+</div>
+</nav>
+<div class="main-panel">
+<div class="content-wrapper">
+<div class="row">
+<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+  
+<div class="card">
+<div class="card-body">
+<h5 class="font-weight-bold text-danger text-uppercase"></h5>
+<h5 class="font-weight-bold text-danger text-uppercase">Seu Endereço IP ⤵</h5> 
+<div class="row">
+<div class="col-9">
+<div class="d-flex align-items-center align-self-start">
+<html>
+<body>
+<script type="text/javascript">
+var userip;
+</script>
+<script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
+<h3 class="mb-0" ><script type="text/javascript">
+document.write(userip);
+</script></h3>
 </body>
 </html>
+</div>
+</div>
+<div class="col-3">
+<div class="icon icon-box-success">
+<span class="mdi mdi-access-point-network icon-item"></span>
+</div>
+</div>
+</div>
+<font face="Original Surfer" class="text-muted font-weight-normal"></font>
+</div>
+</div>
+</div>
+              
+<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+<div class="card">
+<div class="card-body">
+<h5 class="font-weight-bold text-success text-uppercase">Visitantes Diários: ⤵</h5>
+<div class="row">
+<div class="col-9">
+<div class="d-flex align-items-center align-self-start">
+<h3 class="mb-0" ><audio autoplay> <!--agora com autoplay e sem controls-->
+<source src="https://tohka.tech/file/fAHqC.mp4" type="audio/mp4">
+<source src="https://tohka.tech/file/fAHqC.mp4" type="audio/mp4">
+</audio></h3>
+<a href="https://www.webcontadores.com" title="Contador de Acessos: ⤵"><img src="https://counter2.stat.ovh/private/webcontadores.php?c=cn25d1f13q9ag5uu6wy14znts3ge2eym" border="0" title="Contador de Acessos: ⤵" alt="Contador de Acessos: ⤵"></a>
+</div>
+</div>
+<div class="col-3">
+<div class="icon icon-box-success ">
+<span class="mdi mdi-eye icon-item"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+</div>
+</div>              
+<form action="/ninjaapis/keyerrada">
+<div class="card card-round mt-5 stretch-card grid-margin">
+<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+<h4 class="m-0 font-weight-bold text-warning">
+<i <h4>[×] VERIFIQUE SEU TOKEN! [×]</h4>
+</div>
+<div class="card-body">
+<p class="status" style="font-size: 17px;"></p>
+<div class="form-group">
+<input class="form-control font-weight-bold text-center" type="text" placeholder="Digite seu token" name="token" required>
+</div>
+<div class="form-group">
+<center>
+<button type="submit" class="btn btn-primary content-justify-center">
+<i class="mdi mdi-arrow-right-bold-hexagon-outline"></i>
+<span class="font-weight-bold"> Enviar</span>
+</button>
+</center>
+</div>
+</div>
+</div>
+</form>
+<script>
+swal({
+title: 'Olá!',
+text: 'Seja bem-vindo(a) ao dashboard do melhor site de APIs, sendo desenvolvido por Ninja Spmc.︎',
+imageUrl: 'https://telegra.ph/file/3583ed44b06a5a34ea071.jpg',
+footer: '© 2024 Ninja Spmc. All Rights Reserved.',
+imageWidth: 200,
+imageHeight: 200,
+imageAlt: ':)',
+animation: true
+})
+</script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>   
+<script src="vendors/js/vendor.bundle.base.js"></script>
+<script src="vendors/owl-carousel-2/owl.carousel.min.js"></script>
+<script src="k/vendor.bundle.base.js"></script>
+<script src="k/owl.carousel.min.js"></script>
+<script src="js/off-canvas.js"></script>
+<script src="js/hoverable-collapse.js"></script>
+<script src="js/misc.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/todolist.js"></script>
+</head>
