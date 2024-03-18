@@ -2,7 +2,7 @@
   "name": "Ninja APIs",
   "version": "1.0.0",
   "description": "Conecte e inove!",
-  "main": "api.js",
+  "main": "index.js",
   "scripts": {
     "start": "sh iniciar.sh",
     "test": "echo \"Error: no test specified\" && exit 1"

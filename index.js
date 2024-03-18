@@ -299,22 +299,13 @@ res.end("Boop");
 })
 app.use(router);
  
-app.get('/ninjaapis/moderador',(req, res) => {
+app.get('/api/moderador',(req, res) => {
 res.sendFile(path.join(__dirname, "./public/", "moderador.html"))})
 
-app.get('/ninjaapis' ,(req, res) => {
-res.sendFile(path.join(__dirname, "./public/", "ninja-apis.html"))})
-
-app.get('/drex',(req, res) => {
-res.sendFile(path.join(__dirname, "./drex", "inicio.html"))})
-
-app.get('/drex/politicadecadastro',(req, res) => {
-res.sendFile(path.join(__dirname, "./drex", "politica-de-cadastro.html"))})
-
-app.get('/ninjaapis/planos',(req, res) => {
+app.get('/api/planos',(req, res) => {
 res.sendFile(path.join(__dirname, "./public/", "planos.html"))})
 
-app.get('/ninjaapis/add-key-sodono',(req, res) => {
+app.get('/api/add-key-sodono',(req, res) => {
 a = req.query.a
 if(!a.includes("&")) return res.json({message: "Faltando o and"})
 var [token, senha, rq] = a.split("&")
@@ -330,7 +321,7 @@ return res.json({message: `token ${token} registrada com sucesso..`})
 }
 })
 
-app.get('/ninjaapis/tirar-key-sodono',(req, res) => {
+app.get('/api/tirar-key-sodono',(req, res) => {
 a = req.query.a
 if(!a.includes("&")) return res.json({message: "Faltando o and"})
 var [token, senha] = a.split("&")
@@ -398,7 +389,7 @@ listUsersIP = JSON.parse(fs.readFileSync(bla +'/database/usuarios.json').toStrin
 res.json(listUsersIP) 
 })
 
-app.get('/ninjaapis/verificador',(req, res) => {
+app.get('/api/verificador',(req, res) => {
 token = req.query.token;
 var ITC = key.map(i => i?.token)?.indexOf(token);
 if(ITC < 0) {
@@ -408,7 +399,7 @@ return res.json({status: true, resposta: "Token funcionando perfeitamente!", lim
 }
 })
 
-app.get('/ninjaapis/canvas/boasvindas', async (req, res, next) => {
+app.get('/api/canvas/boasvindas', async (req, res, next) => {
 if (!req.query.titulo) return res.json({ status: 404, error: 'Insira o parametro: titulo'})
 if (!req.query.nome) return res.json({ status: 404, error: 'Insira o parametro: nome'})
 if (!req.query.perfil) return res.json({ status: 404, error: 'Insira o parametro: perfil'})
@@ -432,7 +423,7 @@ require('fs').writeFileSync(bla + '/assets/Tempo/welkom.png', base64, 'base64')
 res.sendFile(bla + '/assets/Tempo/welkom.png')
 })
 
-app.get('/ninjaapis/canvas/duelo', async(req, res) => {
+app.get('/api/canvas/duelo', async(req, res) => {
 var { foto1, foto2, fundo } = req.query
 if (!foto1) return res.status(408).send({status: 408, message: 'Coloque o foto1 no parâmetro.'})
 if (!foto2) return res.status(408).send({ status: 408, message: 'Coloque o foto2 no parâmetro.'})
@@ -440,10 +431,10 @@ res.type('jpg')
 res.send(await CvN.kiss(foto1, foto2, fundo, 595, 102, 157, 157, 117, 100, 150, 150, 870, 360))
 })
 
-router.get('/ninjaapis/canvas/rank', RankUser)  
-router.get('/ninjaapis/canvas/welcomev2', WLCM)
+router.get('/api/canvas/rank', RankUser)  
+router.get('/api/canvas/welcomev2', WLCM)
 
-app.get('/ninjaapis/shota', (req, res) => {
+app.get('/api/shota', (req, res) => {
 (async() => {
 json = JSON.parse(fs.readFileSync(bla+'/base de dados/shotas.json').toString())
 random = json[Math.floor(Math.random() * json.length)]
@@ -452,7 +443,7 @@ res.send(await getBuffer(random))
 })()
 })
 
-app.get('/ninjaapis/animes/aleatorio/metadinha', async (req, res, next) => {
+app.get('/api/animes/aleatorio/metadinha', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -463,7 +454,7 @@ random = json[Math.floor(Math.random() * json.length)]
 res.json(random) 
 })
 
-app.get('/ninjaapis/downloaders/facebook', async(req, res, next) => {
+app.get('/api/downloaders/facebook', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
 if (!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -480,7 +471,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/pesquisas/celular', async(req, res) => {
+app.get('/api/pesquisas/celular', async(req, res) => {
 try {
 celular = req.query.celular
 if(!celular)return res.json({status:false, motivo:'Coloque o parâmetro: celular'})
@@ -500,7 +491,7 @@ var BT = $("div").find(".content-row").text()
 var BT2 = $("div").find(".all-about").text()
 res.json({status: true, código: 999, criador: `@VictorGabriel`, resultado: { nomeCelular: titulo, informações: BT2.trim(), resumoExtra: BT.trim().replace(new RegExp("  ", "gi"), "\n\n")}})}).catch(e => {res.json({message: "Error"})})}).catch(e => {res.json({message: "Error"})})} catch {return res.json({message: "Erro...Aguarde ou fale com algum administrador.."})}})
 
-app.get('/ninjaapis/outros/htmlsite', async (req, res) => {
+app.get('/api/outros/htmlsite', async (req, res) => {
 token = req.query.token
 url = req.query.url
 if(!url) return res.json({message: "Faltando o parametro url"})
@@ -512,7 +503,7 @@ getsi = await axios.get(query)
 res.json({status: 200, resultado: getsi})
 })
 
-app.get('/ninjaapis/outros/horoscopo', async (req, res) => {
+app.get('/api/outros/horoscopo', async (req, res) => {
 try {
 token = req.query.token
 signo = req.query.signo
@@ -534,7 +525,7 @@ return res.json({message: "Erro.."})
 }
 })
 
-app.get('/ninjaapis/pesquisas/wikipedia',(req,res) => {
+app.get('/api/pesquisas/wikipedia',(req,res) => {
 query = req.query.query
 if(!query)return res.json({
 status:false,
@@ -556,7 +547,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/pesquisas/pensador',(req,res) => {
+app.get('/api/pesquisas/pensador',(req,res) => {
 query = req.query.query
 if(!query)return res.json({
 status:false,
@@ -578,7 +569,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/pesquisas/wallpaper',(req,res) => {
+app.get('/api/pesquisas/wallpaper',(req,res) => {
 query = req.query.query
 if(!query)return res.json({
 status:false,
@@ -600,7 +591,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/downloaders/youtube',(req,res) => {
+app.get('/api/downloaders/youtube',(req,res) => {
 url = req.query.url
 if(!url)return res.json({
 status:false,
@@ -621,7 +612,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/downloaders/tiktok', async(req, res, next) => {
+app.get('/api/downloaders/tiktok', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -638,7 +629,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/pesquisas/letrasdemusica',(req,res) => {
+app.get('/api/pesquisas/letrasdemusica',(req,res) => {
 query = req.query.query
 if(!query)return res.json({
 status:false,
@@ -668,7 +659,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/figurinhas/emoji/mix', async (req, res, next) => {
+router.get('/api/figurinhas/emoji/mix', async (req, res, next) => {
 	var emoji1 = req.query.emoji1
 	var emoji2 = req.query.emoji2
 	token = req.query.token
@@ -688,7 +679,7 @@ if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({m
 }
 })
 
-app.get('/ninjaapis/pesquisas/filme', async(req, res, next) => {
+app.get('/api/pesquisas/filme', async(req, res, next) => {
 token = req.query.token;
 q = req.query.q
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -706,7 +697,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/nsfw/pornogratis', async(req, res, next) => {
+app.get('/api/nsfw/pornogratis', async(req, res, next) => {
 token = req.query.token;
 q = req.query.q
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -723,7 +714,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/nsfw/:tipoplaq:', async(req, res, next) => {
+app.get('/api/nsfw/:tipoplaq:', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
 plaquinha = [plaq1, plaq2, plaq3, plaq4, plaq5, plaq6, plaq7, plaq8, plaq9, plaq10, plaq11, plaq12, plaq13]
@@ -765,7 +756,7 @@ res.send(imgplaq)
 }
 })
 
-app.get('/ninjaapis/nerding', async(req, res, next) => {
+app.get('/api/nerding', async(req, res, next) => {
 token = req.query.token;
 q = req.query.q
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -780,7 +771,7 @@ message: `Erro no Servidor Interno`
 })})})
 
 
-app.get('/ninjaapis/pesquisas/playstore', async(req, res, next) => {
+app.get('/api/pesquisas/playstore', async(req, res, next) => {
 token = req.query.token;
 nome = req.query.nome
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -796,7 +787,7 @@ message: `Erro no Servidor Interno`,
 erro: `${e}`
 })})})
 
-app.get('/ninjaapis/pesquisas/mercadolivre', async(req, res, next) => {
+app.get('/api/pesquisas/mercadolivre', async(req, res, next) => {
 token = req.query.token;
 nome = req.query.nome
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -811,7 +802,7 @@ message: `Erro no Servidor Interno`,
 erro: `${e}`
 })})})
 
-app.get('/ninjaapis/pesquisas/amazon', async(req, res, next) => {
+app.get('/api/pesquisas/amazon', async(req, res, next) => {
 token = req.query.token;
 nome = req.query.nome
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -826,7 +817,7 @@ message: `Erro no Servidor Interno`,
 erro: `${e}`
 })})})
 
-app.get('/ninjaapis/pesquisas/americanas', async(req, res, next) => {
+app.get('/api/pesquisas/americanas', async(req, res, next) => {
 token = req.query.token;
 nome = req.query.nome
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -841,7 +832,7 @@ message: `Erro no Servidor Interno`,
 erro: `${e}`
 })})})
 
-app.get('/ninjaapis/pesquisas/dicionario', async(req, res, next) => {
+app.get('/api/pesquisas/dicionario', async(req, res, next) => {
 token = req.query.token;
 q = req.query.q
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -856,7 +847,7 @@ message: `Erro no Servidor Interno`,
 erro: `${e}`
 })})})
 
-app.get('/ninjaapis/pesquisas/pinterest/video', async(req, res, next) => {
+app.get('/api/pesquisas/pinterest/video', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -871,7 +862,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/pesquisas/youtube/playlist', async(req, res, next) => {
+app.get('/api/pesquisas/youtube/playlist', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -890,7 +881,7 @@ message: `Erro no Servidor Interno`
 })
 })
 
-app.get('/ninjaapis/pesquisas/submarino', async(req, res, next) => {
+app.get('/api/pesquisas/submarino', async(req, res, next) => {
 token = req.query.token;
 nome = req.query.nome
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -906,7 +897,7 @@ message: `Erro no Servidor Interno`
 })})})
 
 
-app.get('/ninjaapis/outros/horoscopo', async(req, res, next) => {
+app.get('/api/outros/horoscopo', async(req, res, next) => {
 token = req.query.token;
 signo = req.query.signo
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -921,7 +912,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/randomgp', async(req, res, next) => {
+app.get('/api/randomgp', async(req, res, next) => {
 token = req.query.token;
 categoria = req.query.categoria
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -936,7 +927,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/downloaders/kwai', async(req, res, next) => {
+app.get('/api/downloaders/kwai', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -950,7 +941,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/outros/corretor', async(req, res, next) => {
+app.get('/api/outros/corretor', async(req, res, next) => {
 token = req.query.token;
 texto = req.query.texto
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -966,7 +957,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/pesquisas/memedroid', async(req, res, next) => {
+app.get('/api/pesquisas/memedroid', async(req, res, next) => {
 token = req.query.token;
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -979,7 +970,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/pesquisas/ifunny', async(req, res, next) => {
+app.get('/api/pesquisas/ifunny', async(req, res, next) => {
 token = req.query.token;
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -991,7 +982,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/ringtone', async(req, res, next) => {
+app.get('/api/ringtone', async(req, res, next) => {
 query = req.query.query
 token = req.query.token;
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -1007,7 +998,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/noticias/g1', async(req, res, next) => {
+app.get('/api/noticias/g1', async(req, res, next) => {
 token = req.query.token;
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -1020,7 +1011,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/noticias/jovempannews', async(req, res, next) => {
+app.get('/api/noticias/jovempannews', async(req, res, next) => {
 token = req.query.token;
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -1033,7 +1024,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/noticias/poder360', async(req, res, next) => {
+app.get('/api/noticias/poder360', async(req, res, next) => {
 token = req.query.token;
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -1046,7 +1037,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/noticias/uol', async(req, res, next) => {
+app.get('/api/noticias/uol', async(req, res, next) => {
 token = req.query.token;
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -1059,7 +1050,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/noticias/estadao', async(req, res, next) => {
+app.get('/api/noticias/estadao', async(req, res, next) => {
 token = req.query.token;
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -1072,7 +1063,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/noticias/cnnbrasil', async(req, res, next) => {
+app.get('/api/noticias/cnnbrasil', async(req, res, next) => {
 token = req.query.token;
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -1085,7 +1076,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/pesquisas/gruposdewhatsapp', async(req, res, next) => {
+app.get('/api/pesquisas/gruposdewhatsapp', async(req, res, next) => {
 q = req.query.q;
 token = req.query.token;
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -1102,7 +1093,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-router.all('/ninjaapis/pesquisas/itunes', async (req, res) => {
+router.all('/api/pesquisas/itunes', async (req, res) => {
 musica = req.query.musica
 if(!musica)return res.json({
 status:false,
@@ -1131,7 +1122,7 @@ thumbnail: `${auu.thumbnail}`
 })
 })
 
-app.get('/ninjaapis/downloaders/pinterest', (req, res) => {
+app.get('/api/downloaders/pinterest', (req, res) => {
 (async() => {
 token = req.query.token
 text = req.query.text
@@ -1146,7 +1137,7 @@ res.send(await getBuffer(ac))
 })()
 })
 
-app.get("/ninjaapis/ia/DALL-E", async(req, res, next) => {
+app.get("/api/ia/DALL-E", async(req, res, next) => {
 async function PRGT2() {
 try {
 var { Configuration, OpenAIApi } = require("openai") //precisa baixar o módulo (npm i openai)
@@ -1172,7 +1163,7 @@ return res.json({resultado: "Erro / Talvez seu token expirou, espere um tempo pa
 })
 })
 
-app.get('/ninjaapis/figurinhas/attp', async (req, res) => {
+app.get('/api/figurinhas/attp', async (req, res) => {
 try {
 texto = req.query.texto
 token = req.query.token
@@ -1191,7 +1182,7 @@ return res.json({message: "Erro.. "+e})
 }
 })
 
-router.get('/ninjaapis/outros/printweb', async (req, res, next) => {
+router.get('/api/outros/printweb', async (req, res, next) => {
       var link = req.query.link
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
@@ -1212,7 +1203,7 @@ gabriell.ssweb(link).then((data) => {
 }
 })
 
-router.get('/ninjaapis/ia/bard', async (req, res, next) => {
+router.get('/api/ia/bard', async (req, res, next) => {
 var { query, token } = req.query;
 if(!query)return res.json({status:false, motivo:'Cadê o parâmetro query?'})
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
@@ -1228,7 +1219,7 @@ res.json({erro:'Erro no Servidor Interno'})
 }
 })
 
-app.get('/ninjaapis/ia/bing', async(req, res) => {
+app.get('/api/ia/bing', async(req, res) => {
 try {
 token = req.query.token
 query = req.query.query
@@ -1258,7 +1249,7 @@ return res.json({resultado: `${e}`})
 }
 })
 
-app.get('/ninjaapis/ia/chatgpt', async(req, res, next) => {
+app.get('/api/ia/chatgpt', async(req, res, next) => {
 token = req.query.token
 query = req.query.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -1283,7 +1274,7 @@ RegistrarUser(token, req);
 }
 })
 
-app.get('/ninjaapis/pesquisas/pesquisaagora', async(req, res, next) => {
+app.get('/api/pesquisas/pesquisaagora', async(req, res, next) => {
 token = req.query.token
 query = req.query.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -1307,7 +1298,7 @@ RegistrarUser(token, req);
 }
 })
 
-app.get('/ninjaapis/outros/fazernick', async (req, res) => {
+app.get('/api/outros/fazernick', async (req, res) => {
 token = req.query.token  
 let nome = req.query.nome || res.json({message: 'insira o parâmetro: ?nome='})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -1321,7 +1312,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/downloaders/mediafire', async (req, res, next) => {
+app.get('/api/downloaders/mediafire', async (req, res, next) => {
 token = req.query.token
 url = req.query.url
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -1339,7 +1330,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/noticias/ge', async (req, res) => {
+app.get('/api/noticias/ge', async (req, res) => {
 var { token, esporte } = req.query
 DFN_NTC = esporte.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")
 if(!JSON.stringify(['futebol', 'basquete', 'volei', 'tenis', 'atletismo', 'natacao', 'ciclismo', 'boxe', 'beisebol', 'judo', 'ginastica-artistica', 'futebol-americano', 'futsal', 'golfe', 'surfe', 'skate', 'formula-1']).includes(DFN_NTC)) return res.json({
@@ -1362,7 +1353,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/noticias/e-sports', async (req, res) => {
+app.get('/api/noticias/e-sports', async (req, res) => {
 var { token, query } = req.query
 if(!JSON.stringify(["esports", "cod", "csgo", "fifa", "fortnite", "freefire", "gamexp", "pes", "pokemon", "rainbow-6", "valorant", "tcg"]).includes(query)) return res.json({
     status: 400, 
@@ -1384,7 +1375,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/downloaders/mediafire', async (req, res, next) => {
+app.get('/api/downloaders/mediafire', async (req, res, next) => {
 token = req.query.token
 url = req.query.url
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -1402,7 +1393,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/pesquisas/wikimedia', async (req, res, next) => {
+app.get('/api/pesquisas/wikimedia', async (req, res, next) => {
 token = req.query.token
 query = req.query.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -1421,7 +1412,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/googleimage',(req,res) => {
+app.get('/api/googleimage',(req,res) => {
 token = req.query.token
 txt = req.query.txt
 if(!txt) return res.json({message: "Faltando o parametro txt"})
@@ -1436,7 +1427,7 @@ res.json({erro:'Erro no Servidor Interno'})
 }) 
 })
 
-app.get('/ninjaapis/pesquisas/googlesearch',(req,res) => {
+app.get('/api/pesquisas/googlesearch',(req,res) => {
 token = req.query.token
 query = req.query.query
 if(!query) return res.json({message: "Faltando o parametro query"})
@@ -1451,7 +1442,7 @@ res.json({erro:'Erro no Servidor Interno'})
 }) 
 })
 
-app.get('/ninjaapis/wattpad',  async (req, res, next) => {
+app.get('/api/wattpad',  async (req, res, next) => {
 token = req.query.token
 query = req.query.query
 if (!query) return res.json({ status : false,  message : "Cade o parametro query?"})
@@ -1467,7 +1458,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/pesquisas/animetv/search',  async (req, res, next) => {
+app.get('/api/pesquisas/animetv/search',  async (req, res, next) => {
 token = req.query.token
 query = req.query.query
 if (!query) return res.json({ status : false,  message : "Cade o parametro query?"})
@@ -1484,7 +1475,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/pesquisas/animetv/info',  async (req, res, next) => {
+app.get('/api/pesquisas/animetv/info',  async (req, res, next) => {
 token = req.query.token
 url = req.query.url
 if (!url) return res.json({ status : false,  message : "Cade o parametro url?"})
@@ -1501,7 +1492,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/consultas/operadora',  async (req, res, next) => {
+app.get('/api/consultas/operadora',  async (req, res, next) => {
 token = req.query.token
 numero = req.query.numero
 if (!numero) return res.json({ status : false,  message : "Cade o parametro numero?"})
@@ -1518,7 +1509,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/downloaders/instagram/reels', async (req, res, next) => {
+app.get('/api/downloaders/instagram/reels', async (req, res, next) => {
 token = req.query.token
 url = req.query.url
 if (!url) return res.json({ status : false,  message : "Cade o parametro url?"})
@@ -1534,7 +1525,7 @@ res.json({erro:'Erro no Servidor Interno'})
 
 // LOGOS 2 TEXTO
 
-app.get('/ninjaapis/logos/marvel', async (req, res, next) => {
+app.get('/api/logos/marvel', async (req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
@@ -1551,7 +1542,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/3ddragon', async (req, res, next) => {
+app.get('/api/logos/3ddragon', async (req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -1567,7 +1558,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/cartoon', async (req, res, next) => {
+app.get('/api/logos/cartoon', async (req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -1583,7 +1574,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/deepsea', async (req, res, next) => {
+app.get('/api/logos/deepsea', async (req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -1599,7 +1590,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/thorstyle', async (req, res, next) => {
+app.get('/api/logos/thorstyle', async (req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
@@ -1618,7 +1609,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/hologram', async (req, res, next) => {
+app.get('/api/logos/hologram', async (req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -1634,7 +1625,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/pornhub', async(req, res, next) => {
+app.get('/api/logos/pornhub', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
@@ -1651,7 +1642,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/space',  async(req, res, next) => {
+app.get('/api/logos/space',  async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
@@ -1670,7 +1661,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/stone', async(req, res, next) => {
+app.get('/api/logos/stone', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
@@ -1687,7 +1678,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/steel', async(req, res, next) => {
+app.get('/api/logos/steel', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
@@ -1704,7 +1695,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/grafity', async(req, res, next) => {
+app.get('/api/logos/grafity', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
@@ -1721,7 +1712,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/glitch3', async(req, res, next) => {
+app.get('/api/logos/glitch3', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
@@ -1738,7 +1729,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/america', async(req, res, next) => {
+app.get('/api/logos/america', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
@@ -1758,7 +1749,7 @@ res.json({erro:'Erro no Servidor Interno'})
 
 // LOGOS 1 TEXTO
 
-router.get('/ninjaapis/logos/brilhante', async (req, res) => {
+router.get('/api/logos/brilhante', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
@@ -1773,7 +1764,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 });
 
-router.get('/ninjaapis/logos/blur', async (req, res) => {
+router.get('/api/logos/blur', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
@@ -1788,7 +1779,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 });
 
-router.get('/ninjaapis/logos/goldt', async (req, res) => {
+router.get('/api/logos/goldt', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
@@ -1803,7 +1794,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 });
 
-router.get('/ninjaapis/logos/tela', async (req, res) => {
+router.get('/api/logos/tela', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
@@ -1818,7 +1809,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 });
 
-router.get('/ninjaapis/logos/vietnam', async (req, res) => {
+router.get('/api/logos/vietnam', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
@@ -1833,7 +1824,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 });
 
-router.get('/ninjaapis/logos/seta', async (req, res) => {
+router.get('/api/logos/seta', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
@@ -1848,7 +1839,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 });
 
-router.get('/ninjaapis/logos/grafite', async (req, res) => {
+router.get('/api/logos/grafite', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 nome2 = req.query.texto2;
@@ -1864,7 +1855,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 });
 
-router.get('/ninjaapis/logos/pubgv', async (req, res) => {
+router.get('/api/logos/pubgv', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
@@ -1879,7 +1870,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 });
 
-router.get('/ninjaapis/logos/anonovo', async (req, res) => {
+router.get('/api/logos/anonovo', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
@@ -1894,7 +1885,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 });
 
-router.get('/ninjaapis/logos/natalmsg', async (req, res) => {
+router.get('/api/logos/natalmsg', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
@@ -1909,7 +1900,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 });
 
-router.get('/ninjaapis/logos/trigrev', async (req, res) => {
+router.get('/api/logos/trigrev', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
@@ -1926,7 +1917,7 @@ res.json({erro:'Erro no Servidor Interno'})
 
 // LOGOS - PHOTOOXY
 
-router.get('/ninjaapis/logos/photooxy/flaming', async (req, res, next) => {
+router.get('/api/logos/photooxy/flaming', async (req, res, next) => {
 var text1 = req.query.texto
 if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 var token = req.query.token
@@ -1944,7 +1935,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 
 
-router.get('/ninjaapis/logos/photooxy/shadow-sky', async (req, res, next) => {
+router.get('/api/logos/photooxy/shadow-sky', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 var token = req.query.token
@@ -1962,7 +1953,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 
 
-router.get('/ninjaapis/logos/photooxy/metallic', async (req, res, next) => {
+router.get('/api/logos/photooxy/metallic', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -1980,7 +1971,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 
 
-router.get('/ninjaapis/logos/photooxy/naruto', async (req, res, next) => {
+router.get('/api/logos/photooxy/naruto', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var token = req.query.token
@@ -1998,7 +1989,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 
 
-router.get('/ninjaapis/logos/photooxy/pubg', async (req, res, next) => {
+router.get('/api/logos/photooxy/pubg', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var Texto2 = req.query.texto2
@@ -2017,7 +2008,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/photooxy/under-grass', async (req, res, next) => {
+router.get('/api/logos/photooxy/under-grass', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})    
 	var token = req.query.token
@@ -2034,7 +2025,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/photooxy/harry-potter', async (req, res, next) => {
+router.get('/api/logos/photooxy/harry-potter', async (req, res, next) => {
 	var text1 = req.query.texto
     if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
     var token = req.query.token
@@ -2051,7 +2042,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/photooxy/flower-typography', async (req, res, next) => {
+router.get('/api/logos/photooxy/flower-typography', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var token = req.query.token
@@ -2068,7 +2059,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/photooxy/picture-of-love', async (req, res, next) => {
+router.get('/api/logos/photooxy/picture-of-love', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var token = req.query.token
@@ -2085,7 +2076,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/photooxy/coffee-cup', async (req, res, next) => {
+router.get('/api/logos/photooxy/coffee-cup', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var token = req.query.token
@@ -2102,7 +2093,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/photooxy/butterfly', async (req, res, next) => {
+router.get('/api/logos/photooxy/butterfly', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var token = req.query.token
@@ -2119,7 +2110,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/photooxy/night-sky', async (req, res, next) => {
+router.get('/api/logos/photooxy/night-sky', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var token = req.query.token
@@ -2137,7 +2128,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 
 
-router.get('/ninjaapis/logos/photooxy/carved-wood', async (req, res, next) => {
+router.get('/api/logos/photooxy/carved-wood', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var token = req.query.token
@@ -2155,7 +2146,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 
 
-router.get('/ninjaapis/logos/photooxy/illuminated-metallic', async (req, res, next) => {
+router.get('/api/logos/photooxy/illuminated-metallic', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var token = req.query.token
@@ -2172,7 +2163,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/photooxy/sweet-candy', async (req, res, next) => {
+router.get('/api/logos/photooxy/sweet-candy', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2189,7 +2180,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/1917', async (req, res, next) => {
+router.get('/api/logos/1917', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2206,7 +2197,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/robotr2', async (req, res, next) => {
+router.get('/api/logos/robotr2', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2223,7 +2214,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/purpleshiny', async (req, res, next) => {
+router.get('/api/logos/purpleshiny', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2240,7 +2231,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/rock', async (req, res, next) => {
+router.get('/api/logos/rock', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2257,7 +2248,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/1917', async (req, res, next) => {
+router.get('/api/logos/1917', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2274,7 +2265,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/ninjalogo', async (req, res, next) => {
+router.get('/api/logos/ninjalogo', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"}) 
 	var text2 = req.query.texto
@@ -2293,7 +2284,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/toxic', async (req, res, next) => {
+router.get('/api/logos/toxic', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2310,7 +2301,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/captain', async (req, res, next) => {
+router.get('/api/logos/captain', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2327,7 +2318,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/stargreen', async (req, res, next) => {
+router.get('/api/logos/stargreen', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2344,7 +2335,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/denimtext', async (req, res, next) => {
+router.get('/api/logos/denimtext', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2361,7 +2352,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/ultragloss', async (req, res, next) => {
+router.get('/api/logos/ultragloss', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2378,7 +2369,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/goldfoil', async (req, res, next) => {
+router.get('/api/logos/goldfoil', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2395,7 +2386,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/steeltext', async (req, res, next) => {
+router.get('/api/logos/steeltext', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2412,7 +2403,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/wicker', async (req, res, next) => {
+router.get('/api/logos/wicker', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2429,7 +2420,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/joker', async (req, res, next) => {
+router.get('/api/logos/joker', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2446,7 +2437,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/metaldark', async (req, res, next) => {
+router.get('/api/logos/metaldark', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2463,7 +2454,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/darkgold', async (req, res, next) => {
+router.get('/api/logos/darkgold', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2480,7 +2471,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/halloweenfire', async (req, res, next) => {
+router.get('/api/logos/halloweenfire', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2497,7 +2488,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/fabric', async (req, res, next) => {
+router.get('/api/logos/fabric', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2514,7 +2505,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/firework', async (req, res, next) => {
+router.get('/api/logos/firework', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2531,7 +2522,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/glossycarbon', async (req, res, next) => {
+router.get('/api/logos/glossycarbon', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2548,7 +2539,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/deluxe', async (req, res, next) => {
+router.get('/api/logos/deluxe', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2565,7 +2556,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/deluxegold', async (req, res, next) => {
+router.get('/api/logos/deluxegold', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2582,7 +2573,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/holographic', async (req, res, next) => {
+router.get('/api/logos/holographic', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2599,7 +2590,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/horrorgift', async (req, res, next) => {
+router.get('/api/logos/horrorgift', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2616,7 +2607,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/minion', async (req, res, next) => {
+router.get('/api/logos/minion', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2633,7 +2624,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/galaxystyle', async (req, res, next) => {
+router.get('/api/logos/galaxystyle', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2650,7 +2641,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/glossyblue', async (req, res, next) => {
+router.get('/api/logos/glossyblue', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2667,7 +2658,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/dark', async (req, res, next) => {
+router.get('/api/logos/dark', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2684,7 +2675,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/sandsummer', async (req, res, next) => {
+router.get('/api/logos/sandsummer', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2701,7 +2692,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/sandengraved', async (req, res, next) => {
+router.get('/api/logos/sandengraved', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2718,7 +2709,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/sandwriting', async (req, res, next) => {
+router.get('/api/logos/sandwriting', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2735,7 +2726,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/winter', async (req, res, next) => {
+router.get('/api/logos/winter', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2752,7 +2743,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/technology', async (req, res, next) => {
+router.get('/api/logos/technology', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2769,7 +2760,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/scifi', async (req, res, next) => {
+router.get('/api/logos/scifi', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2786,7 +2777,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/americanflag', async (req, res, next) => {
+router.get('/api/logos/americanflag', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2803,7 +2794,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/drug', async (req, res, next) => {
+router.get('/api/logos/drug', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2820,7 +2811,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/3ddeep', async (req, res, next) => {
+router.get('/api/logos/3ddeep', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2837,7 +2828,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/retro', async(req, res, next) => {
+app.get('/api/logos/retro', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 texto3 = req.query.texto3;
@@ -2857,7 +2848,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-router.get('/ninjaapis/logos/naturalleaves', async (req, res, next) => {
+router.get('/api/logos/naturalleaves', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2874,7 +2865,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/multicolor', async (req, res, next) => {
+router.get('/api/logos/multicolor', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2891,7 +2882,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/merrychristmas', async (req, res, next) => {
+router.get('/api/logos/merrychristmas', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2908,7 +2899,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/christmas', async (req, res, next) => {
+router.get('/api/logos/christmas', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2925,7 +2916,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/holiday', async (req, res, next) => {
+router.get('/api/logos/holiday', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2942,7 +2933,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/candycane', async (req, res, next) => {
+router.get('/api/logos/candycane', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2959,7 +2950,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/generator', async (req, res, next) => {
+router.get('/api/logos/generator', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2976,7 +2967,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/glue', async (req, res, next) => {
+router.get('/api/logos/glue', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -2993,7 +2984,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/wonderful', async (req, res, next) => {
+router.get('/api/logos/wonderful', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -3010,7 +3001,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/watercolor', async (req, res, next) => {
+router.get('/api/logos/watercolor', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -3027,7 +3018,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/glitch', async (req, res, next) => {
+router.get('/api/logos/glitch', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
@@ -3045,7 +3036,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 
 
-router.get('/ninjaapis/logos/blackpink', async (req, res, next) => {
+router.get('/api/logos/blackpink', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
@@ -3063,7 +3054,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 
 
-router.get('/ninjaapis/logos/berry', async (req, res, next) => {
+router.get('/api/logos/berry', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
@@ -3080,7 +3071,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/neonlight', async (req, res, next) => {
+router.get('/api/logos/neonlight', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
@@ -3097,7 +3088,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/neon', async (req, res, next) => {
+router.get('/api/logos/neon', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
@@ -3114,7 +3105,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/logobear', async (req, res, next) => {
+router.get('/api/logos/logobear', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 		var token = req.query.token
@@ -3132,7 +3123,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 
 
-router.get('/ninjaapis/logos/3dchristmas', async (req, res, next) => {
+router.get('/api/logos/3dchristmas', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
@@ -3150,7 +3141,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 
 
-router.get('/ninjaapis/logos/thunder', async (req, res, next) => {
+router.get('/api/logos/thunder', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
@@ -3168,7 +3159,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 
 
-router.get('/ninjaapis/logos/3dbox', async (req, res, next) => {
+router.get('/api/logos/3dbox', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
@@ -3186,7 +3177,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 
 
-router.get('/ninjaapis/logos/glitch', async (req, res, next) => {
+router.get('/api/logos/glitch', async (req, res, next) => {
 	var text1 = req.query.texto
 	var Texto2 = req.query.texto2
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
@@ -3205,7 +3196,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/glitchtiktok', async (req, res, next) => {
+router.get('/api/logos/glitchtiktok', async (req, res, next) => {
 	var text1 = req.query.texto
 	var Texto2 = req.query.texto2
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
@@ -3224,7 +3215,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/video-game-classic', async (req, res, next) => {
+router.get('/api/logos/video-game-classic', async (req, res, next) => {
 	var text1 = req.query.texto
 	var Texto2 = req.query.texto2
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
@@ -3243,7 +3234,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/marvel-studios', async (req, res, next) => {
+router.get('/api/logos/marvel-studios', async (req, res, next) => {
 	var text1 = req.query.texto
 	var Texto2 = req.query.texto2
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
@@ -3262,7 +3253,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/ninja-logo', async (req, res, next) => {
+router.get('/api/logos/ninja-logo', async (req, res, next) => {
 	var text1 = req.query.texto
 	var Texto2 = req.query.texto2
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
@@ -3281,7 +3272,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/green-horror', async (req, res, next) => {
+router.get('/api/logos/green-horror', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})
 		var token = req.query.token
@@ -3298,7 +3289,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/magma', async (req, res, next) => {
+router.get('/api/logos/magma', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
@@ -3315,7 +3306,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/3d-neon-light', async (req, res, next) => {
+router.get('/api/logos/3d-neon-light', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
@@ -3332,7 +3323,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/3d-orange-juice', async (req, res, next) => {
+router.get('/api/logos/3d-orange-juice', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	 	var token = req.query.token
@@ -3349,7 +3340,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/chocolate-cake', async (req, res, next) => {
+router.get('/api/logos/chocolate-cake', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
@@ -3366,7 +3357,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-router.get('/ninjaapis/logos/strawberry', async (req, res, next) => {
+router.get('/api/logos/strawberry', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
@@ -3383,7 +3374,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/angelwing', async(req, res, next) => {
+app.get('/api/logos/angelwing', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3400,7 +3391,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/hackneon', async(req, res, next) => {
+app.get('/api/logos/hackneon', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3417,7 +3408,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/fpsmascote', async(req, res, next) => {
+app.get('/api/logos/fpsmascote', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3434,7 +3425,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/equipemascote', async(req, res, next) => {
+app.get('/api/logos/equipemascote', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3451,7 +3442,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/txtquadrinhos', async(req, res, next) => {
+app.get('/api/logos/txtquadrinhos', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3468,7 +3459,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/3dsilver', async(req, res, next) => {
+app.get('/api/logos/3dsilver', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3485,7 +3476,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/frozen', async(req, res, next) => {
+app.get('/api/logos/frozen', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3502,7 +3493,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/goldtext', async(req, res, next) => {
+app.get('/api/logos/goldtext', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3519,7 +3510,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/starballons', async(req, res, next) => {
+app.get('/api/logos/starballons', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3536,7 +3527,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/ffavatar', async(req, res, next) => {
+app.get('/api/logos/ffavatar', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3553,7 +3544,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/ffbanner', async(req, res, next) => {
+app.get('/api/logos/ffbanner', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
@@ -3572,7 +3563,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/mascotegame', async(req, res, next) => {
+app.get('/api/logos/mascotegame', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3589,7 +3580,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/logos/mascoteavatar', async(req, res, next) => {
+app.get('/api/logos/mascoteavatar', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
@@ -3607,7 +3598,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/wingeffect', async(req, res, next) => {
+app.get('/api/logos/wingeffect', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3623,7 +3614,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/angelglx', async(req, res, next) => {
+app.get('/api/logos/angelglx', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3639,7 +3630,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/gizquadro', async(req, res, next) => {
+app.get('/api/logos/gizquadro', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3655,7 +3646,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/blackpink', async(req, res, next) => {
+app.get('/api/logos/blackpink', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3671,7 +3662,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/girlmascote', async(req, res, next) => {
+app.get('/api/logos/girlmascote', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3687,7 +3678,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/logogame', async(req, res, next) => {
+app.get('/api/logos/logogame', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3703,7 +3694,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/romantic', async(req, res, next) => {
+app.get('/api/logos/romantic', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3719,7 +3710,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/fire', async(req, res, next) => {
+app.get('/api/logos/fire', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3735,7 +3726,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/smoke', async(req, res, next) => {
+app.get('/api/logos/smoke', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3751,7 +3742,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/papel', async(req, res, next) => {
+app.get('/api/logos/papel', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3767,7 +3758,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/narutologo', async(req, res, next) => {
+app.get('/api/logos/narutologo', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3783,7 +3774,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/lovemsg', async(req, res, next) => {
+app.get('/api/logos/lovemsg', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3799,7 +3790,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/lovemsg2', async(req, res, next) => {
+app.get('/api/logos/lovemsg2', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3815,7 +3806,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/lovemsg3', async(req, res, next) => {
+app.get('/api/logos/lovemsg3', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3831,7 +3822,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/coffecup', async(req, res, next) => {
+app.get('/api/logos/coffecup', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3847,7 +3838,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/coffecup2', async(req, res, next) => {
+app.get('/api/logos/coffecup2', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3863,7 +3854,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/florwooden', async(req, res, next) => {
+app.get('/api/logos/florwooden', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3879,7 +3870,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/madeira', async(req, res, next) => {
+app.get('/api/logos/madeira', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3895,7 +3886,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/gameplay', async(req, res, next) => {
+app.get('/api/logos/gameplay', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
@@ -3913,7 +3904,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/googlesg', async(req, res, next) => {
+app.get('/api/logos/googlesg', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 texto3 = req.query.texto3;
@@ -3933,7 +3924,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/neon2', async(req, res, next) => {
+app.get('/api/logos/neon2', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3949,7 +3940,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/lobometal', async(req, res, next) => {
+app.get('/api/logos/lobometal', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3965,7 +3956,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/harryp', async(req, res, next) => {
+app.get('/api/logos/harryp', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3981,7 +3972,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/cup', async(req, res, next) => {
+app.get('/api/logos/cup', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -3997,7 +3988,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/txtborboleta', async(req, res, next) => {
+app.get('/api/logos/txtborboleta', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -4013,7 +4004,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/shadow', async(req, res, next) => {
+app.get('/api/logos/shadow', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -4029,7 +4020,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/cemiterio', async(req, res, next) => {
+app.get('/api/logos/cemiterio', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -4045,7 +4036,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/metalgold', async(req, res, next) => {
+app.get('/api/logos/metalgold', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -4061,7 +4052,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/efeitoneon', async(req, res, next) => {
+app.get('/api/logos/efeitoneon', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
@@ -4077,7 +4068,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/transformer', async(req, res, next) => {
+app.get('/api/logos/transformer', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4093,7 +4084,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/narutologo2', async(req, res, next) => {
+app.get('/api/logos/narutologo2', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4109,7 +4100,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/3dstone', async(req, res, next) => {
+app.get('/api/logos/3dstone', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4125,7 +4116,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/fiction', async(req, res, next) => {
+app.get('/api/logos/fiction', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4141,7 +4132,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/esmeralda', async(req, res, next) => {
+app.get('/api/logos/esmeralda', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4157,7 +4148,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/cattxt', async(req, res, next) => {
+app.get('/api/logos/cattxt', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4173,7 +4164,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/neondevil', async(req, res, next) => {
+app.get('/api/logos/neondevil', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4189,7 +4180,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/demonfire', async(req, res, next) => {
+app.get('/api/logos/demonfire', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4205,7 +4196,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/colaq', async(req, res, next) => {
+app.get('/api/logos/colaq', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4221,7 +4212,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/luxury', async(req, res, next) => {
+app.get('/api/logos/luxury', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4237,7 +4228,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/berry', async(req, res, next) => {
+app.get('/api/logos/berry', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4253,7 +4244,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/matrix', async(req, res, next) => {
+app.get('/api/logos/matrix', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4269,7 +4260,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/horror', async(req, res, next) => {
+app.get('/api/logos/horror', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4285,7 +4276,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/nuvem', async(req, res, next) => {
+app.get('/api/logos/nuvem', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4301,7 +4292,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/neon3', async(req, res, next) => {
+app.get('/api/logos/neon3', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4317,7 +4308,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/neve', async(req, res, next) => {
+app.get('/api/logos/neve', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4333,7 +4324,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/areia', async(req, res, next) => {
+app.get('/api/logos/areia', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4349,7 +4340,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/vidro', async(req, res, next) => {
+app.get('/api/logos/vidro', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4365,7 +4356,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/style', async(req, res, next) => {
+app.get('/api/logos/style', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4381,7 +4372,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/blood', async(req, res, next) => {
+app.get('/api/logos/blood', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4397,7 +4388,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/pink', async(req, res, next) => {
+app.get('/api/logos/pink', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4413,7 +4404,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/carbon', async(req, res, next) => {
+app.get('/api/logos/carbon', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4429,7 +4420,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/metalblue', async(req, res, next) => {
+app.get('/api/logos/metalblue', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4445,7 +4436,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/jeans', async(req, res, next) => {
+app.get('/api/logos/jeans', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4461,7 +4452,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/jokerlogo', async(req, res, next) => {
+app.get('/api/logos/jokerlogo', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4477,7 +4468,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/natal', async(req, res, next) => {
+app.get('/api/logos/natal', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4493,7 +4484,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/ossos', async(req, res, next) => {
+app.get('/api/logos/ossos', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4509,7 +4500,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/asfalto', async(req, res, next) => {
+app.get('/api/logos/asfalto', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4525,7 +4516,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/break', async(req, res, next) => {
+app.get('/api/logos/break', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4541,7 +4532,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/glitch2', async(req, res, next) => {
+app.get('/api/logos/glitch2', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
@@ -4557,7 +4548,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/glitch', async(req, res, next) => {
+app.get('/api/logos/glitch', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
@@ -4576,7 +4567,7 @@ console.log("ERROR"));
 })
 
 
-app.get('/ninjaapis/logos/lapis', async(req, res) => {
+app.get('/api/logos/lapis', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4591,7 +4582,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/3dgold', async(req, res) => {
+app.get('/api/logos/3dgold', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4606,7 +4597,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/halloween', async(req, res) => {
+app.get('/api/logos/halloween', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4621,7 +4612,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/lava', async(req, res) => {
+app.get('/api/logos/lava', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4636,7 +4627,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/toxic', async(req, res) => {
+app.get('/api/logos/toxic', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4651,7 +4642,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/demongreen', async(req, res) => {
+app.get('/api/logos/demongreen', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4666,7 +4657,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/metalfire', async(req, res) => {
+app.get('/api/logos/metalfire', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4681,7 +4672,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/thunder', async(req, res) => {
+app.get('/api/logos/thunder', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4696,7 +4687,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/thunderv2', async(req, res) => {
+app.get('/api/logos/thunderv2', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4711,7 +4702,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/neongreen', async(req, res) => {
+app.get('/api/logos/neongreen', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4726,7 +4717,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/neon', async(req, res) => {
+app.get('/api/logos/neon', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4741,7 +4732,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/neon1', async(req, res) => {
+app.get('/api/logos/neon1', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4756,7 +4747,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/neon3d', async(req, res) => {
+app.get('/api/logos/neon3d', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4771,7 +4762,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/rainbow', async(req, res) => {
+app.get('/api/logos/rainbow', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4786,7 +4777,7 @@ resultado: data
 console.log("ERROR"));
 })
 
-app.get('/ninjaapis/logos/gelo', async(req, res) => {
+app.get('/api/logos/gelo', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4803,7 +4794,7 @@ console.log("ERROR"));
 
 // FIM LOGOS
 
-app.get('/ninjaapis/pokemon-search', async(req, res, next) => {
+app.get('/api/pokemon-search', async(req, res, next) => {
 token = req.query.token;
 name = req.query.name
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4818,7 +4809,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/pesquisas/nasaphoto', async(req, res, next) => {
+app.get('/api/pesquisas/nasaphoto', async(req, res, next) => {
  token = req.query.token;
  data = req.query.data
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4833,7 +4824,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/senhaterminaldrex', async(req, res, next) => {
+app.get('/api/senhaterminaldrex', async(req, res, next) => {
 token = req.query.token;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -4841,7 +4832,7 @@ if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({m
 res.json({ senha: 'ninja-10' })
 })
 
-app.get('/ninjaapis/consultas/basic/nome', async(req, res, next) => {
+app.get('/api/consultas/basic/nome', async(req, res, next) => {
 query = req.query.query
 token = req.query.token;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4863,7 +4854,7 @@ return res.status(404).json({ resultado: "O banco de dados das consultas está e
 }
 })
 
-app.get('/ninjaapis/consultas/full/nome', async(req, res, next) => {
+app.get('/api/consultas/full/nome', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4911,7 +4902,7 @@ res.json({
 }
 })
 
-app.get('/ninjaapis/consultas/basic/cpf', async(req, res, next) => {
+app.get('/api/consultas/basic/cpf', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4930,7 +4921,7 @@ return res.status(404).json({ resultado: "O banco de dados das consultas está e
 }
 })
 
-app.get('/ninjaapis/consultas/full/cpf', async(req, res, next) => {
+app.get('/api/consultas/full/cpf', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -4974,7 +4965,7 @@ return res.status(404).json({ resultado: "O banco de dados das consultas está e
 }
 })
 
-app.get('/ninjaapis/consultas/telefone', async(req, res, next) => {
+app.get('/api/consultas/telefone', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5016,7 +5007,7 @@ return res.status(404).json({ resultado: "O banco de dados das consultas está e
 }
 })
 
-app.get('/ninjaapis/consultas/placa', async(req, res, next) => {
+app.get('/api/consultas/placa', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5036,7 +5027,7 @@ return res.status(404).json({ resultado: "O banco de dados das consultas está e
 }
 })
 
-app.get('/ninjaapis/consultas/ip', async(req, res, next) => {
+app.get('/api/consultas/ip', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5055,7 +5046,7 @@ return res.status(404).json({ resultado: "O banco de dados das consultas está e
 }
 })
 
-app.get('/ninjaapis/consultas/rg', async(req, res, next) => {
+app.get('/api/consultas/rg', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5074,7 +5065,7 @@ return res.status(404).json({ resultado: "O banco de dados das consultas está e
 }
 })
 
-app.get('/ninjaapis/consultas/cns', async(req, res, next) => {
+app.get('/api/consultas/cns', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5093,7 +5084,7 @@ return res.status(404).json({ resultado: "O banco de dados das consultas está e
 }
 })
 
-app.get('/ninjaapis/downloaders/instagram', async(req, res, next) => {
+app.get('/api/downloaders/instagram', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5107,7 +5098,7 @@ res.json({status: false, código: 404, message: `Erro no Servidor Interno`})
 })
 })
 
-app.get('/ninjaapis/nsfw/pornhub', async(req, res, next) => {
+app.get('/api/nsfw/pornhub', async(req, res, next) => {
 token = req.query.token;
 q = req.query.q
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5124,7 +5115,7 @@ res.json({
 message: `Erro no Servidor Interno`
 })})})
 
-app.get('/ninjaapis/tinder/registro',(req, res) => {
+app.get('/api/tinder/registro',(req, res) => {
   var { usuario, rg, token } = req.query
   if(!token) return res.json({message: "Faltando paramento token"})
   if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5197,7 +5188,7 @@ app.get('/ninjaapis/tinder/registro',(req, res) => {
   }
 })
 
-app.get('/ninjaapis/tinder/find', async (req, res) => {
+app.get('/api/tinder/find', async (req, res) => {
 usuario = req.query.usuario
 token = req.query.token
 if(tinder.length <= 0) return res.json({message: "Nenhum usuário registrado..."})
@@ -5223,7 +5214,7 @@ BC = Math.floor(Math.random()*caixa.length)
 res.json({criador: "Ninja Spmc", dados: [{id: BC+1, total: caixa.length, nome: caixa[BC].nome, idade: caixa[BC].idade, gene: caixa[BC].gene, sexualidade: caixa[BC].sexualidade, bio: caixa[BC].bio, nmr: caixa[BC].nmr, foto: caixa[BC].foto}]})
 })
 
-app.get('/ninjaapis/tinder/config', async (req, res) => {
+app.get('/api/tinder/config', async (req, res) => {
 var { usuario, mod, q, token } = req.query
 if(!usuario) return res.json({message: "Faltando o parâmetro usuario"})
 if(!mod) return res.json({message: "Faltando o parâmetro mod"})
@@ -5286,7 +5277,7 @@ return res.json({message: `✅ O filtro de busca foi atualizado! Agora buscarei 
   }
 })
 
-app.get('/ninjaapis/tinder/perfil', async (req, res) => {
+app.get('/api/tinder/perfil', async (req, res) => {
 var { usuario, token } = req.query
 if(!usuario) return res.json({message: "Faltando o parâmetro usuario"})
 if(!token) return res.json({message: "Faltando o parâmetro token"})
@@ -5299,7 +5290,7 @@ RegistrarUser(token, req);
 return res.json({criador: "Ninja Spmc", dados: [{nome: tinder[AB].nome, idade: tinder[AB].idade, gene: tinder[AB].gene, sexualidade: tinder[AB].sexualidade, filtro: tinder[AB].filtro, bio: tinder[AB].bio, nmr: tinder[AB].id.split('@')[0], foto: tinder[AB].foto, registro: [tinder[AB].dataRG, tinder[AB].horaRG]}]})
 })
 
-app.get('/ninjaapis/tinder/delete', async (req, res) => {
+app.get('/api/tinder/delete', async (req, res) => {
 try {
 var { usuario, token } = req.query
 if(!usuario) return res.json({message: "Faltando o parâmetro usuario"})
@@ -5317,7 +5308,7 @@ console.log(e)
 }
 })
 
-router.all('/ninjaapis/cartoon', async (req, res) => {
+router.all('/api/cartoon', async (req, res) => {
 token = req.query.token;
 img = req.query.img;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
@@ -5334,7 +5325,7 @@ url_imagem: `${auu.url}`
 })
 })
 
-router.get('/ninjaapis/figurinhas/emoji/apple', async (req, res, next) => {
+router.get('/api/figurinhas/emoji/apple', async (req, res, next) => {
 token = req.query.token
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5356,7 +5347,7 @@ RegistrarUser(token, req);
 	})
 })
 
-router.get('/ninjaapis/figurinhas/emoji/google', async (req, res, next) => {
+router.get('/api/figurinhas/emoji/google', async (req, res, next) => {
 token = req.query.token
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5375,7 +5366,7 @@ if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({m
 	})
 })
 
-router.get('/ninjaapis/figurinhas/emoji/samsung', async (req, res, next) => {
+router.get('/api/figurinhas/emoji/samsung', async (req, res, next) => {
 		var emj = req.query.emj
 	if (!emj) return res.json({ status : false, message : "[!] parâmetros de entrada  emj"})
 token = req.query.token
@@ -5394,7 +5385,7 @@ RegistrarUser(token, req);
 	})
 })
 
-router.get('/ninjaapis/figurinhas/emoji/microsoft', async (req, res, next) => {
+router.get('/api/figurinhas/emoji/microsoft', async (req, res, next) => {
 		var emj = req.query.emj
 	if (!emj) return res.json({ status : false, message : "[!] parâmetros de entrada  emj"})
 		token = req.query.token
@@ -5413,7 +5404,7 @@ RegistrarUser(token, req);
 	})
 })
 
-router.get('/ninjaapis/figurinhas/emoji/whatsapp', async (req, res, next) => {
+router.get('/api/figurinhas/emoji/whatsapp', async (req, res, next) => {
 	var emj = req.query.emj
 	if (!emj) return res.json({ status : false, message : "[!] parâmetros de entrada  emj"})
 	token = req.query.token
@@ -5432,7 +5423,7 @@ RegistrarUser(token, req);
 	})
 })
 
-router.get('/ninjaapis/figurinhas/emoji/x', async (req, res, next) => {
+router.get('/api/figurinhas/emoji/x', async (req, res, next) => {
 	var emj = req.query.emj
 	if (!emj) return res.json({ status : false, message : "[!] parâmetros de entrada  emj"})
 		token = req.query.token
@@ -5451,7 +5442,7 @@ RegistrarUser(token, req);
 	})
 })
 
-router.get('/ninjaapis/figurinhas/emoji/facebook', async (req, res, next) => {
+router.get('/api/figurinhas/emoji/facebook', async (req, res, next) => {
 	var emj = req.query.emj
 	if (!emj) return res.json({ status : false, message : "[!] parâmetros de entrada  emj"})
 		token = req.query.token
@@ -5470,7 +5461,7 @@ RegistrarUser(token, req);
 	})
 })
 
-router.get('/ninjaapis/figurinhas/emoji/skype', async (req, res, next) => {
+router.get('/api/figurinhas/emoji/skype', async (req, res, next) => {
 	var emj = req.query.emj
 	if (!emj) return res.json({ status : false, message : "[!] parâmetros de entrada  emj"})
 		token = req.query.token
@@ -5489,32 +5480,32 @@ RegistrarUser(token, req);
 	})
 })
 
-router.get('/ninjaapis/canvas/comunismo', comunismo) 
-router.get('/ninjaapis/canvas/bolsonaro', bolsonaro) 
-router.get('/ninjaapis/canvas/bnw', bnw) 
-router.get('/ninjaapis/canvas/affect', affect) 
-router.get('/ninjaapis/canvas/blur', blurr) 
-router.get('/ninjaapis/canvas/beautiful', beautiful)   
-router.get('/ninjaapis/canvas/circle', circle) 
-router.get('/ninjaapis/canvas/del', del) 
-router.get('/ninjaapis/canvas/invert', invert) 
-router.get('/ninjaapis/canvas/gay', gay) 
-router.get('/ninjaapis/canvas/lgbt', lgbt) 
-router.get('/ninjaapis/canvas/facepalm', facepalm)    
-router.get('/ninjaapis/canvas/dither', dither) 
-router.get('/ninjaapis/canvas/jail', jail) 
-router.get('/ninjaapis/canvas/magik', magik) 
-router.get('/ninjaapis/canvas/rip', rip)   
-router.get('/ninjaapis/canvas/sepia', sepia) 
-router.get('/ninjaapis/canvas/rotate', rotate) 
-router.get('/ninjaapis/canvas/pixelate', pixelate) 
-router.get('/ninjaapis/canvas/trash', trash) 
-router.get('/ninjaapis/canvas/wasted', wasted)
-router.get('/ninjaapis/canvas/wanted', wanted)
-router.get('/ninjaapis/canvas/bobross', bobross)
-router.get('/ninjaapis/canvas/karaba', bobross)
-router.get('/ninjaapis/canvas/mms', mms)
-router.get('/ninjaapis/happymod', happymodr)
+router.get('/api/canvas/comunismo', comunismo) 
+router.get('/api/canvas/bolsonaro', bolsonaro) 
+router.get('/api/canvas/bnw', bnw) 
+router.get('/api/canvas/affect', affect) 
+router.get('/api/canvas/blur', blurr) 
+router.get('/api/canvas/beautiful', beautiful)   
+router.get('/api/canvas/circle', circle) 
+router.get('/api/canvas/del', del) 
+router.get('/api/canvas/invert', invert) 
+router.get('/api/canvas/gay', gay) 
+router.get('/api/canvas/lgbt', lgbt) 
+router.get('/api/canvas/facepalm', facepalm)    
+router.get('/api/canvas/dither', dither) 
+router.get('/api/canvas/jail', jail) 
+router.get('/api/canvas/magik', magik) 
+router.get('/api/canvas/rip', rip)   
+router.get('/api/canvas/sepia', sepia) 
+router.get('/api/canvas/rotate', rotate) 
+router.get('/api/canvas/pixelate', pixelate) 
+router.get('/api/canvas/trash', trash) 
+router.get('/api/canvas/wasted', wasted)
+router.get('/api/canvas/wanted', wanted)
+router.get('/api/canvas/bobross', bobross)
+router.get('/api/canvas/karaba', bobross)
+router.get('/api/canvas/mms', mms)
+router.get('/api/happymod', happymodr)
 
 app.get('/about',(req, res) => {
 res.json({
@@ -5523,7 +5514,7 @@ message:'Projeto em beta'
 })
 })
 
-app.get('/ninjaapis/outros/antiporno',async (req,res,next) => {
+app.get('/api/outros/antiporno',async (req,res,next) => {
 url = req.query.url
 if(!url)return res.json({
 status:false,
@@ -5533,12 +5524,12 @@ token = req.query.token
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
-fetch(`https://nsfw-demo.sashido.io/ninjaapis/image/classify?url=${url}`).then(e => {
+fetch(`https://nsfw-demo.sashido.io/api/image/classify?url=${url}`).then(e => {
 res.json(e)
 })
 })
 
-router.get('/ninjaapis/outros/printweb', async (req, res, next) => {
+router.get('/api/outros/printweb', async (req, res, next) => {
 url = req.query.url
 if(!url)return res.json({status:false, motivo:'Cadê o parâmetro url?'})
 token = req.query.token
@@ -5556,7 +5547,7 @@ RegistrarUser(token, req);
 }    
 })
 
-router.get('/ninjaapis/figurinhas/pack/emoji', async (req, res, next) => {
+router.get('/api/figurinhas/pack/emoji', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5573,7 +5564,7 @@ hasil = `https://raw.githubusercontent.com/Scheyot2/media/master/packs/emoji/${r
 }    
 })
 
-router.get('/ninjaapis/figurinhas/pack/flork', async (req, res, next) => {
+router.get('/api/figurinhas/pack/flork', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5590,7 +5581,7 @@ hasil = `https://raw.githubusercontent.com/Scheyot2/anya-bot/master/Figurinhas/f
 }    
 })
 
-router.get('/ninjaapis/figurinhas/pack/memes', async (req, res, next) => {
+router.get('/api/figurinhas/pack/memes', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5607,7 +5598,7 @@ var rnd = Math.floor(Math.random() * 109)
 }    
 })
 
-router.get('/ninjaapis/figurinhas/pack/anime', async (req, res, next) => {
+router.get('/api/figurinhas/pack/anime', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5624,7 +5615,7 @@ var rnd = Math.floor(Math.random() * 109)
 }    
 })
 
-router.get('/ninjaapis/figurinhas/pack/coreana', async (req, res, next) => {
+router.get('/api/figurinhas/pack/coreana', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5641,7 +5632,7 @@ var rnd = Math.floor(Math.random() * 43)
 }    
 })
 
-router.get('/ninjaapis/figurinhas/pack/bebe', async (req, res, next) => {
+router.get('/api/figurinhas/pack/bebe', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5658,7 +5649,7 @@ var rnd = Math.floor(Math.random() * 17)
 }    
 })
 
-router.get('/ninjaapis/figurinhas/pack/desenho', async (req, res, next) => {
+router.get('/api/figurinhas/pack/desenho', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5675,7 +5666,7 @@ var rnd = Math.floor(Math.random() * 109)
 }    
 })
 
-router.get('/ninjaapis/figurinhas/pack/animais', async (req, res, next) => {
+router.get('/api/figurinhas/pack/animais', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5709,7 +5700,7 @@ var rnd = Math.floor(Math.random() * 25)
 }    
 })
 
-router.get('/ninjaapis/figurinhas/pack/raiva', async (req, res, next) => {
+router.get('/api/figurinhas/pack/raiva', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5726,7 +5717,7 @@ var rnd = Math.floor(Math.random() * 29)
 }    
 })
 
-router.get('/ninjaapis/figurinhas/pack/roblox', async (req, res, next) => {
+router.get('/api/figurinhas/pack/roblox', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5743,7 +5734,7 @@ var rnd = Math.floor(Math.random() * 21)
 }    
 })
 
-router.get('/ninjapis/nsfw/ahegao', async (req, res, next) => {
+router.get('/api/nsfw/ahegao', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5761,7 +5752,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/ass', async (req, res, next) => {
+router.get('/api/nsfw/ass', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5779,7 +5770,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/bdsm', async (req, res, next) => {
+router.get('/api/nsfw/bdsm', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5797,7 +5788,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/blowjob', async (req, res, next) => {
+router.get('/api/nsfw/blowjob', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5815,7 +5806,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/cuckold', async (req, res, next) => {
+router.get('/api/nsfw/cuckold', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5833,7 +5824,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/cum', async (req, res, next) => {
+router.get('/api/nsfw/cum', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5851,7 +5842,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/ero', async (req, res, next) => {
+router.get('/api/nsfw/ero', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5869,7 +5860,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/femdom', async (req, res, next) => {
+router.get('/api/nsfw/femdom', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5887,7 +5878,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/foot', async (req, res, next) => {
+router.get('/api/nsfw/foot', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5905,7 +5896,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/gangbang', async (req, res, next) => {
+router.get('/api/nsfw/gangbang', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5923,7 +5914,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/glasses', async (req, res, next) => {
+router.get('/api/nsfw/glasses', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5941,7 +5932,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/hentai', async (req, res, next) => {
+router.get('/api/nsfw/hentai', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5959,7 +5950,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/gifs', async (req, res, next) => {
+router.get('/api/nsfw/gifs', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5976,7 +5967,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/stickera', async (req, res, next) => {
+router.get('/api/stickera', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -5993,7 +5984,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/jahy', async (req, res, next) => {
+router.get('/api/nsfw/jahy', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6011,7 +6002,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/manga', async (req, res, next) => {
+router.get('/api/nsfw/manga', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6029,7 +6020,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/masturbation', async (req, res, next) => {
+router.get('/api/nsfw/masturbation', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6047,7 +6038,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/neko', async (req, res, next) => {
+router.get('/api/nsfw/neko', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6065,7 +6056,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/orgy', async (req, res, next) => {
+router.get('/api/nsfw/orgy', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6083,7 +6074,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/panties', async (req, res, next) => {
+router.get('/api/nsfw/panties', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6101,7 +6092,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/pussy', async (req, res, next) => {
+router.get('/api/nsfw/pussy', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6119,7 +6110,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/neko2', async (req, res, next) => {
+router.get('/api/nsfw/neko2', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6137,7 +6128,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/tentacles', async (req, res, next) => {
+router.get('/api/nsfw/tentacles', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6155,7 +6146,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/thighs', async (req, res, next) => {
+router.get('/api/nsfw/thighs', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6173,7 +6164,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/yuri', async (req, res, next) => {
+router.get('/api/nsfw/yuri', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6191,7 +6182,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/zettai', async (req, res, next) => {
+router.get('/api/nsfw/zettai', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6209,7 +6200,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/keneki', async (req, res, next) => {
+router.get('/api/animes/keneki', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6227,7 +6218,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/megumin', async (req, res, next) => {
+router.get('/api/animes/megumin', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6245,7 +6236,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/yotsuba', async (req, res, next) => {
+router.get('/api/animes/yotsuba', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6263,7 +6254,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/shinomiya', async (req, res, next) => {
+router.get('/api/animes/shinomiya', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6281,7 +6272,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/yumeko', async (req, res, next) => {
+router.get('/api/animes/yumeko', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6299,7 +6290,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/tejina', async (req, res, next) => {
+router.get('/api/animes/tejina', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6317,7 +6308,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/chiho', async (req, res, next) => {
+router.get('/api/animes/chiho', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6427,7 +6418,7 @@ RegistrarUser(token, req);
 
 
 
-router.get('/ninjaapis/animes/toukachan', async (req, res, next) => {
+router.get('/api/animes/toukachan', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6445,7 +6436,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/akira', async (req, res, next) => {
+router.get('/api/animes/akira', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6463,7 +6454,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/itori', async (req, res, next) => {
+router.get('/api/animes/itori', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6481,7 +6472,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/kurumi', async (req, res, next) => {
+router.get('/api/animes/kurumi', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6499,7 +6490,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/miku', async (req, res, next) => {
+router.get('/api/animes/miku', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6517,7 +6508,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/pokemon', async (req, res, next) => {
+router.get('/api/animes/pokemon', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6535,7 +6526,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/ryujin', async (req, res, next) => {
+router.get('/api/animes/ryujin', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6553,7 +6544,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/rose', async (req, res, next) => {
+router.get('/api/animes/rose', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6571,7 +6562,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/kaori', async (req, res, next) => {
+router.get('/api/animes/kaori', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6589,7 +6580,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/shizuka', async (req, res, next) => {
+router.get('/api/animes/shizuka', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6607,7 +6598,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/kaga', async (req, res, next) => {
+router.get('/api/animes/kaga', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6625,7 +6616,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/kotori', async (req, res, next) => {
+router.get('/api/animes/kotori', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6643,7 +6634,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/mikasa', async (req, res, next) => {
+router.get('/api/animes/mikasa', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6661,7 +6652,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/akiyama', async (req, res, next) => {
+router.get('/api/animes/akiyama', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6679,7 +6670,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/gremory', async (req, res, next) => {
+router.get('/api/animes/gremory', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6697,7 +6688,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/isuzu', async (req, res, next) => {
+router.get('/api/animes/isuzu', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6715,7 +6706,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/cosplay', async (req, res, next) => {
+router.get('/api/animes/cosplay', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6733,7 +6724,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/shina', async (req, res, next) => {
+router.get('/api/animes/shina', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6751,7 +6742,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/kagura', async (req, res, next) => {
+router.get('/api/animes/kagura', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6769,7 +6760,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/shinka', async (req, res, next) => {
+router.get('/api/animes/shinka', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6787,7 +6778,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/eba', async (req, res, next) => {
+router.get('/api/animes/eba', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6805,7 +6796,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/deidara', async (req, res, next) => {
+router.get('/api/animes/deidara', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6824,7 +6815,7 @@ res.json({erro:'Erro no Servidor Interno'})
 
 
 
-router.get('/ninjaapis/animes/jeni', async (req, res, next) => {
+router.get('/api/animes/jeni', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6843,7 +6834,7 @@ RegistrarUser(token, req);
 })
 
 
-router.get('/ninjaapis/animes/meme', async (req, res, next) => {
+router.get('/api/animes/meme', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6881,7 +6872,7 @@ RegistrarUser(token, req);
 
 
 
-router.get('/ninjaapis/animes/itachi', async (req, res, next) => {
+router.get('/api/animes/itachi', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6899,7 +6890,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/madara', async (req, res, next) => {
+router.get('/api/animes/madara', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6917,7 +6908,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/yuki', async (req, res, next) => {
+router.get('/api/animes/yuki', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6953,7 +6944,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/ayuzawa', async (req, res, next) => {
+router.get('/api/animes/ayuzawa', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6971,7 +6962,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/chitoge', async (req, res, next) => {
+router.get('/api/animes/chitoge', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -6989,7 +6980,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/emilia', async (req, res, next) => {
+router.get('/api/animes/emilia', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7007,7 +6998,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/hestia', async (req, res, next) => {
+router.get('/api/animes/hestia', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7025,7 +7016,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/inori', async (req, res, next) => {
+router.get('/api/animes/inori', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7043,7 +7034,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/ana', async (req, res, next) => {
+router.get('/api/animes/ana', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7061,7 +7052,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/boruto', async (req, res, next) => {
+router.get('/api/animes/boruto', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7079,7 +7070,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/erza', async (req, res, next) => {
+router.get('/api/animes/erza', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7097,7 +7088,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/kakashi', async (req, res, next) => {
+router.get('/api/animes/kakashi', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7115,7 +7106,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/sagiri', async (req, res, next) => {
+router.get('/api/animes/sagiri', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7133,7 +7124,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/minato', async (req, res, next) => {
+router.get('/api/animes/minato', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7151,7 +7142,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/naruto', async (req, res, next) => {
+router.get('/api/animes/naruto', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7169,7 +7160,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/nezuko', async (req, res, next) => {
+router.get('/api/animes/nezuko', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7187,7 +7178,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/onepiece', async (req, res, next) => {
+router.get('/api/animes/onepiece', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7205,7 +7196,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/rize', async (req, res, next) => {
+router.get('/api/animes/rize', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7223,7 +7214,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/sakura', async (req, res, next) => {
+router.get('/api/animes/sakura', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7241,7 +7232,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/sasuke', async (req, res, next) => {
+router.get('/api/animes/sasuke', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7259,7 +7250,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/tsunade', async (req, res, next) => {
+router.get('/api/animes/tsunade', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7277,7 +7268,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/montor', async (req, res, next) => {
+router.get('/api/animes/montor', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7295,7 +7286,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/mobil', async (req, res, next) => {
+router.get('/api/animes/mobil', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7314,7 +7305,7 @@ RegistrarUser(token, req);
 })
 
 
-router.get('/ninjaapis/animes/anime', async (req, res, next) => {
+router.get('/api/animes/anime', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7333,7 +7324,7 @@ RegistrarUser(token, req);
 })
 
 
-router.get('/ninjaapis/animes/wallhp', async (req, res, next) => {
+router.get('/api/animes/wallhp', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7351,7 +7342,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/waifu2', async (req, res, next) => {
+router.get('/api/animes/waifu2', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7369,7 +7360,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/waifu', async (req, res, next) => {
+router.get('/api/animes/waifu', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7388,7 +7379,7 @@ RegistrarUser(token, req);
 })
 
 
-router.get('/ninjaapis/animes/hekel', async (req, res, next) => {
+router.get('/api/animes/hekel', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7406,7 +7397,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/kucing', async (req, res, next) => {
+router.get('/api/animes/kucing', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7478,7 +7469,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/doraemon', async (req, res, next) => {
+router.get('/api/animes/doraemon', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7497,7 +7488,7 @@ RegistrarUser(token, req);
 })
 
 
-router.get('/ninjaapis/animes/elaina', async (req, res, next) => {
+router.get('/api/animes/elaina', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7516,7 +7507,7 @@ RegistrarUser(token, req);
 })
 
 
-router.get('/ninjaapis/animes/loli', async (req, res, next) => {
+router.get('/api/animes/loli', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7535,7 +7526,7 @@ RegistrarUser(token, req);
 })
 
 
-router.get('/ninjaapis/animes/yuri', async (req, res, next) => {
+router.get('/api/animes/yuri', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7554,7 +7545,7 @@ RegistrarUser(token, req);
 })
 
 
-router.get('/ninjaapis/animes/cecan', async (req, res, next) => {
+router.get('/api/animes/cecan', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7593,7 +7584,7 @@ RegistrarUser(token, req);
 
 
 
-router.get('/ninjaapis/animes/sagiri', async (req, res, next) => {
+router.get('/api/animes/sagiri', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7611,7 +7602,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/animes/shota', async (req, res, next) => {
+router.get('/api/animes/shota', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7629,7 +7620,7 @@ RegistrarUser(token, req);
   }
 })
 
-router.get('/ninjaapis/nsfw/hinata', async (req, res, next) => {
+router.get('/api/nsfw/hinata', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7646,7 +7637,7 @@ RegistrarUser(token, req);
   }
 })
 
- app.get('/ninjaapis/downloaders/soundcloud', async(req, res, next) => {
+ app.get('/api/downloaders/soundcloud', async(req, res, next) => {
  token = req.query.token;
  url = req.query.url
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7662,7 +7653,7 @@ res.json({
  message: `Erro no Servidor Interno`
  })})})
 
- app.get('/ninjaapis/nsfw/manga', async(req, res, next) => {
+ app.get('/api/nsfw/manga', async(req, res, next) => {
  token = req.query.token;
 q = req.query.q
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7678,7 +7669,7 @@ res.json({
  message: `Erro no Servidor Interno`
  })})})
 
- app.get('/ninjaapis/nsfw/hentaistube', async(req, res, next) => {
+ app.get('/api/nsfw/hentaistube', async(req, res, next) => {
  token = req.query.token;
 q = req.query.q
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7694,7 +7685,7 @@ res.json({
  message: `Erro no Servidor Interno`
  })})})
 
-app.get('/ninjaapis/icms', async(req, res, next) => {
+app.get('/api/icms', async(req, res, next) => {
 var { token, valor, ddd } = req.query
 if(!token) return res.json({status:false,message:'cade o parametro token'})
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7711,7 +7702,7 @@ message: `Erro no Servidor Interno`
 })
 })
 
-app.get('/ninjaapis/noticias/brasileirao', async(req, res, next) => {
+app.get('/api/noticias/brasileirao', async(req, res, next) => {
 var { token } = req.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -7725,7 +7716,7 @@ message: `Erro no Servidor Interno`
 })
 })
 
-app.get('/ninjaapis/figurinhas/ttp',  async (req, res) => {
+app.get('/api/figurinhas/ttp',  async (req, res) => {
 texto = req.query.texto
 if(!texto)return res.json({
 status:false,
@@ -7744,7 +7735,7 @@ res.type('jpg')
 res.send(await getBuffer(sitee))
 })
 
-app.get('/ninjaapis/fbdown',(req,res) => {
+app.get('/api/fbdown',(req,res) => {
 url = req.query.url
 if(!url)return res.json({
 status:false,
@@ -7764,7 +7755,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/photooxy',(req,res) => {
+app.get('/api/photooxy',(req,res) => {
 url = req.query.url
 text = req.query.text
 if(!url)return res.json({
@@ -7789,7 +7780,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/wallpaperanime',(req,res) => {
+app.get('/api/wallpaperanime',(req,res) => {
 token = req.query.token
 q = 'Wallpaper anime'
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -7812,7 +7803,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get("/ninjaapis/google-img", async(req, res) => {
+app.get("/api/google-img", async(req, res) => {
 try {
 token = req.query.token
 nome = req.query.nome
@@ -7835,8 +7826,8 @@ return res.json({message: "Erro.."})
 }
 })
 
-app.get('/ninjaapis/avatar',(req,res,next) => {
-fetch(encodeURI(`https://nekos.life/ninjaapis/v2/img/avatar`))
+app.get('/api/avatar',(req,res,next) => {
+fetch(encodeURI(`https://nekos.life/api/v2/img/avatar`))
 .then(response => response.json())
 .then(async (data) => {
 resultado =  data
@@ -7849,7 +7840,7 @@ res.json({erro:'erro'})
 })
 })
 
-app.get('/ninjaapis/legenda',async (req,res,next) => {
+app.get('/api/legenda',async (req,res,next) => {
 url = req.query.url
 texto1 = req.query.texto1
 texto2 = req.query.texto2
@@ -7874,7 +7865,7 @@ res.type('jpg')
 res.send(bala)
 })
 
-app.get('/ninjaapis/github',(req,res,next) => {
+app.get('/api/github',(req,res,next) => {
 pessoa = req.query.usuario
 if(!pessoa)return res.json({
 status:false,
@@ -7917,7 +7908,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/wiki',(req,res) => {
+app.get('/api/wiki',(req,res) => {
 texto = req.query.texto
 if(!texto)return res.json({
 status:false,
@@ -7941,7 +7932,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/downloaders/twitter2',(req,res) => {
+app.get('/api/downloaders/twitter2',(req,res) => {
 url = req.query.url
 if(!url)return res.json({status:false, message:'Cade o parametro url??'})
 token = req.query.token
@@ -7955,7 +7946,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/pesquisas/youtube',(req,res) => {
+app.get('/api/pesquisas/youtube',(req,res) => {
 q = req.query.q
 if(!q)return res.json({
 status:false,
@@ -7976,7 +7967,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/downloaders/youtube/play', async(req, res, next) => {
+app.get('/api/downloaders/youtube/play', async(req, res, next) => {
 token = req.query.token;
 text = req.query.query
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -8016,7 +8007,7 @@ message: `Erro no Servidor Interno`
 })
 })
 
-app.get('/ninjaapis/downloaders/ytdl', async(req, res, next) => {
+app.get('/api/downloaders/ytdl', async(req, res, next) => {
 token = req.query.token;
 text = req.query.url
  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -8051,7 +8042,7 @@ message: `Erro no Servidor Interno`
 })
 })
 
-router.get('/ninjaapis/ia/midjourney', async (req, res, next) => {
+router.get('/api/ia/midjourney', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 var query = req.query.query;
@@ -8069,7 +8060,7 @@ res.sendFile(bla + '/assets/Tempo/gostosinha.jpg')
 }    
 })
 
-app.get('/ninjaapis/ia/toanime', async(req, res, next) => {
+app.get('/api/ia/toanime', async(req, res, next) => {
 var { token, link } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8082,7 +8073,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-app.get('/ninjaapis/ia/tozombie', async(req, res, next) => {
+app.get('/api/ia/tozombie', async(req, res, next) => {
 var { token, link } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8095,7 +8086,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-app.get('/ninjaapis/ia/remini', async(req, res, next) => {
+app.get('/api/ia/remini', async(req, res, next) => {
 var { token, link } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8108,7 +8099,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-app.get('/ninjaapis/ia/removebg', async(req, res, next) => {
+app.get('/api/ia/removebg', async(req, res, next) => {
 var { token, link } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8121,7 +8112,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-router.get('/ninjaapis/outros/encurtador/tinyurl', async (req, res, next) => {
+router.get('/api/outros/encurtador/tinyurl', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 var link = req.query.link;
@@ -8137,7 +8128,7 @@ res.json({status: true, result: link})
 });	
 })
 	
-router.get('/ninjaapis/outros/encurtador/cuttly', async (req, res, next) => {
+router.get('/api/outros/encurtador/cuttly', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 var link = req.query.link;
@@ -8147,14 +8138,14 @@ if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({m
 var islink = isUrl(link)
 if (!islink) return res.json({ status : false, message : "[!] insira uma url válido"})  
 let randomapicuttly = apicuttly[Math.floor(Math.random() * apicuttly.length)]
-var hasil = await fetchJson(`https://cutt.ly/ninjaapis/api.php?key=${randomapicuttly}&short=${link}`)
+var hasil = await fetchJson(`https://cutt.ly/api/api.php?key=${randomapicuttly}&short=${link}`)
 if (!hasil.url.shortLink) return  res.json({erro: "Erro no Servidor Interno"})
 RegistrarUser(token, req);
 res.json({status: true, Criador: `@VictorGabriel`,result: hasil.url.shortLink})
 });
 
 
-router.get('/ninjaapis/outros/encurtador/bitly', async (req, res, next) => {
+router.get('/api/outros/encurtador/bitly', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 var link = req.query.link;
@@ -8173,7 +8164,7 @@ res.json({status: true, criador: `@VictorGabriel`, result : result.link})
 });
 })
 
-router.get('/ninjaapis/outros/encurtador/tinyurl', async (req, res, next) => {
+router.get('/api/outros/encurtador/tinyurl', async (req, res, next) => {
 var link = req.query.link
 var alias = req.query.alias
 var token = req.query.token;
@@ -8191,7 +8182,7 @@ res.json({status: true, criador: `@VictorGabriel`, result: link})
 })
 })
 
-router.get('/ninjaapis/ia/googletradutor', async (req, res, next) => {
+router.get('/api/ia/googletradutor', async (req, res, next) => {
 text = req.query.texto
 ling = req.query.ling
 token = req.query.token;
@@ -8220,7 +8211,7 @@ status: true,
 result: result[0]
 })}})
 
-app.get('/ninjaapis/animes/edits/video', async(req, res, next) => {
+app.get('/api/animes/edits/video', async(req, res, next) => {
 var { token, categoria } = req.query
 if (!categoria) return res.json({ status : false,  message : "cade o parametro categoria"}) 
 var EDT_ALEATORIOS = JSON.parse(fs.readFileSync("./base de dados/random/EDIT-ANIMES/ALEATORIOS.json").toString())
@@ -8258,7 +8249,7 @@ res.json({status: false, resultado:'⏳️ Tempo de resposta esgotado!'})
 }
 })
 
-app.get('/ninjaapis/downloaders/youtube/audio', async (req, res, next) => {
+app.get('/api/downloaders/youtube/audio', async (req, res, next) => {
 token = req.query.token
 url = req.query.url
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -8276,7 +8267,7 @@ console.log(err)
 };
 });
 
-app.get('/ninjaapis/downloaders/youtube/video', async (req, res, next) => {
+app.get('/api/downloaders/youtube/video', async (req, res, next) => {
 token = req.query.token
 url = req.query.url
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -8294,7 +8285,7 @@ console.log(err)
 };
 });
 
-app.get('/ninjaapis/downloaders/y2bs', (req, res) => {
+app.get('/api/downloaders/y2bs', (req, res) => {
 var { token, url, type } = req.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8308,7 +8299,7 @@ res.json({erro: "Erro: "+e})
 })
 })
 
-app.get('/ninjaapis/downloaders/savefrom', (req, res) => {
+app.get('/api/downloaders/savefrom', (req, res) => {
 var { token, url, type } = req.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8322,7 +8313,7 @@ res.json({erro: "Erro: "+e})
 })
 })
 
-app.get('/ninjaapis/downloaders/audiomeme', async(req, res, next) => {
+app.get('/api/downloaders/audiomeme', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -8336,7 +8327,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-app.get('/ninjaapis/downloaders/tuna', async(req, res, next) => {
+app.get('/api/downloaders/tuna', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -8350,7 +8341,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-app.get('/ninjaapis/downloaders/drive', async(req, res, next) => {
+app.get('/api/downloaders/drive', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -8364,7 +8355,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-app.get('/ninjaapis/downloaders/mediafire', async(req, res, next) => {
+app.get('/api/downloaders/mediafire', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -8378,7 +8369,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-app.get('/ninjaapis/downloaders/instagram/story', async(req, res, next) => {
+app.get('/api/downloaders/instagram/story', async(req, res, next) => {
 token = req.query.token;
 usuario = req.query.usuario
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -8392,7 +8383,7 @@ res.json({status: 404, message: `Erro no Servidor Interno`})
 })
 })
 
-app.get('/ninjaapis/downloaders/multidownload', async(req, res, next) => {
+app.get('/api/downloaders/multidownload', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -8406,7 +8397,7 @@ res.json({status: 404, message: `Erro no Servidor Interno`})
 })
 })
 
-app.get('/ninjaapis/pesquisas/imdb/busca', async(req, res, next) => {
+app.get('/api/pesquisas/imdb/busca', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -8420,7 +8411,7 @@ res.json({status: 404, message: `Erro no Servidor Interno`})
 })
 })
 
-app.get('/ninjaapis/pesquisas/imdb/info', async(req, res, next) => {
+app.get('/api/pesquisas/imdb/info', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
@@ -8434,7 +8425,7 @@ res.json({status: 404, message: `Erro no Servidor Interno`})
 })
 })
 
-app.get('/ninjaapis/outros/rastreio', async(req, res, next) => {
+app.get('/api/outros/rastreio', async(req, res, next) => {
 var { token, code } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8448,7 +8439,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-app.get('/ninjaapis/pesquisas/pensador', async(req, res, next) => {
+app.get('/api/pesquisas/pensador', async(req, res, next) => {
 var { token, text } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8462,7 +8453,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-app.get('/ninjaapis/pesquisas/spotify', async(req, res, next) => {
+app.get('/api/pesquisas/spotify', async(req, res, next) => {
 var { token, query } = req.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8474,7 +8465,7 @@ res.json({message: "Erro no Servidor Interno"})
 })
 })
 
-app.get('/ninjaapis/downloaders/spotify', async(req, res, next) => {
+app.get('/api/downloaders/spotify', async(req, res, next) => {
 var { token, url } = req.query;
 if(!key.map(i => i.token)?.includes(token)) return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8487,7 +8478,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-app.get('/ninjaapis/downloaders/capcut', async(req, res, next) => {
+app.get('/api/downloaders/capcut', async(req, res, next) => {
 var { token, url } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8500,7 +8491,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-app.get('/ninjaapis/downloaders/threads', async(req, res, next) => {
+app.get('/api/downloaders/threads', async(req, res, next) => {
 var { token, url } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8513,7 +8504,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-app.get('/ninjaapis/downloaders/x', async(req, res, next) => {
+app.get('/api/downloaders/x', async(req, res, next) => {
 var { token, url } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8526,7 +8517,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-app.get('/ninjaapis/ia/simih', async(req, res, next) => {
+app.get('/api/ia/simih', async(req, res, next) => {
 var { text, language, token } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8539,7 +8530,7 @@ res.json({status: 404, resultado: "Não entendi, por favor me ensine!"});
 });
 })
 
-app.get('/ninjaapis/consultas/ddd', async(req, res, next) => {
+app.get('/api/consultas/ddd', async(req, res, next) => {
 var { ddd, token } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8552,7 +8543,7 @@ res.json({status: 404, message: error})
 })
 })
 
-app.get('/ninjaapis/consultas/ddi', async (req, res, next) => {
+app.get('/api/consultas/ddi', async (req, res, next) => {
   const { ddi, token } = req.query;
   try {
     if (!key.map(i => i.token)?.includes(token)) {
@@ -8577,7 +8568,7 @@ app.get('/ninjaapis/consultas/ddi', async (req, res, next) => {
   }
 });
 
-app.get('/ninjaapis/pesquisas/cybercook/info', async(req, res, next) => {
+app.get('/api/pesquisas/cybercook/info', async(req, res, next) => {
 var { token, url } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8590,7 +8581,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-app.get('/ninjaapis/pesquisas/cybercook/busca', async(req, res, next) => {
+app.get('/api/pesquisas/cybercook/busca', async(req, res, next) => {
 var { token, query } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8603,7 +8594,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-app.get('/ninjaapis/pesquisas/uptodown/info', async(req, res, next) => {
+app.get('/api/pesquisas/uptodown/info', async(req, res, next) => {
 var { token, url } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8616,7 +8607,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-app.get('/ninjaapis/pesquisas/uptodown/busca', async(req, res, next) => {p
+app.get('/api/pesquisas/uptodown/busca', async(req, res, next) => {p
 var { token, query } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8629,20 +8620,20 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 })
 })
 
-app.get('/ninjaapis/consultas/cnpj', async(req, res, next) => {
+app.get('/api/consultas/cnpj', async(req, res, next) => {
 var { cnpj, token } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!cnpj) return res.json({ status : false, message: "faltando o parametro: cnpj"})
 RegistrarUser(token, req);
-axios.get(`https://brasilapi.com.br/ninjaapis/cnpj/v1/${cnpj}`).then(dat => {
+axios.get(`https://brasilapi.com.br/api/cnpj/v1/${cnpj}`).then(dat => {
 res.json({status: 200, resultado: dat.data})
 }).catch(error => {
 res.json({status: 404, message: error})
 })
 })
 
-app.get('/ninjaapis/consultas/feriados', async(req, res, next) => {
+app.get('/api/consultas/feriados', async(req, res, next) => {
 var { ano, token } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8655,7 +8646,7 @@ res.json({status: 404, message: error})
 })
 })
 
-app.get('/ninjaapis/consultas/municipios', async(req, res, next) => {
+app.get('/api/consultas/municipios', async(req, res, next) => {
 var { sigla_uf, token } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8668,7 +8659,7 @@ res.json({status: 404, message: error})
 })
 })
 
-app.get('/ninjaapis/consultas/dominio', async(req, res, next) => {
+app.get('/api/consultas/dominio', async(req, res, next) => {
 var { domain, token } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8681,7 +8672,7 @@ res.json({status: 404, message: error})
 })
 })
 
-app.get('/ninjaapis/consultas/ispb', async(req, res, next) => {
+app.get('/api/consultas/ispb', async(req, res, next) => {
 var { code, token } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8694,7 +8685,7 @@ res.json({status: 404, message: error})
 })
 })
 
-app.get('/ninjaapis/consultas/bancos', async(req, res, next) => {
+app.get('/api/consultas/bancos', async(req, res, next) => {
 var { token } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8706,7 +8697,7 @@ res.json({status: 404, message: error})
 })
 })
 
-app.get('/ninjaapis/consultas/cep', async(req, res, next) => {
+app.get('/api/consultas/cep', async(req, res, next) => {
 var { code, token } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"));
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8719,7 +8710,7 @@ res.json({status: 404, message: error})
 })
 })
 
-app.get('/ninjaapis/pesquisas/stalker/instagram', async(req, res, next) => {
+app.get('/api/pesquisas/stalker/instagram', async(req, res, next) => {
 var { usuario, token } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8746,7 +8737,7 @@ res.json({resultado: `${msgerro}`})
 };
 })
 
-app.get('/ninjaapis/pesquisas/stalker/tiktok', async(req, res, next) => {
+app.get('/api/pesquisas/stalker/tiktok', async(req, res, next) => {
 var { usuario, token } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8774,7 +8765,7 @@ res.json({resultado: `${msgerro}`})
 };
 })
 
-app.get('/ninjaapis/pesquisas/letrasdemusicas',(req,res) => {
+app.get('/api/pesquisas/letrasdemusicas',(req,res) => {
 query = req.query.query
 if(!query)return res.json({
 status:false,
@@ -8794,7 +8785,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/outros/rastreio/aliexpress',(req,res) => {
+app.get('/api/outros/rastreio/aliexpress',(req,res) => {
 var { id, token } = req.query
 if(!id)return res.json({status:false, message:'Cadê o parâmetro: id'})
 if(!token)return res.json({status:false,message:'Cadê o parâmetro: token'})
@@ -8809,7 +8800,7 @@ res.json({erro:'Erro no Servidor Interno'})
 })
 })
 
-app.get('/ninjaapis/pesquisas/stickerly', async(req, res, next) => {
+app.get('/api/pesquisas/stickerly', async(req, res, next) => {
 var { token, text } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8828,7 +8819,7 @@ scrapper.SearchStickerLy(text)
 
 // Codei por cima da Bronxys? Sim! Achei interessante, meu primeiro código puxando por cima de uma api.
 // Desde já, não faça spam de solicitações.
-app.get('/ninjaapis/pesquisas/grupos', async(req, res, next) => {
+app.get('/api/pesquisas/grupos', async(req, res, next) => {
 var { token, text } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8836,7 +8827,7 @@ if (!text) return res.json({ status : false,  message: "faltando o parametro: te
 RegistrarUser(token, req);
 randomK = ["sigma22", "sigma23", "sigma24"]
 keySel = randomK[Math.floor(Math.random() * randomK.length)]
-console.log("[SABAPIS] | Rota: [ /ninjaapis/grupos ] - Usando a token: " + keySel)
+console.log("[SABAPIS] | Rota: [ /api/grupos ] - Usando a token: " + keySel)
 axios.get(`https://api.bronxyshost.com.br/api-bronxys/grupos?apikey=${keySel}&q=${text}`)
 .then((resultado) => {
 return res.json(resultado.data)
@@ -8845,7 +8836,7 @@ res.json({error: "Ocorreu um erro ao filtrar os resultados, contrate o adminstra
 })
 })
 
-app.get('/ninjaapis/ia/ocr', async(req, res, next) => {
+app.get('/api/ia/ocr', async(req, res, next) => {
 var { token, image } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8861,7 +8852,7 @@ res.json({error: "Ocorreu um erro ao filtrar os resultados, contrate o adminstra
 })
 })
 
-app.get('/ninjaapis/nsfw/xvideos/pesquisa', async(req, res, next) => {
+app.get('/api/nsfw/xvideos/pesquisa', async(req, res, next) => {
 var { token, query } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8874,7 +8865,7 @@ res.json({error: "Ocorreu um erro ao filtrar os resultados, contrate o adminstra
 })
 })
 
-app.get('/ninjaapis/nsfw/xnxx/pesquisa', async(req, res, next) => {
+app.get('/api/nsfw/xnxx/pesquisa', async(req, res, next) => {
 var { token, query } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8887,7 +8878,7 @@ res.json({error: "Ocorreu um erro ao filtrar os resultados, contrate o adminstra
 })
 })
 
-app.get('/ninjaapis/nsfw/xnxx/download', async(req, res, next) => {
+app.get('/api/nsfw/xnxx/download', async(req, res, next) => {
 var { token, link } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8900,7 +8891,7 @@ res.json({error: "Ocorreu um erro ao filtrar os resultados, contrate o adminstra
 })
 })
 
-app.get('/ninjaapis/nsfw/xvideos/download', async(req, res, next) => {
+app.get('/api/nsfw/xvideos/download', async(req, res, next) => {
 var { token, link } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
@@ -8913,7 +8904,7 @@ res.json({error: "Ocorreu um erro ao filtrar os resultados, contrate o adminstra
 })
 })
 
-app.get('/ninjaapis/ia/langdetect', async(req, res, next) => {
+app.get('/api/ia/langdetect', async(req, res, next) => {
 var { token, text } = req.query;
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
