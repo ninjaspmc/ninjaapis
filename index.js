@@ -298,6 +298,10 @@ console.log("Beep");
 res.end("Boop");
 })
 app.use(router);
+
+app.get('/api', (req, res) => {
+  res.send('Esta é a API!');
+});
  
 app.get('/api/moderador',(req, res) => {
 res.sendFile(path.join(__dirname, "./public/", "moderador.html"))})
