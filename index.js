@@ -1,7 +1,7 @@
 bla = process.cwd()
 __path = process.cwd()
 //=>=>=>=>=>=>=>=[@]=<=<=<=<=<=<=<=<=//
-const PORT = process.env.PORT || 4012
+// const PORT = process.env.PORT || 4012
 //=>=>=>=>=>=>=>=[@]=<=<=<=<=<=<=<=<=//
 const ffmpeg = require('fluent-ffmpeg');
 const uuid = require('uuid').v4
@@ -8918,9 +8918,9 @@ res.json({error: "Ocorreu um erro ao filtrar o resultado, contrate o adminstrado
 })
          
 //////MOSTRA SE O APP FOI ABERTO
-app.listen(PORT, () => {
-console.log('Aplicativo aberto na porta: ' + PORT)
-})
+// app.listen(PORT, () => {
+// console.log('Aplicativo aberto na porta: ' + PORT)
+// })
 
 
 module.exports = router;
