@@ -15,7 +15,7 @@ const moment = require('moment-timezone')
 const yts = require('yt-search')
 const translate = require('translate-google-api')
 const multer = require('multer')
-const { Lyrics, aliexpress } = require("./base de dados/ali+lyric.js");
+const { Lyrics, aliexpress } = require("../base de dados/ali+lyric.js");
 const express = require('express')
 const request = require('request');
 const cheerio = require('cheerio');
@@ -26,51 +26,51 @@ const uber = require('uberduck-api');
 const AssemblyAI = require("assemblyai");
 const Vagalume = require('@eugabrielsilva/vagalume');
 const Canvasfy = require("canvafy")
-var { igstory} = require('./base de dados/scrape.js');
-const cyberCook = require("./base de dados/receitas.js")
-const InstaStalker = require("./base de dados/instaStalker.js")
-const tinder = JSON.parse(fs.readFileSync("./database/tinder.json"));
-const { xvideosdl, xnxxdl, xvideosSearch, xnxxSearch } = require("./base de dados/+18.js")
-var { searchSpotify } = require('./base de dados/spotify.js');
-const getInfo = require("./base de dados/opsanime.js");
-const { SpotifySearchDL } = require("./base de dados/spotifydl.js");
-const uptodown = require("./base de dados/uptodown.js")
-const icms = require('./base de dados/icms.js')
+var { igstory} = require('../base de dados/scrape.js');
+const cyberCook = require("../base de dados/receitas.js")
+const InstaStalker = require("../base de dados/instaStalker.js")
+const tinder = JSON.parse(fs.readFileSync("../database/tinder.json"));
+const { xvideosdl, xnxxdl, xvideosSearch, xnxxSearch } = require("../base de dados/+18.js")
+var { searchSpotify } = require('../base de dados/spotify.js');
+const getInfo = require("../base de dados/opsanime.js");
+const { SpotifySearchDL } = require("../base de dados/spotifydl.js");
+const uptodown = require("../base de dados/uptodown.js")
+const icms = require('../base de dados/icms.js')
 const { init, askAI, Chat } = require(bla+'/base de dados/modules/bard-ai');
 const { GDriveDl, mediafiredl__ } = require(bla+'/base de dados/download.js');
 const { Youtube } = require('ytdownloader.js')
 var canvasx = require('discord-canvas')
 var { fromBuffer } = require('file-type')
-const BrainlySearch = require('./base de dados/brainly.js')
+const BrainlySearch = require('../base de dados/brainly.js')
 const Canvas = require("@napi-rs/canvas")
-const { PlayLinkMP4_1 } = require('./base de dados/youtube2.js')
-const { instagramStoryUser, igProfileStalk, unsplashSearch } = require('./base de dados/get.js')
-const { fetchJson } = require('./base de dados/myfunc')
-const { audioMeme, yt2mate, yt1s, savef, get, y2bs } = require("./base de dados/sociais-2.js")
+const { PlayLinkMP4_1 } = require('../base de dados/youtube2.js')
+const { instagramStoryUser, igProfileStalk, unsplashSearch } = require('../base de dados/get.js')
+const { fetchJson } = require('../base de dados/myfunc')
+const { audioMeme, yt2mate, yt1s, savef, get, y2bs } = require("../base de dados/sociais-2.js")
 const isUrl = require("is-url")
-var gerarnick = require('./base de dados/gerarnick.js')
-var { mediafireDl } = require('./base de dados/mediafire.js');
-const { fetchTwitterMedia } = require('./base de dados/twtdl.js')
-var buffer = require('./base de dados/upload.js')
+var gerarnick = require('../base de dados/gerarnick.js')
+var { mediafireDl } = require('../base de dados/mediafire.js');
+const { fetchTwitterMedia } = require('../base de dados/twtdl.js')
+var buffer = require('../base de dados/upload.js')
 var exec = require('child_process').exec;
 var { Maker } = require('imagemaker.js')
 var TikTokScraper = require('tiktok-scraper');
 var download = require('@phaticusthiccy/open-apis')
 const { shortText } = require("limit-text-js")
 const CEP = require('cep-address-finder')
-const scraper = require('./base de dados/MULTI_IMDb.js')
+const scraper = require('../base de dados/MULTI_IMDb.js')
 const { rastrearEncomendas, dafontDownload, dafontSearch, xvideosPorno, pensador } = require(bla+"/base de dados/@api.js")      
 const { EmojiAPI } = require("emoji-api");
 const emoji = new EmojiAPI();
 var thiccysapi = require('textmaker-thiccy');
-var { pinterest } = require('./base de dados/funções.js')
-const { BrasileirãoFutebol, getNoticiasEsporte } = require("./base de dados/futebol.js")
-const { download_Url } = require("./base de dados/function.js");
+var { pinterest } = require('../base de dados/funções.js')
+const { BrasileirãoFutebol, getNoticiasEsporte } = require("../base de dados/futebol.js")
+const { download_Url } = require("../base de dados/function.js");
 const mintake = require(bla + '/base de dados/modules/mintake');
 const mumaker = require(bla + '/base de dados/modules/mumaker');
 const { youtubedl, youtubedlv2 } = require(bla + "/base de dados/modules/sosmed")
-const { PlayLinkMP3, PlayLinkMP4, PlayAudio, PlayVideo, ytSearch2 } = require("./base de dados/youtubev1.js");
-const { tikmate, tiklydown } = require("./base de dados/tiktok.js")
+const { PlayLinkMP3, PlayLinkMP4, PlayAudio, PlayVideo, ytSearch2 } = require("../base de dados/youtubev1.js");
+const { tikmate, tiklydown } = require("../base de dados/tiktok.js")
 var wiki = require("@dada513/wikipedia-search")
 const ytdl = require("ytdl-core")
 const tesseract = require("node-tesseract-ocr");
@@ -79,53 +79,53 @@ var trans = require('@vitalets/google-translate-api')
 const SANIME = require('selfietoanime');
 var Deezer = require("deezer-web-api");
 var DeezerClient = new Deezer();
-const {savefrom} = require('./base de dados/savefrom.js')
+const {savefrom} = require('../base de dados/savefrom.js')
 const Pokemon = require('pokemon.js');
 const cors = require('cors')
-const gabriell = require("./base de dados/listdl.js")
-const testing = require("./base de dados/listdl2.js")
+const gabriell = require("../base de dados/listdl.js")
+const testing = require("../base de dados/listdl2.js")
 const BitlyClient = require('bitly').BitlyClient
 const TinyURL = require('tinyurl');
 const { createWorker } = require("tesseract.js")
 const unfetch = require('isomorphic-unfetch');
-const { wikimedia } = require("./base de dados/scraper/wikimedia.js")
-const { wall } = require("./base de dados/scraper/scraper.js")
-var { color } = require('./base de dados/color.js')
-const { Mp3Download, Mp4Download } = require("./base de dados/y2mate.js")
-var { ytMp3, ytMp4, ytPlay, ytPlayMp4, ytSearch, ytVideosSearch } = require('./base de dados/yt.js')
-const { fbdown } = require("./base de dados/facebook.js")
-const { saveig, saveig_reels, getmyfb } = require("./base de dados/sociais.js");
-const { ytDonlodMp3_3, ytDonlodMp4_3, ytPlayMp3_3, ytPlayMp4_3, ytSearch_3 } = require("./base de dados/youtubev3");
-const {  facebook } = require('./base de dados/downloader.js')
-const { gis } = require('./base de dados/gimage.js')
-var { ytMp3_2, ytMp4_2, ytPlay_2 } = require('./base de dados/youtubev2.js')
-var { nerding, gpwhatsapp, apkmody, pornhubsrc, igstalk, soundl, playstore, manga, anime, hentaistube, pornogratis, filme, wattpad } = require('./base de dados/scraper2.js')
-var { pensadorSearch, wallpaper2 } = require('./base de dados/scrapper-api.js')
-var { tiktok2, FacebookMp4 } = require('./base de dados/downloader.js')
-var { PlayStoreSearch, MercadoLivreSearch, AmazonSearch, AmericanasSearch, SubmarinoSearch, Horoscopo, Dicionario } = require('./base de dados/scraper/pesquisas.js');
-var { pinterestVideoV2 } = require('./base de dados/pinterest.js');
-var { kwai } = require('./base de dados/kwai.js')
-var { InArtificial, CorretorOpenAi } = require('./base de dados/scrapper-vip.js');
-var { getVideosPlaylist } = require('./base de dados/playlist.js');
-const scrapper = require("./base de dados/scrapper.js")
-var { G1, Poder360, JovemPan, Uol, CNNBrasil, Estadao } = require('./base de dados/scraper/noticias.js')
+const { wikimedia } = require("../base de dados/scraper/wikimedia.js")
+const { wall } = require("../base de dados/scraper/scraper.js")
+var { color } = require('../base de dados/color.js')
+const { Mp3Download, Mp4Download } = require("../base de dados/y2mate.js")
+var { ytMp3, ytMp4, ytPlay, ytPlayMp4, ytSearch, ytVideosSearch } = require('../base de dados/yt.js')
+const { fbdown } = require("../base de dados/facebook.js")
+const { saveig, saveig_reels, getmyfb } = require("../base de dados/sociais.js");
+const { ytDonlodMp3_3, ytDonlodMp4_3, ytPlayMp3_3, ytPlayMp4_3, ytSearch_3 } = require("../base de dados/youtubev3");
+const {  facebook } = require('../base de dados/downloader.js')
+const { gis } = require('../base de dados/gimage.js')
+var { ytMp3_2, ytMp4_2, ytPlay_2 } = require('../base de dados/youtubev2.js')
+var { nerding, gpwhatsapp, apkmody, pornhubsrc, igstalk, soundl, playstore, manga, anime, hentaistube, pornogratis, filme, wattpad } = require('../base de dados/scraper2.js')
+var { pensadorSearch, wallpaper2 } = require('../base de dados/scrapper-api.js')
+var { tiktok2, FacebookMp4 } = require('../base de dados/downloader.js')
+var { PlayStoreSearch, MercadoLivreSearch, AmazonSearch, AmericanasSearch, SubmarinoSearch, Horoscopo, Dicionario } = require('../base de dados/scraper/pesquisas.js');
+var { pinterestVideoV2 } = require('../base de dados/pinterest.js');
+var { kwai } = require('../base de dados/kwai.js')
+var { InArtificial, CorretorOpenAi } = require('../base de dados/scrapper-vip.js');
+var { getVideosPlaylist } = require('../base de dados/playlist.js');
+const scrapper = require("../base de dados/scrapper.js")
+var { G1, Poder360, JovemPan, Uol, CNNBrasil, Estadao } = require('../base de dados/scraper/noticias.js')
 const path = require("path");
 const { dirname } = require('path');
 var __dirname = dirname(__filename);
-var { memesDroid } = require('./base de dados/scraper/aleacrapper.js')
-var { iFunny } = require("./base de dados/ifunny.js")
-var { ringtone } = require('./base de dados/scraper/ringtone.js')
-var { lirik } = require('./base de dados/sab_scraper.js')
+var { memesDroid } = require('../base de dados/scraper/aleacrapper.js')
+var { iFunny } = require("../base de dados/ifunny.js")
+var { ringtone } = require('../base de dados/scraper/ringtone.js')
+var { lirik } = require('../base de dados/sab_scraper.js')
 const { AnimeWallpaper } = require("anime-wallpaper");
 const BuscaWallpaper = new AnimeWallpaper();
 const { snapsave } = require("@bochilteam/scraper")
-var { facebookDownloader, instaVideoV1 } = require('./base de dados/scraper/downloaders.js')
-var { LetradaMusica } = require('./base de dados/letraMusic.js')
-var { igdl } = require('./base de dados/igdl.js')
-const { comunismo, bolsonaro, bnw, blurr, affect, beautiful, circle, del, gay, lgbt, invert, facepalm, dither, jail, magik, pixelate, rip, sepia, rotate, trash, wanted, wasted, bobross, mms, karaba, WLCM, RankUser } = require('./base de dados/canvas.js')
-const { happymodr } = require('./base de dados/happymod.js')
-const { wikiSearch } = require('./base de dados/wikipediaBr.js');
-const { randomGrupos } = require('./base de dados/groups-random.js');
+var { facebookDownloader, instaVideoV1 } = require('../base de dados/scraper/downloaders.js')
+var { LetradaMusica } = require('../base de dados/letraMusic.js')
+var { igdl } = require('../base de dados/igdl.js')
+const { comunismo, bolsonaro, bnw, blurr, affect, beautiful, circle, del, gay, lgbt, invert, facepalm, dither, jail, magik, pixelate, rip, sepia, rotate, trash, wanted, wasted, bobross, mms, karaba, WLCM, RankUser } = require('../base de dados/canvas.js')
+const { happymodr } = require('../base de dados/happymod.js')
+const { wikiSearch } = require('../base de dados/wikipediaBr.js');
+const { randomGrupos } = require('../base de dados/groups-random.js');
 //=>=>=>=>=>=>=>=[@]=<=<=<=<=<=<=<=<=//
 async function getBuffer(url) {
 he = await fetch(url).then(c => c.buffer())
@@ -149,22 +149,22 @@ return he
 
 //-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-\\
  //==>==>===>===>[ tokenS ]<===<===<===\\
-var key = JSON.parse(fs.readFileSync("./database/tokens.json"));
-const usus_r = JSON.parse(fs.readFileSync("./database/usuarios.json"));
+var key = JSON.parse(fs.readFileSync("../database/tokens.json"));
+const usus_r = JSON.parse(fs.readFileSync("../database/usuarios.json"));
 
 async function RegistrarUser(token, req) {
 var i4 = key.map(i => i?.token)?.indexOf(token)
 if(i4 >= 0) {
 key[i4].request -= 1;
-fs.writeFileSync("./database/tokens.json", JSON.stringify(key, null, 2));
+fs.writeFileSync("../database/tokens.json", JSON.stringify(key, null, 2));
 var IP = req.headers['x-real-ip'] || req.connection.remoteAddress || 0;
 var i3 = usus_r.map(i => i.key).indexOf(token);
 if(i3 < 0 && !usus_r.map(i => i.IP).includes(IP?.split(":")[3])){
 usus_r.push({key: token, IP: [IP?.split(":")[3]]})
-fs.writeFileSync("./database/usuarios.json", JSON.stringify(usus_r, null, 2));
+fs.writeFileSync("../database/usuarios.json", JSON.stringify(usus_r, null, 2));
 } else if(i3 >= 0 && !usus_r[i3]?.IP.includes(IP?.split(":")[3])) {
 usus_r[i3].IP.push(IP?.split(":")[3])
-fs.writeFileSync("./database/usuarios.json", JSON.stringify(usus_r, null, 2));
+fs.writeFileSync("../database/usuarios.json", JSON.stringify(usus_r, null, 2));
 }}}
 
 //-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-\\
@@ -221,8 +221,8 @@ margin: 15,
 //marginBottom: 40,
 align: "center",
 valign: "middle",
-}).render().toFile(`./assets/Edições/${name}`);
-return `./assets/Edições/${name}`;
+}).render().toFile(`../assets/Edições/${name}`);
+return `../assets/Edições/${name}`;
 }
 
 async function attp(text) {
@@ -239,7 +239,7 @@ ttp(text, '#ff00ea', `${nome}6.png`),
 
 return new Promise(function (resolve, reject) {
 // gerar webp
-ffmpeg().addInput((`./assets/Edições/${nome}`+"%d.png"))
+ffmpeg().addInput((`../assets/Edições/${nome}`+"%d.png"))
 .addOutputOptions(['-vcodec', 'libwebp', '-vf','scale=500:500:force_original_aspect_ratio=decrease,setsar=1, pad=500:500:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse', '-loop', '50', '-preset', 'default'])
 //.outputFPS(15)
 .toFormat('webp')
@@ -247,12 +247,12 @@ ffmpeg().addInput((`./assets/Edições/${nome}`+"%d.png"))
 for (let img = 0; img < lista.length; img++) {
 delFile("*png");
 }
-resolve('./assets/Edições/'+nome+'.webp')}).on('error', (err) => {
+resolve('../assets/Edições/'+nome+'.webp')}).on('error', (err) => {
 for (let img = 0; img < lista.length; img++) {
 delFile("*webp");
 }
 reject(('erro ffmpeg ' + err));
-}).save(('./assets/Edições/'+nome+'.webp'));
+}).save(('../assets/Edições/'+nome+'.webp'));
 });
 }
 
@@ -304,10 +304,10 @@ app.get('/api', (req, res) => {
 });
  
 app.get('/api/moderador',(req, res) => {
-res.sendFile(path.join(__dirname, "./public/", "moderador.html"))})
+res.sendFile(path.join(__dirname, "../public/", "moderador.html"))})
 
 app.get('/api/planos',(req, res) => {
-res.sendFile(path.join(__dirname, "./public/", "planos.html"))})
+res.sendFile(path.join(__dirname, "../public/", "planos.html"))})
 
 app.get('/api/add-key-sodono',(req, res) => {
 a = req.query.a
@@ -320,7 +320,7 @@ if(key.map(i => i.token).includes(token)) {
 return res.json({message: "Essa key já está inclusa dentro do sistema.."})
 } else {
 key.push({token: token, request: rq})
-fs.writeFileSync("./database/tokens.json", JSON.stringify(key))
+fs.writeFileSync("../database/tokens.json", JSON.stringify(key))
 return res.json({message: `token ${token} registrada com sucesso..`})
 }
 })
@@ -337,7 +337,7 @@ return res.json({message: "Essa key não está inclusa.."})
 } else {
 var i2 = key.map(i => i.token).indexOf(token)
 key.splice(i2, 1)
-fs.writeFileSync("./database/tokens.json", JSON.stringify(key))
+fs.writeFileSync("../database/tokens.json", JSON.stringify(key))
 return res.json({message: `token ${token} tirada com sucesso..`})
 }
 })
@@ -353,7 +353,7 @@ if(key.map(i => i.token).includes(token)) {
 return res.json({message: "A token digitada já está inclusa dentro do sistema."})
 } else {
 key.push({token: token, request: request})
-fs.writeFileSync("./database/tokens.json", JSON.stringify(key))
+fs.writeFileSync("../database/tokens.json", JSON.stringify(key))
 return res.json({message: `token ${token} registrada em meu sistema com sucesso..`})
 }
 })
@@ -370,7 +370,7 @@ return res.json({message: "Essa token não está inclusa em minha base de dados.
 } else {
 var i2 = key.map(i => i.token).indexOf(token)
 key.splice(i2, 1)
-fs.writeFileSync("./database/tokens.json", JSON.stringify(key))
+fs.writeFileSync("../database/tokens.json", JSON.stringify(key))
 return res.json({message: `token ${token} removida da lista com sucesso..`})
 }
 })
@@ -450,7 +450,7 @@ res.send(await getBuffer(random))
 app.get('/api/animes/aleatorio/metadinha', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 json = JSON.parse(fs.readFileSync(bla +'/base de dados/metadinha.json').toString())
@@ -461,7 +461,7 @@ res.json(random)
 app.get('/api/downloaders/facebook', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
-if (!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if (!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message: "Coloque o parametro: url"})
 RegistrarUser(token, req);
@@ -481,7 +481,7 @@ celular = req.query.celular
 if(!celular)return res.json({status:false, motivo:'Coloque o parâmetro: celular'})
 token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 axios(`https://www.techtudo.com.br/busca/?q=`+celular, Headers={headers}).then(rs => {
@@ -500,7 +500,7 @@ token = req.query.token
 url = req.query.url
 if(!url) return res.json({message: "Faltando o parametro url"})
 if(!token)return res.json({message:'cade o parametro token'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 getsi = await axios.get(query)
@@ -513,11 +513,11 @@ token = req.query.token
 signo = req.query.signo
 if(!signo) return res.json({message: "Faltando o parametro signo"})
 if(!token)return res.json({message:'cade o parametro token'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 DFN_SG = signo.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "")
 if(!JSON.stringify(["aries", "touro", "gemeos", "cancer", "leao", "virgem", "libra", "escorpiao", "sagitario", "capricornio", "aquario", "peixes"]).includes(DFN_SG)) return res.json({message: "Este signo não existe, os signos existentes são: Áries, Touro, Gêmeos, Câncer, Leão, Virgem, Libra, Escorpião, Sagitário, Capricórnio, Aquário e Peixes."})
-var { horoshoje } = require("./base de dados/horoscopo.js");
+var { horoshoje } = require("../base de dados/horoscopo.js");
 RegistrarUser(token, req);
 await horoshoje(DFN_SG).then(signo => {
 res.json({status: 200, resultado: signo})
@@ -537,7 +537,7 @@ message:'Cadê o parâmetro: QUERY'
 })
 token = req.query.token
 if(!token)return res.json({status:false,message:'Cadê o parâmetro: token'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 wikiSearch(query)
@@ -559,7 +559,7 @@ message:'Cadê o parâmetro: QUERY'
 })
 token = req.query.token
 if(!token)return res.json({status:false,message:'Cadê o parâmetro: token'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 pensadorSearch(query)
@@ -581,7 +581,7 @@ message:'Cadê o parâmetro: QUERY'
 })
 token = req.query.token
 if(!token)return res.json({status:false,message:'Cadê o parâmetro: token'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 wallpaper2(query)
@@ -603,7 +603,7 @@ message:'Cadê o parâmetro: url'
 })
 token = req.query.token
 if(!token)return res.json({status:false,message:'Cadê o parâmetro: token'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 ytDonlodMp3_3(url).then(result => {
@@ -619,7 +619,7 @@ res.json({erro:'Erro no Servidor Interno'})
 app.get('/api/downloaders/tiktok', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!url) return res.json({ status : false,  message: "Coloque o parametro: url"})
  RegistrarUser(token, req);
@@ -641,7 +641,7 @@ message:'Cadê o parâmetro: query?'
 })
 token = req.query.token
 if(!token)return res.json({status:false,message:'Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 const VagalumeToken = [
@@ -668,7 +668,7 @@ router.get('/api/figurinhas/emoji/mix', async (req, res, next) => {
 	var emoji2 = req.query.emoji2
 	token = req.query.token
 if(!token)return res.json({status:false,message:'Cadê o parâmetro: token'})
-	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 	if (!emoji1) return res.json({ status : false, message : "[!] parâmetros de entrada  emoji1"})
 	if (!emoji2) return res.json({ status : false, message : "[!] parâmetros de entrada  emoji2"})  
@@ -686,7 +686,7 @@ if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({m
 app.get('/api/pesquisas/filme', async(req, res, next) => {
 token = req.query.token;
 q = req.query.q
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!q) return res.json({ status : false,  message: "Coloque o parametro: q"})
  RegistrarUser(token, req);
@@ -704,7 +704,7 @@ message: `Erro no Servidor Interno`
 app.get('/api/nsfw/pornogratis', async(req, res, next) => {
 token = req.query.token;
 q = req.query.q
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!q) return res.json({ status : false,  message: "Coloque o parametro: q"})
  RegistrarUser(token, req);
@@ -724,7 +724,7 @@ query = req.query.query
 plaquinha = [plaq1, plaq2, plaq3, plaq4, plaq5, plaq6, plaq7, plaq8, plaq9, plaq10, plaq11, plaq12, plaq13]
 tipoplaq = req.query.tipoplaq
 if(tipoplaq.includes(plaquinha)) {
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!query) return res.json({ status : false,  message: "Coloque o parametro: query"})
  RegistrarUser(token, req);
@@ -763,7 +763,7 @@ res.send(imgplaq)
 app.get('/api/nerding', async(req, res, next) => {
 token = req.query.token;
 q = req.query.q
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!q) return res.json({ status : false,  message: "Coloque o parametro: q"})
  RegistrarUser(token, req);
@@ -778,7 +778,7 @@ message: `Erro no Servidor Interno`
 app.get('/api/pesquisas/playstore', async(req, res, next) => {
 token = req.query.token;
 nome = req.query.nome
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!nome) return res.json({ status : false,  message: "Coloque o parametro: nome"})
  RegistrarUser(token, req);
@@ -794,7 +794,7 @@ erro: `${e}`
 app.get('/api/pesquisas/mercadolivre', async(req, res, next) => {
 token = req.query.token;
 nome = req.query.nome
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!nome) return res.json({ status : false,  message: "Coloque o parametro: nome"})
  RegistrarUser(token, req);
@@ -809,7 +809,7 @@ erro: `${e}`
 app.get('/api/pesquisas/amazon', async(req, res, next) => {
 token = req.query.token;
 nome = req.query.nome
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!nome) return res.json({ status : false,  message: "Coloque o parametro: nome"})
  RegistrarUser(token, req);
@@ -824,7 +824,7 @@ erro: `${e}`
 app.get('/api/pesquisas/americanas', async(req, res, next) => {
 token = req.query.token;
 nome = req.query.nome
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!nome) return res.json({ status : false,  message: "Coloque o parametro: nome"})
  RegistrarUser(token, req);
@@ -839,7 +839,7 @@ erro: `${e}`
 app.get('/api/pesquisas/dicionario', async(req, res, next) => {
 token = req.query.token;
 q = req.query.q
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!q) return res.json({ status : false,  message: "Coloque o parametro: q"})
  RegistrarUser(token, req);
@@ -854,7 +854,7 @@ erro: `${e}`
 app.get('/api/pesquisas/pinterest/video', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!url) return res.json({ status : false,  message: "Coloque o parametro: url"})
  RegistrarUser(token, req);
@@ -869,7 +869,7 @@ message: `Erro no Servidor Interno`
 app.get('/api/pesquisas/youtube/playlist', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!url) return res.json({ status : false,  message: "Coloque o parametro: url"})
  RegistrarUser(token, req);
@@ -888,7 +888,7 @@ message: `Erro no Servidor Interno`
 app.get('/api/pesquisas/submarino', async(req, res, next) => {
 token = req.query.token;
 nome = req.query.nome
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!nome) return res.json({ status : false,  message: "Coloque o parametro: nome"})
  RegistrarUser(token, req);
@@ -904,7 +904,7 @@ message: `Erro no Servidor Interno`
 app.get('/api/outros/horoscopo', async(req, res, next) => {
 token = req.query.token;
 signo = req.query.signo
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!signo) return res.json({ status : false,  message: "Coloque o parametro: signo"})
  RegistrarUser(token, req);
@@ -919,7 +919,7 @@ message: `Erro no Servidor Interno`
 app.get('/api/randomgp', async(req, res, next) => {
 token = req.query.token;
 categoria = req.query.categoria
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!categoria) return res.json({ status : false,  message: "Coloque o parametro: categoria"})
  RegistrarUser(token, req);
@@ -934,7 +934,7 @@ message: `Erro no Servidor Interno`
 app.get('/api/downloaders/kwai', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!url) return res.json({ status : false,  message: "Coloque o parametro: url"})
  RegistrarUser(token, req);
@@ -948,7 +948,7 @@ message: `Erro no Servidor Interno`
 app.get('/api/outros/corretor', async(req, res, next) => {
 token = req.query.token;
 texto = req.query.texto
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!texto) return res.json({ status : false,  message: "Coloque o parametro: texto"})
  RegistrarUser(token, req);
@@ -963,7 +963,7 @@ message: `Erro no Servidor Interno`
 
 app.get('/api/pesquisas/memedroid', async(req, res, next) => {
 token = req.query.token;
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 memesDroid().then(dados => {
@@ -976,7 +976,7 @@ message: `Erro no Servidor Interno`
 
 app.get('/api/pesquisas/ifunny', async(req, res, next) => {
 token = req.query.token;
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 iFunny().then(dados => {
@@ -989,7 +989,7 @@ message: `Erro no Servidor Interno`
 app.get('/api/ringtone', async(req, res, next) => {
 query = req.query.query
 token = req.query.token;
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
   if (!query) return res.json({ status : false,  message: "Coloque o parametro: query"})
   RegistrarUser(token, req);
@@ -1004,7 +1004,7 @@ message: `Erro no Servidor Interno`
 
 app.get('/api/noticias/g1', async(req, res, next) => {
 token = req.query.token;
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 G1().then(data => {
@@ -1017,7 +1017,7 @@ message: `Erro no Servidor Interno`
 
 app.get('/api/noticias/jovempannews', async(req, res, next) => {
 token = req.query.token;
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 JovemPan().then(data => {
@@ -1030,7 +1030,7 @@ message: `Erro no Servidor Interno`
 
 app.get('/api/noticias/poder360', async(req, res, next) => {
 token = req.query.token;
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 Poder360().then(data => {
@@ -1043,7 +1043,7 @@ message: `Erro no Servidor Interno`
 
 app.get('/api/noticias/uol', async(req, res, next) => {
 token = req.query.token;
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 Uol().then(data => {
@@ -1056,7 +1056,7 @@ message: `Erro no Servidor Interno`
 
 app.get('/api/noticias/estadao', async(req, res, next) => {
 token = req.query.token;
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 Estadao().then(data => {
@@ -1069,7 +1069,7 @@ message: `Erro no Servidor Interno`
 
 app.get('/api/noticias/cnnbrasil', async(req, res, next) => {
 token = req.query.token;
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 CNNBrasil().then(data => {
@@ -1083,7 +1083,7 @@ message: `Erro no Servidor Interno`
 app.get('/api/pesquisas/gruposdewhatsapp', async(req, res, next) => {
 q = req.query.q;
 token = req.query.token;
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
   if(!q)return res.json({status:false,message:'Cadê o parâmetro q?'})
   RegistrarUser(token, req);
@@ -1105,7 +1105,7 @@ motivo:'Coloque o parâmetro: musica'
 })
 token = req.query.token;
 if(!token)return res.json({status:false,message:'Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 auu = await Kibar(`https://api.popcat.xyz/itunes?q=${musica}`)
@@ -1130,7 +1130,7 @@ app.get('/api/downloaders/pinterest', (req, res) => {
 (async() => {
 token = req.query.token
 text = req.query.text
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!text) return res.json({ status : false,  message : "Cade o parametro text?"})
 RegistrarUser(token, req);
@@ -1173,7 +1173,7 @@ texto = req.query.texto
 token = req.query.token
 if(!texto) return res.json({message: "Faltando o parametro texto"})
 if(!token)return res.json({message:'cade o parametro token'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 await attp(texto).then(img => {
@@ -1191,7 +1191,7 @@ router.get('/api/outros/printweb', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
       if(!link)return res.json({status:false, motivo:'Cadê o parâmetro link?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -1211,7 +1211,7 @@ router.get('/api/ia/bard', async (req, res, next) => {
 var { query, token } = req.query;
 if(!query)return res.json({status:false, motivo:'Cadê o parâmetro query?'})
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 if(key.map(i => i.token)?.includes(token)){
@@ -1227,7 +1227,7 @@ app.get('/api/ia/bing', async(req, res) => {
 try {
 token = req.query.token
 query = req.query.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message : "Cade o parametro query?"}) 
 RegistrarUser(token, req);
@@ -1256,7 +1256,7 @@ return res.json({resultado: `${e}`})
 app.get('/api/ia/chatgpt', async(req, res, next) => {
 token = req.query.token
 query = req.query.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message : "Cade o parametro query?"}) 
 RegistrarUser(token, req);
@@ -1281,7 +1281,7 @@ RegistrarUser(token, req);
 app.get('/api/pesquisas/pesquisaagora', async(req, res, next) => {
 token = req.query.token
 query = req.query.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message : "Cade o parametro query?"}) 
 RegistrarUser(token, req);
@@ -1305,7 +1305,7 @@ RegistrarUser(token, req);
 app.get('/api/outros/fazernick', async (req, res) => {
 token = req.query.token  
 let nome = req.query.nome || res.json({message: 'insira o parâmetro: ?nome='})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 await gerarnick(nome)
@@ -1319,7 +1319,7 @@ res.json({erro:'Erro no Servidor Interno'})
 app.get('/api/downloaders/mediafire', async (req, res, next) => {
 token = req.query.token
 url = req.query.url
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message : "Cade o parametro url?"})
 RegistrarUser(token, req);
@@ -1342,7 +1342,7 @@ if(!JSON.stringify(['futebol', 'basquete', 'volei', 'tenis', 'atletismo', 'natac
     message: "De acordo com o esporte selecionado, não é possível encontrar resultados exatos sobre. Por favor, verifique o tipos disponíveis abaixo para obter resultados exatos sobre o esporte!",
     esportes: ['futebol', 'basquete', 'volei', 'tenis', 'atletismo', 'natacao', 'ciclismo', 'boxe', 'beisebol', 'judo', 'ginastica-artistica', 'futebol-americano', 'futsal', 'golfe', 'surfe', 'skate', 'formula-1']
   })
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 getNoticiasEsporte(DFN_NTC)
@@ -1364,7 +1364,7 @@ if(!JSON.stringify(["esports", "cod", "csgo", "fifa", "fortnite", "freefire", "g
     message: "De acordo com o jogo selecionado, não é possível encontrar resultados exatos sobre. Por favor, verifique o tipos disponíveis abaixo para obter resultados exatos sobre o jogo!",
     jogos: ["esports", "cod", "csgo", "fifa", "fortnite", "freefire", "gamexp", "pes", "pokemon", "rainbow-6", "valorant", "tcg"]
   })
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 getNoticiasEsporte(query)
@@ -1382,7 +1382,7 @@ res.json({erro:'Erro no Servidor Interno'})
 app.get('/api/downloaders/mediafire', async (req, res, next) => {
 token = req.query.token
 url = req.query.url
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message : "Cade o parametro url?"})
 RegistrarUser(token, req);
@@ -1400,7 +1400,7 @@ res.json({erro:'Erro no Servidor Interno'})
 app.get('/api/pesquisas/wikimedia', async (req, res, next) => {
 token = req.query.token
 query = req.query.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message : "Cade o parametro query?"})
 RegistrarUser(token, req);
@@ -1420,7 +1420,7 @@ app.get('/api/googleimage',(req,res) => {
 token = req.query.token
 txt = req.query.txt
 if(!txt) return res.json({message: "Faltando o parametro txt"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 GOOGLE_IMG_SCRAP({
@@ -1435,7 +1435,7 @@ app.get('/api/pesquisas/googlesearch',(req,res) => {
 token = req.query.token
 query = req.query.query
 if(!query) return res.json({message: "Faltando o parametro query"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 GOOGLE_IMG_SCRAP({search: query})
@@ -1450,7 +1450,7 @@ app.get('/api/wattpad',  async (req, res, next) => {
 token = req.query.token
 query = req.query.query
 if (!query) return res.json({ status : false,  message : "Cade o parametro query?"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 wattpad(query).then(result => {
@@ -1466,7 +1466,7 @@ app.get('/api/pesquisas/animetv/search',  async (req, res, next) => {
 token = req.query.token
 query = req.query.query
 if (!query) return res.json({ status : false,  message : "Cade o parametro query?"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 getInfo.animeTv.search(query).then(result => {
@@ -1483,7 +1483,7 @@ app.get('/api/pesquisas/animetv/info',  async (req, res, next) => {
 token = req.query.token
 url = req.query.url
 if (!url) return res.json({ status : false,  message : "Cade o parametro url?"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 getInfo.animeTv.list(url).then(result => {
@@ -1500,7 +1500,7 @@ app.get('/api/consultas/operadora',  async (req, res, next) => {
 token = req.query.token
 numero = req.query.numero
 if (!numero) return res.json({ status : false,  message : "Cade o parametro numero?"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 getInfo.qualOperadora(numero).then(result => {
@@ -1517,7 +1517,7 @@ app.get('/api/downloaders/instagram/reels', async (req, res, next) => {
 token = req.query.token
 url = req.query.url
 if (!url) return res.json({ status : false,  message : "Cade o parametro url?"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 saveig_reels(url).then(data => {
@@ -1533,7 +1533,7 @@ app.get('/api/logos/marvel', async (req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-3d-avengers-logo-online-974.html", [`${texto}`,`${texto2}`])
@@ -1549,7 +1549,7 @@ res.json({erro:'Erro no Servidor Interno'})
 app.get('/api/logos/3ddragon', async (req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-3d-dragon-scale-text-effect-online-1127.html", [`${texto}`])
@@ -1565,7 +1565,7 @@ res.json({erro:'Erro no Servidor Interno'})
 app.get('/api/logos/cartoon', async (req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/3d-cartoon-text-effect-generator-online-1123.html", [`${texto}`])
@@ -1581,7 +1581,7 @@ res.json({erro:'Erro no Servidor Interno'})
 app.get('/api/logos/deepsea', async (req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-3d-deep-sea-metal-text-effect-online-1053.html", [`${texto}`])
@@ -1600,7 +1600,7 @@ texto2 = req.query.texto2;
 token = req.query.token
 if(!texto)return res.json({status:false,message:'cade o parametro texto'})
 if(!texto2)return res.json({status:false,message:'cade o parametro texto2'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-thor-logo-style-text-effect-online-1064.html", [`${texto}`, `${texto2}`])
@@ -1616,7 +1616,7 @@ res.json({erro:'Erro no Servidor Interno'})
 app.get('/api/logos/hologram', async (req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/hologram-color-3d-text-effect-generator-online-1117.html", [`${texto}`])
@@ -1633,7 +1633,7 @@ app.get('/api/logos/pornhub', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/pornhub-style-logo-online-generator-free-977.html", [`${texto}`,`${texto2}`])
@@ -1652,7 +1652,7 @@ texto2 = req.query.texto2;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
 if(!texto2) return res.json({status:false,message:'cade o parametro texto2'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-space-3d-text-effect-online-985.html", [`${texto}`,`${texto2}`])
@@ -1669,7 +1669,7 @@ app.get('/api/logos/stone', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-a-stone-text-effect-online-982.html", [`${texto}`,`${texto2}`])
@@ -1686,7 +1686,7 @@ app.get('/api/logos/steel', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/3d-steel-text-effect-877.html", [`${texto}`,`${texto2}`])
@@ -1703,7 +1703,7 @@ app.get('/api/logos/grafity', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-a-cool-graffiti-text-on-the-wall-1010.html", [`${texto}`,`${texto2}`])
@@ -1720,7 +1720,7 @@ app.get('/api/logos/glitch3', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-a-glitch-text-effect-online-free-1026.html", [`${texto}`,`${texto2}`])
@@ -1737,7 +1737,7 @@ app.get('/api/logos/america', async(req, res, next) => {
 texto = req.query.texto;
 texto2 = req.query.texto2;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-a-captain-america-text-effect-free-online-1039.html", [`${texto}`,`${texto2}`])
@@ -1757,7 +1757,7 @@ router.get('/api/logos/brilhante', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 mumaker.ephoto("https://ephoto360.com/tao-hieu-ung-chu-phat-sang-online-834.html", [nome]).then(async(daynsdata) => {
 resul = await getBuffer(daynsdata)
@@ -1772,7 +1772,7 @@ router.get('/api/logos/blur', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 mumaker.ephoto("https://ephoto360.com/hieu-ung-viet-chu-len-cua-kinh-mua-tam-trang-dep-682.html", [nome]).then(async(daynsdata) => {
 resul = await getBuffer(daynsdata)
@@ -1787,7 +1787,7 @@ router.get('/api/logos/goldt', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 mumaker.ephoto("https://ephoto360.com/hieu-ung-chu/hieu-ung-chu-vang-moi-271.html", [nome]).then(async(daynsdata) => {
 resul = await getBuffer(daynsdata)
@@ -1802,7 +1802,7 @@ router.get('/api/logos/tela', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 mumaker.ephoto("https://ephoto360.com/hieu-ung-chu/hieu-ung-chu-tren-vai-62.html", [nome]).then(async(daynsdata) => {
 resul = await getBuffer(daynsdata)
@@ -1817,7 +1817,7 @@ router.get('/api/logos/vietnam', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 mumaker.ephoto("https://ephoto360.com/tao-hieu-ung-chu-quoc-ky-viet-nam-truc-tuyen-884.html", [nome]).then(async(daynsdata) => {
 resul = await getBuffer(daynsdata)
@@ -1832,7 +1832,7 @@ router.get('/api/logos/seta', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 mumaker.ephoto("https://ephoto360.com/tao-hieu-ung-mui-ten-dinh-kem-chu-ky-nhieu-mau-846.html", [nome]).then(async(daynsdata) => {
 resul = await getBuffer(daynsdata)
@@ -1848,7 +1848,7 @@ token = req.query.token;
 nome = req.query.texto;
 nome2 = req.query.texto2;
 if (nome === undefined || nome2 === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & texto2 & token`});
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 mumaker.ephoto("https://ephoto360.com/viet-chu-graffiti-nghe-thuat-tren-tuong-day-mau-sac-792.html", [nome, nome2]).then(async(daynsdata) => {
 resul = await getBuffer(daynsdata)
@@ -1863,7 +1863,7 @@ router.get('/api/logos/pubgv', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 mumaker.ephoto("https://ephoto360.com/tao-avatar-video-pubg-phong-cach-nhieu-song-glitch-627.html", [nome]).then(async(daynsdata) => {
 resul = await getBuffer(daynsdata)
@@ -1878,7 +1878,7 @@ router.get('/api/logos/anonovo', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 mumaker.ephoto("https://ephoto360.com/tao-thiep-video-new-year-countdown-2022-888.html", [nome]).then(async(daynsdata) => {
 resul = await getBuffer(daynsdata)
@@ -1893,7 +1893,7 @@ router.get('/api/logos/natalmsg', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 mumaker.ephoto("https://ephoto360.com/tao-thiep-video-giang-sinh-dep-va-an-tuong-danh-tang-ban-be-va-nguoi-than-885.html", [nome]).then(async(daynsdata) => {
 resul = await getBuffer(daynsdata)
@@ -1908,7 +1908,7 @@ router.get('/api/logos/trigrev', async (req, res) => {
 token = req.query.token;
 nome = req.query.texto;
 if (nome === undefined || token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro texto & token`});
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 mumaker.ephoto("https://ephoto360.com/hieu-ung-video-logo-con-ho-ky-thuat-so-862.html", [nome]).then(async(daynsdata) => {
 resul = await getBuffer(daynsdata)
@@ -1925,7 +1925,7 @@ router.get('/api/logos/photooxy/flaming', async (req, res, next) => {
 var text1 = req.query.texto
 if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 gabriell.photooxy("https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html", [text1])
@@ -1943,7 +1943,7 @@ router.get('/api/logos/photooxy/shadow-sky', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 gabriell.photooxy("https://photooxy.com/logo-and-text-effects/shadow-text-effect-in-the-sky-394.html", [text1])
@@ -1961,7 +1961,7 @@ router.get('/api/logos/photooxy/metallic', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 gabriell.photooxy("https://photooxy.com/other-design/create-metallic-text-glow-online-188.html", [text1])
@@ -1979,7 +1979,7 @@ router.get('/api/logos/photooxy/naruto', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 gabriell.photooxy("https://photooxy.com/manga-and-anime/make-naruto-banner-online-free-378.html", [text1])
@@ -1999,7 +1999,7 @@ router.get('/api/logos/photooxy/pubg', async (req, res, next) => {
 	var Texto2 = req.query.texto2
 	if (!Texto2) return res.json({ status : false, message: "[!] Digite o parâmetro de texto2"})  
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 gabriell.photooxy("https://photooxy.com/battlegrounds/make-wallpaper-battlegrounds-logo-text-146.html", [text1,Texto2])
@@ -2016,7 +2016,7 @@ router.get('/api/logos/photooxy/under-grass', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})    
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 gabriell.photooxy("https://photooxy.com/logo-and-text-effects/make-quotes-under-grass-376.html", [text1])
@@ -2033,7 +2033,7 @@ router.get('/api/logos/photooxy/harry-potter', async (req, res, next) => {
 	var text1 = req.query.texto
     if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
     var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 gabriell.photooxy("https://photooxy.com/logo-and-text-effects/create-harry-potter-text-on-horror-background-178.html", [text1])
@@ -2050,7 +2050,7 @@ router.get('/api/logos/photooxy/flower-typography', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 gabriell.photooxy("https://photooxy.com/art-effects/flower-typography-text-effect-164.html", [text1])
@@ -2067,7 +2067,7 @@ router.get('/api/logos/photooxy/picture-of-love', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 gabriell.photooxy("https://photooxy.com/logo-and-text-effects/create-a-picture-of-love-message-377.html", [text1])
@@ -2084,7 +2084,7 @@ router.get('/api/logos/photooxy/coffee-cup', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 gabriell.photooxy("https://photooxy.com/logo-and-text-effects/put-any-text-in-to-coffee-cup-371.html", [text1])
@@ -2101,7 +2101,7 @@ router.get('/api/logos/photooxy/butterfly', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 gabriell.photooxy("https://photooxy.com/logo-and-text-effects/butterfly-text-with-reflection-effect-183.html", [text1])
@@ -2118,7 +2118,7 @@ router.get('/api/logos/photooxy/night-sky', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 gabriell.photooxy("https://photooxy.com/logo-and-text-effects/write-stars-text-on-the-night-sky-200.html", [text1])
@@ -2136,7 +2136,7 @@ router.get('/api/logos/photooxy/carved-wood', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 gabriell.photooxy("https://photooxy.com/logo-and-text-effects/carved-wood-effect-online-171.html", [text1])
@@ -2154,7 +2154,7 @@ router.get('/api/logos/photooxy/illuminated-metallic', async (req, res, next) =>
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 gabriell.photooxy("https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html", [text1])
@@ -2171,7 +2171,7 @@ router.get('/api/logos/photooxy/sweet-candy', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);  
 gabriell.photooxy("https://photooxy.com/logo-and-text-effects/sweet-andy-text-online-168.html", [text1])
@@ -2188,7 +2188,7 @@ router.get('/api/logos/1917', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/1917-style-text-effect-online-980.html", [text1])
@@ -2205,7 +2205,7 @@ router.get('/api/logos/robotr2', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/robot-r2-d2-text-effect-903.html", [text1])
@@ -2222,7 +2222,7 @@ router.get('/api/logos/purpleshiny', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/purple-shiny-glass-text-effect-906.html", [text1])
@@ -2239,7 +2239,7 @@ router.get('/api/logos/rock', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/rock-text-effect-online-915.html", [text1])
@@ -2256,7 +2256,7 @@ router.get('/api/logos/1917', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/peridot-stone-text-effect-916.html", [text1])
@@ -2275,7 +2275,7 @@ router.get('/api/logos/ninjalogo', async (req, res, next) => {
 	var text2 = req.query.texto
 	if (!text2) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-ninja-logo-online-935.html", [text1, text2])
@@ -2292,7 +2292,7 @@ router.get('/api/logos/toxic', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/toxic-text-effect-online-901.html", [text1])
@@ -2309,7 +2309,7 @@ router.get('/api/logos/captain', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/captain-america-text-effect-905.html", [text1])
@@ -2326,7 +2326,7 @@ router.get('/api/logos/stargreen', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/decorate-green-text-effect-918.html", [text1])
@@ -2343,7 +2343,7 @@ router.get('/api/logos/denimtext', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/denim-text-effect-online-919.html", [text1])
@@ -2360,7 +2360,7 @@ router.get('/api/logos/ultragloss', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/ultra-gloss-text-effect-online-920.html", [text1])
@@ -2377,7 +2377,7 @@ router.get('/api/logos/goldfoil', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/gold-foil-balloon-text-effect-922.html", [text1])
@@ -2394,7 +2394,7 @@ router.get('/api/logos/steeltext', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/steel-text-effect-online-921.html", [text1])
@@ -2411,7 +2411,7 @@ router.get('/api/logos/wicker', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/wicker-text-effect-online-932.html", [text1])
@@ -2428,7 +2428,7 @@ router.get('/api/logos/joker', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-logo-joker-online-934.html", [text1])
@@ -2445,7 +2445,7 @@ router.get('/api/logos/metaldark', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/metal-dark-gold-text-effect-online-939.html", [text1])
@@ -2462,7 +2462,7 @@ router.get('/api/logos/darkgold', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/metal-dark-gold-text-effect-online-939.html", [text1])
@@ -2479,7 +2479,7 @@ router.get('/api/logos/halloweenfire', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/halloween-fire-text-effect-940.html", [text1])
@@ -2496,7 +2496,7 @@ router.get('/api/logos/fabric', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/fabric-text-effect-online-964.html", [text1])
@@ -2513,7 +2513,7 @@ router.get('/api/logos/firework', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/firework-sparkle-text-effect-930.html", [text1])
@@ -2530,7 +2530,7 @@ router.get('/api/logos/glossycarbon', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/glossy-carbon-text-effect-965.html", [text1])
@@ -2547,7 +2547,7 @@ router.get('/api/logos/deluxe', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/deluxe-silver-text-effect-970.html", [text1])
@@ -2564,7 +2564,7 @@ router.get('/api/logos/deluxegold', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/deluxe-gold-text-effect-966.html", [text1])
@@ -2581,7 +2581,7 @@ router.get('/api/logos/holographic', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/holographic-3d-text-effect-975.html", [text1])
@@ -2598,7 +2598,7 @@ router.get('/api/logos/horrorgift', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/horror-gift-text-effect-866.html", [text1])
@@ -2615,7 +2615,7 @@ router.get('/api/logos/minion', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/minion-text-effect-3d-online-978.html", [text1])
@@ -2632,7 +2632,7 @@ router.get('/api/logos/galaxystyle', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/neon-light-text-effect-with-galaxy-style-981.html", [text1])
@@ -2649,7 +2649,7 @@ router.get('/api/logos/glossyblue', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/glossy-blue-metal-text-effect-967.html", [text1])
@@ -2666,7 +2666,7 @@ router.get('/api/logos/dark', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/metal-dark-gold-text-effect-984.html", [text1])
@@ -2683,7 +2683,7 @@ router.get('/api/logos/sandsummer', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/write-in-sand-summer-beach-free-online-991.html", [text1])
@@ -2700,7 +2700,7 @@ router.get('/api/logos/sandengraved', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/sand-engraved-3d-text-effect-989.html", [text1])
@@ -2717,7 +2717,7 @@ router.get('/api/logos/sandwriting', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/sand-writing-text-effect-online-990.html", [text1])
@@ -2734,7 +2734,7 @@ router.get('/api/logos/winter', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-snow-text-effects-for-winter-holidays-1005.html", [text1])
@@ -2751,7 +2751,7 @@ router.get('/api/logos/technology', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-a-futuristic-technology-neon-light-text-effect-1006.html", [text1])
@@ -2768,7 +2768,7 @@ router.get('/api/logos/scifi', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-3d-sci-fi-text-effect-online-1050.html", [text1])
@@ -2785,7 +2785,7 @@ router.get('/api/logos/americanflag', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-american-flag-3d-text-effect-online-1051.html", [text1])
@@ -2802,7 +2802,7 @@ router.get('/api/logos/drug', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/plastic-bag-drug-text-effect-867.html", [text1])
@@ -2819,7 +2819,7 @@ router.get('/api/logos/3ddeep', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-3d-deep-sea-metal-text-effect-online-1053.html", [text1])
@@ -2840,7 +2840,7 @@ token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
 if(!texto2) return res.json({message: "Cade o parametro texto2"})
 if(!texto3) return res.json({message: "Cade o parametro texto3"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 Maker().TextPro("https://textpro.me/80-s-retro-neon-text-effect-online-979.html", [`${texto}`, `${texto2}`, `${texto3}`])
@@ -2856,7 +2856,7 @@ router.get('/api/logos/naturalleaves', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/natural-leaves-text-effect-931.html", [text1])
@@ -2873,7 +2873,7 @@ router.get('/api/logos/multicolor', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/online-multicolor-3d-paper-cut-text-effect-1016.html", [text1])
@@ -2890,7 +2890,7 @@ router.get('/api/logos/merrychristmas', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/sparkles-merry-christmas-text-effect-1054.html", [text1])
@@ -2907,7 +2907,7 @@ router.get('/api/logos/christmas', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-a-christmas-holiday-snow-text-effect-1007.html", [text1])
@@ -2924,7 +2924,7 @@ router.get('/api/logos/holiday', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-a-christmas-holiday-snow-text-effect-1007.html", [text1])
@@ -2941,7 +2941,7 @@ router.get('/api/logos/candycane', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-christmas-candy-cane-text-effect-1056.html", [text1])
@@ -2958,7 +2958,7 @@ router.get('/api/logos/generator', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/3d-underwater-text-effect-generator-online-1013.html", [text1])
@@ -2975,7 +2975,7 @@ router.get('/api/logos/glue', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-3d-glue-text-effect-with-realistic-style-986.html", [text1])
@@ -2992,7 +2992,7 @@ router.get('/api/logos/wonderful', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-wonderful-graffiti-art-text-effect-1011.html", [text1])
@@ -3009,7 +3009,7 @@ router.get('/api/logos/watercolor', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-a-free-online-watercolor-text-effect-1017.html", [text1])
@@ -3026,7 +3026,7 @@ router.get('/api/logos/glitch', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-impressive-glitch-text-effects-online-1027.html", [text1])
@@ -3044,7 +3044,7 @@ router.get('/api/logos/blackpink', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-blackpink-logo-style-online-1001.html", [text1])
@@ -3062,7 +3062,7 @@ router.get('/api/logos/berry', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-berry-text-effect-online-free-1033.html", [text1])
@@ -3079,7 +3079,7 @@ router.get('/api/logos/neonlight', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/neon-light-text-effect-online-882.html", [text1])
@@ -3096,7 +3096,7 @@ router.get('/api/logos/neon', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/neon-text-effect-online-963.html", [text1])
@@ -3113,7 +3113,7 @@ router.get('/api/logos/logobear', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 		var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req); 
 	mumaker.textpro("https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html", [text1])
@@ -3131,7 +3131,7 @@ router.get('/api/logos/3dchristmas', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/3d-christmas-text-effect-by-Name-1055.html", [text1])
@@ -3149,7 +3149,7 @@ router.get('/api/logos/thunder', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/online-thunder-text-effect-generator-1031.html", [text1])
@@ -3167,7 +3167,7 @@ router.get('/api/logos/3dbox', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/3d-box-text-effect-online-880.html", [text1])
@@ -3187,7 +3187,7 @@ router.get('/api/logos/glitch', async (req, res, next) => {
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	if (!Texto2) return res.json({ status : false, message: "[!] Digite o parâmetro de texto2"}) 
 		var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-a-glitch-text-effect-online-free-1026.html", [text1,Texto2])
@@ -3206,7 +3206,7 @@ router.get('/api/logos/glitchtiktok', async (req, res, next) => {
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	if (!Texto2) return res.json({ status : false, message: "[!] Digite o parâmetro de texto2"}) 
 		var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-glitch-text-effect-style-tik-tok-983.html", [text1,Texto2])
@@ -3225,7 +3225,7 @@ router.get('/api/logos/video-game-classic', async (req, res, next) => {
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	if (!Texto2) return res.json({ status : false, message: "[!] Digite o parâmetro de texto2"}) 
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);	
 	mumaker.textpro("https://textpro.me/video-game-classic-8-bit-text-effect-1037.html", [text1,Texto2])
@@ -3244,7 +3244,7 @@ router.get('/api/logos/marvel-studios', async (req, res, next) => {
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	if (!Texto2) return res.json({ status : false, message: "[!] Digite o parâmetro de texto2"}) 
 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);	
 	mumaker.textpro("https://textpro.me/create-logo-style-marvel-studios-online-971.html", [text1,Texto2])
@@ -3263,7 +3263,7 @@ router.get('/api/logos/ninja-logo', async (req, res, next) => {
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 	if (!Texto2) return res.json({ status : false, message: "[!] Digite o parâmetro de texto2"}) 
 		var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-ninja-logo-online-935.html", [text1,Texto2])
@@ -3280,7 +3280,7 @@ router.get('/api/logos/green-horror', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})
 		var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);   
 	mumaker.textpro("https://textpro.me/create-green-horror-style-text-effect-online-1036.html", [text1])
@@ -3297,7 +3297,7 @@ router.get('/api/logos/magma', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-a-magma-hot-text-effect-online-1030.html", [text1])
@@ -3314,7 +3314,7 @@ router.get('/api/logos/3d-neon-light', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-3d-neon-light-text-effect-online-1028.html", [text1])
@@ -3331,7 +3331,7 @@ router.get('/api/logos/3d-orange-juice', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})  
 	 	var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/create-a-3d-orange-juice-text-effect-online-1084.html", [text1])
@@ -3348,7 +3348,7 @@ router.get('/api/logos/chocolate-cake', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/chocolate-cake-text-effect-890.html", [text1])
@@ -3365,7 +3365,7 @@ router.get('/api/logos/strawberry', async (req, res, next) => {
 	var text1 = req.query.texto
 	if (!text1) return res.json({ status : false, message: "[!] Digite o parâmetro de texto"})   
 		var token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	mumaker.textpro("https://textpro.me/strawberry-text-effect-online-889.html", [text1])
@@ -3382,7 +3382,7 @@ app.get('/api/logos/angelwing', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/create-colorful-angel-wing-avatars-731.html", [`${texto}`])
@@ -3399,7 +3399,7 @@ app.get('/api/logos/hackneon', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/create-anonymous-hacker-avatars-cyan-neon-677.html", [`${texto}`])
@@ -3416,7 +3416,7 @@ app.get('/api/logos/fpsmascote', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/free-gaming-logo-maker-for-fps-game-team-546.html", [`${texto}`])
@@ -3433,7 +3433,7 @@ app.get('/api/logos/equipemascote', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/make-team-logo-online-free-432.html", [`${texto}`])
@@ -3450,7 +3450,7 @@ app.get('/api/logos/txtquadrinhos', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/boom-text-comic-style-text-effect-675.html", [`${texto}`])
@@ -3467,7 +3467,7 @@ app.get('/api/logos/3dsilver', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/create-glossy-silver-3d-text-effect-online-802.html", [`${texto}`])
@@ -3484,7 +3484,7 @@ app.get('/api/logos/frozen', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/create-a-frozen-christmas-text-effect-online-792.html", [`${texto}`])
@@ -3501,7 +3501,7 @@ app.get('/api/logos/goldtext', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/gold-text-effect-158.html", [`${texto}`])
@@ -3518,7 +3518,7 @@ app.get('/api/logos/starballons', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/beautiful-3d-foil-balloon-effects-for-holidays-and-birthday-803.html", [`${texto}`])
@@ -3535,7 +3535,7 @@ app.get('/api/logos/ffavatar', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/create-free-fire-avatar-online-572.html", [`${texto}`])
@@ -3554,7 +3554,7 @@ texto2 = req.query.texto2;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
 if(!texto2) return res.json({message: "Cade o parametro texto2"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/make-your-own-free-fire-youtube-banner-online-free-562.html", [`${texto}`, `${texto2}`])
@@ -3571,7 +3571,7 @@ app.get('/api/logos/mascotegame', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/create-a-gaming-mascot-logo-free-560.html", [`${texto}`])
@@ -3590,7 +3590,7 @@ texto2 = req.query.texto2;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
 if(!texto2) return res.json({message: "Cade o parametro texto2"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/create-logo-avatar-mascot-style-364.html", [`${texto}`, `${texto2}`])
@@ -3606,7 +3606,7 @@ app.get('/api/logos/wingeffect', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/the-effect-of-galaxy-angel-wings-289.html", [`${texto}`])
@@ -3622,7 +3622,7 @@ app.get('/api/logos/angelglx', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/wings-galaxy-206.html", [`${texto}`])
@@ -3638,7 +3638,7 @@ app.get('/api/logos/gizquadro', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/writing-chalk-on-the-blackboard-30.html", [`${texto}`])
@@ -3654,7 +3654,7 @@ app.get('/api/logos/blackpink', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/create-a-blackpink-neon-logo-text-effect-online-710.html", [`${texto}`])
@@ -3670,7 +3670,7 @@ app.get('/api/logos/girlmascote', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/create-cute-girl-gamer-mascot-logo-online-687.html", [`${texto}`])
@@ -3686,7 +3686,7 @@ app.get('/api/logos/logogame', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().Ephoto360("https://en.ephoto360.com/create-logo-team-logo-gaming-assassin-style-574.html", [`${texto}`])
@@ -3702,7 +3702,7 @@ app.get('/api/logos/romantic', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/romantic-messages-for-your-loved-one-391.html", [`${texto}`])
@@ -3718,7 +3718,7 @@ app.get('/api/logos/fire', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html", [`${texto}`])
@@ -3734,7 +3734,7 @@ app.get('/api/logos/smoke', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/other-design/create-an-easy-smoke-type-effect-390.html", [`${texto}`])
@@ -3750,7 +3750,7 @@ app.get('/api/logos/papel', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/write-text-on-burn-paper-388.html", [`${texto}`])
@@ -3766,7 +3766,7 @@ app.get('/api/logos/narutologo', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/manga-and-anime/make-naruto-banner-online-free-378.html", [`${texto}`])
@@ -3782,7 +3782,7 @@ app.get('/api/logos/lovemsg', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/create-a-picture-of-love-message-377.html", [`${texto}`])
@@ -3798,7 +3798,7 @@ app.get('/api/logos/lovemsg2', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/make-quotes-under-grass-376.html", [`${texto}`])
@@ -3814,7 +3814,7 @@ app.get('/api/logos/lovemsg3', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/love-text-effect-372.html", [`${texto}`])
@@ -3830,7 +3830,7 @@ app.get('/api/logos/coffecup', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/put-any-text-in-to-coffee-cup-371.html", [`${texto}`])
@@ -3846,7 +3846,7 @@ app.get('/api/logos/coffecup2', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/put-your-text-on-a-coffee-cup--174.html", [`${texto}`])
@@ -3862,7 +3862,7 @@ app.get('/api/logos/florwooden', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/writing-on-wooden-boards-368.html", [`${texto}`])
@@ -3878,7 +3878,7 @@ app.get('/api/logos/madeira', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/carved-wood-effect-online-171.html", [`${texto}`])
@@ -3896,7 +3896,7 @@ texto2 = req.query.texto2;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
 if(!texto2) return res.json({message: "Cade o parametro texto2"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/8-bit-text-on-arcade-rift-175.html", [`${texto}`, `${texto2}`])
@@ -3916,7 +3916,7 @@ token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
 if(!texto2) return res.json({message: "Cade o parametro texto2"})
 if(!texto3) return res.json({message: "Cade o parametro texto3"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/other-design/make-google-suggestion-photos-238.html", [`${texto}`, `${texto2}`, `${texto3}`])
@@ -3932,7 +3932,7 @@ app.get('/api/logos/neon2', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html", [`${texto}`])
@@ -3948,7 +3948,7 @@ app.get('/api/logos/lobometal', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/create-a-wolf-metal-text-effect-365.html", [`${texto}`])
@@ -3964,7 +3964,7 @@ app.get('/api/logos/harryp', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/create-harry-potter-text-on-horror-background-178.html", [`${texto}`])
@@ -3980,7 +3980,7 @@ app.get('/api/logos/cup', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html", [`${texto}`])
@@ -3996,7 +3996,7 @@ app.get('/api/logos/txtborboleta', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/butterfly-text-with-reflection-effect-183.html", [`${texto}`])
@@ -4012,7 +4012,7 @@ app.get('/api/logos/shadow', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/shadow-text-effect-in-the-sky-394.html", [`${texto}`])
@@ -4028,7 +4028,7 @@ app.get('/api/logos/cemiterio', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/text-on-scary-cemetery-gate-172.html", [`${texto}`])
@@ -4044,7 +4044,7 @@ app.get('/api/logos/metalgold', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/other-design/create-metallic-text-glow-online-188.html", [`${texto}`])
@@ -4060,7 +4060,7 @@ app.get('/api/logos/efeitoneon', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({message: "Cade o parametro texto"})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 new Maker().PhotoOxy("https://photooxy.com/logo-and-text-effects/make-smoky-neon-glow-effect-343.html", [`${texto}`])
@@ -4076,7 +4076,7 @@ app.get('/api/logos/transformer', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-a-transformer-text-effect-online-1035.html", [`${texto}`])
@@ -4092,7 +4092,7 @@ app.get('/api/logos/narutologo2', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-naruto-logo-style-text-effect-online-1125.html", [`${texto}`])
@@ -4108,7 +4108,7 @@ app.get('/api/logos/3dstone', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/3d-stone-cracked-cool-text-effect-1029.html", [`${texto}`])
@@ -4124,7 +4124,7 @@ app.get('/api/logos/fiction', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-science-fiction-text-effect-online-free-1038.html", [`${texto}`])
@@ -4140,7 +4140,7 @@ app.get('/api/logos/esmeralda', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-luxury-3d-emerald-text-effects-online-1126.html", [`${texto}`])
@@ -4156,7 +4156,7 @@ app.get('/api/logos/cattxt', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/write-text-on-foggy-window-online-free-1015.html", [`${texto}`])
@@ -4172,7 +4172,7 @@ app.get('/api/logos/neondevil', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html", [`${texto}`])
@@ -4188,7 +4188,7 @@ app.get('/api/logos/demonfire', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-a-magma-hot-text-effect-online-1030.html", [`${texto}`])
@@ -4204,7 +4204,7 @@ app.get('/api/logos/colaq', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-3d-glue-text-effect-with-realistic-style-986.html", [`${texto}`])
@@ -4220,7 +4220,7 @@ app.get('/api/logos/luxury', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/3d-luxury-gold-text-effect-online-1003.html", [`${texto}`])
@@ -4236,7 +4236,7 @@ app.get('/api/logos/berry', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-berry-text-effect-online-free-1033.html", [`${texto}`])
@@ -4252,7 +4252,7 @@ app.get('/api/logos/matrix', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/matrix-style-text-effect-online-884.html", [`${texto}`])
@@ -4268,7 +4268,7 @@ app.get('/api/logos/horror', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/horror-blood-text-effect-online-883.html", [`${texto}`])
@@ -4284,7 +4284,7 @@ app.get('/api/logos/nuvem', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-a-cloud-text-effect-on-the-sky-online-1004.html", [`${texto}`])
@@ -4300,7 +4300,7 @@ app.get('/api/logos/neon3', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-a-futuristic-technology-neon-light-text-effect-1006.html", [`${texto}`])
@@ -4316,7 +4316,7 @@ app.get('/api/logos/neve', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/xmas-cards-3d-online-942.html", [`${texto}`])
@@ -4332,7 +4332,7 @@ app.get('/api/logos/areia', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/write-in-sand-summer-beach-free-online-991.html", [`${texto}`])
@@ -4348,7 +4348,7 @@ app.get('/api/logos/vidro', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/dropwater-text-effect-872.html", [`${texto}`])
@@ -4364,7 +4364,7 @@ app.get('/api/logos/style', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/1917-style-text-effect-online-980.html", [`${texto}`])
@@ -4380,7 +4380,7 @@ app.get('/api/logos/blood', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/blood-text-on-the-frosted-glass-941.html", [`${texto}`])
@@ -4396,7 +4396,7 @@ app.get('/api/logos/pink', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/holographic-3d-text-effect-975.html", [`${texto}`])
@@ -4412,7 +4412,7 @@ app.get('/api/logos/carbon', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/glossy-carbon-text-effect-965.html", [`${texto}`])
@@ -4428,7 +4428,7 @@ app.get('/api/logos/metalblue', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/glossy-blue-metal-text-effect-967.html", [`${texto}`])
@@ -4444,7 +4444,7 @@ app.get('/api/logos/jeans', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/denim-text-effect-online-919.html", [`${texto}`])
@@ -4460,7 +4460,7 @@ app.get('/api/logos/jokerlogo', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-logo-joker-online-934.html", [`${texto}`])
@@ -4476,7 +4476,7 @@ app.get('/api/logos/natal', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-a-christmas-holiday-snow-text-effect-1007.html", [`${texto}`])
@@ -4492,7 +4492,7 @@ app.get('/api/logos/ossos', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/skeleton-text-effect-online-929.html", [`${texto}`])
@@ -4508,7 +4508,7 @@ app.get('/api/logos/asfalto', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/road-warning-text-effect-878.html", [`${texto}`])
@@ -4524,7 +4524,7 @@ app.get('/api/logos/break', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/break-wall-text-effect-871.html", [`${texto}`])
@@ -4540,7 +4540,7 @@ app.get('/api/logos/glitch2', async(req, res, next) => {
 texto = req.query.texto;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-impressive-glitch-text-effects-online-1027.html", [`${texto}`])
@@ -4558,7 +4558,7 @@ texto2 = req.query.texto2;
 token = req.query.token
 if(!texto) return res.json({status:false,message:'cade o parametro texto'})
 if(!texto2) return res.json({status:false,message:'cade o parametro texto2'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-glitch-text-effect-style-tik-tok-983.html", [`${texto}`, `${texto2}`])
@@ -4574,7 +4574,7 @@ console.log("ERROR"));
 app.get('/api/logos/lapis', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-a-sketch-text-effect-online-1044.html", [`${texto}`])
@@ -4589,7 +4589,7 @@ console.log("ERROR"));
 app.get('/api/logos/3dgold', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/3d-golden-ancient-text-effect-online-free-1060.html", [`${texto}`])
@@ -4604,7 +4604,7 @@ console.log("ERROR"));
 app.get('/api/logos/halloween', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/halloween-fire-text-effect-940.html", [`${texto}`])
@@ -4619,7 +4619,7 @@ console.log("ERROR"));
 app.get('/api/logos/lava', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/lava-text-effect-online-914.html", [`${texto}`])
@@ -4634,7 +4634,7 @@ console.log("ERROR"));
 app.get('/api/logos/toxic', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/toxic-text-effect-online-901.html", [`${texto}`])
@@ -4649,7 +4649,7 @@ console.log("ERROR"));
 app.get('/api/logos/demongreen', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-green-horror-style-text-effect-online-1036.html", [`${texto}`])
@@ -4664,7 +4664,7 @@ console.log("ERROR"));
 app.get('/api/logos/metalfire', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/hot-metal-text-effect-843.html", [`${texto}`])
@@ -4679,7 +4679,7 @@ console.log("ERROR"));
 app.get('/api/logos/thunder', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-thunder-text-effect-online-881.html", [`${texto}`])
@@ -4694,7 +4694,7 @@ console.log("ERROR"));
 app.get('/api/logos/thunderv2', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/online-thunder-text-effect-generator-1031.html", [`${texto}`])
@@ -4709,7 +4709,7 @@ console.log("ERROR"));
 app.get('/api/logos/neongreen', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/green-neon-text-effect-874.html", [`${texto}`])
@@ -4724,7 +4724,7 @@ console.log("ERROR"));
 app.get('/api/logos/neon', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/neon-light-text-effect-with-galaxy-style-981.html", [`${texto}`])
@@ -4739,7 +4739,7 @@ console.log("ERROR"));
 app.get('/api/logos/neon1', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/free-advanced-glow-text-effect-873.html", [`${texto}`])
@@ -4754,7 +4754,7 @@ console.log("ERROR"));
 app.get('/api/logos/neon3d', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/create-3d-neon-light-text-effect-online-1028.html", [`${texto}`])
@@ -4769,7 +4769,7 @@ console.log("ERROR"));
 app.get('/api/logos/rainbow', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/3d-rainbow-color-calligraphy-text-effect-1049.html", [`${texto}`])
@@ -4784,7 +4784,7 @@ console.log("ERROR"));
 app.get('/api/logos/gelo', async(req, res) => {
 texto = req.query.texto;
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 mumaker.textpro("https://textpro.me/ice-cold-text-effect-862.html", [`${texto}`])
@@ -4801,7 +4801,7 @@ console.log("ERROR"));
 app.get('/api/pokemon-search', async(req, res, next) => {
 token = req.query.token;
 name = req.query.name
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!name) return res.json({ status : false,  message: "Coloque o parametro: name"})
 RegistrarUser(token, req);
@@ -4816,7 +4816,7 @@ message: `Erro no Servidor Interno`
 app.get('/api/pesquisas/nasaphoto', async(req, res, next) => {
  token = req.query.token;
  data = req.query.data
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!data) return res.json({ status : false,  message: "Coloque o parametro: data > Exemplo: 19-10-2007"})
 RegistrarUser(token, req);
@@ -4830,7 +4830,7 @@ message: `Erro no Servidor Interno`
 
 app.get('/api/senhaterminaldrex', async(req, res, next) => {
 token = req.query.token;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
     RegistrarUser(token, req);
 res.json({ senha: 'ninja-10' })
@@ -4839,7 +4839,7 @@ res.json({ senha: 'ninja-10' })
 app.get('/api/consultas/basic/nome', async(req, res, next) => {
 query = req.query.query
 token = req.query.token;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
     if (!query) return res.json({ status: false, message: "Preencha ou adicione o parâmetro query" });
     RegistrarUser(token, req);
@@ -4861,7 +4861,7 @@ return res.status(404).json({ resultado: "O banco de dados das consultas está e
 app.get('/api/consultas/full/nome', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message: "Preencha ou adicione o parâmetro query"})
 RegistrarUser(token, req);
@@ -4909,7 +4909,7 @@ res.json({
 app.get('/api/consultas/basic/cpf', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message: "Preencha ou adicione o parâmetro query"})
 RegistrarUser(token, req);
@@ -4928,7 +4928,7 @@ return res.status(404).json({ resultado: "O banco de dados das consultas está e
 app.get('/api/consultas/full/cpf', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message: "Preencha ou adicione o parâmetro query"})
 RegistrarUser(token, req);
@@ -4972,7 +4972,7 @@ return res.status(404).json({ resultado: "O banco de dados das consultas está e
 app.get('/api/consultas/telefone', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message: "Preencha ou adicione o parâmetro query"})
 RegistrarUser(token, req);
@@ -5014,7 +5014,7 @@ return res.status(404).json({ resultado: "O banco de dados das consultas está e
 app.get('/api/consultas/placa', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message: "Preencha ou adicione o parâmetro query"})
 RegistrarUser(token, req);
@@ -5034,7 +5034,7 @@ return res.status(404).json({ resultado: "O banco de dados das consultas está e
 app.get('/api/consultas/ip', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message: "Preencha ou adicione o parâmetro query"})
 RegistrarUser(token, req);
@@ -5053,7 +5053,7 @@ return res.status(404).json({ resultado: "O banco de dados das consultas está e
 app.get('/api/consultas/rg', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message: "Preencha ou adicione o parâmetro query"})
 RegistrarUser(token, req);
@@ -5072,7 +5072,7 @@ return res.status(404).json({ resultado: "O banco de dados das consultas está e
 app.get('/api/consultas/cns', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message: "Preencha ou adicione o parâmetro query"})
 RegistrarUser(token, req);
@@ -5091,7 +5091,7 @@ return res.status(404).json({ resultado: "O banco de dados das consultas está e
 app.get('/api/downloaders/instagram', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message: "cade o parametro url?"})
 RegistrarUser(token, req);
@@ -5105,7 +5105,7 @@ res.json({status: false, código: 404, message: `Erro no Servidor Interno`})
 app.get('/api/nsfw/pornhub', async(req, res, next) => {
 token = req.query.token;
 q = req.query.q
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
  if (!q) return res.json({ status : false,  message: "Coloque o parametro: q"})
  RegistrarUser(token, req);
@@ -5122,12 +5122,12 @@ message: `Erro no Servidor Interno`
 app.get('/api/tinder/registro',(req, res) => {
   var { usuario, rg, token } = req.query
   if(!token) return res.json({message: "Faltando paramento token"})
-  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+  if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
   if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Token inválido ou requests esgotados!"})
   if(!usuario) return res.json({message: "Faltando paramento usuario"})
   if(!JSON.stringify(tinder).includes(usuario)) {
     tinder.push({id: usuario, nome: 0, idade: 0, gene: 0, sexualidade: 0, filtro: 0, bio: 0, foto: 0, dataRG: 0, horaRG: 0})
-    fs.writeFileSync("./database/tinder.json", JSON.stringify(tinder))
+    fs.writeFileSync("../database/tinder.json", JSON.stringify(tinder))
   }
   AB = tinder.map(i => i.id).indexOf(usuario)
   if(tinder[AB].nome != 0 && tinder[AB].idade != 0 && tinder[AB].gene != 0 && tinder[AB].filtro != 0 && tinder[AB].bio != 0 && tinder[AB].foto != 0) return res.json({message: "❗ Você já está registrado! Digite \`#p#tinder\` para navegar pelo #nomebot2# Tinder!"})
@@ -5143,7 +5143,7 @@ app.get('/api/tinder/registro',(req, res) => {
   if(!token) return res.json({message: "Faltando o parâmetro token"})
   if(tinder[AB].nome == 0) {
     tinder[AB].nome = rg
-    fs.writeFileSync("./database/tinder.json", JSON.stringify(tinder))
+    fs.writeFileSync("../database/tinder.json", JSON.stringify(tinder))
     return res.json({semft: false, message: "✅ O nome foi registrado para o seu perfil!\n\nDigite o comando novamente e insira a sua idade ao lado dele como parâmetro seguindo a forma de uso: \`#pc# <sua idade>\`."})
   }
   if(tinder[AB].idade == 0) {
@@ -5152,29 +5152,29 @@ app.get('/api/tinder/registro',(req, res) => {
     if(Number(rg) > 70) return res.json({message: "❗ Não é permitido usuários acima de 70 anos no #nomebot2# Tinder!"})
     if(rg.includes(".")) return res.json({message: "❗ Sua idade está incorreta! Você usou números decimais!"})
     tinder[AB].idade = rg
-    fs.writeFileSync("./database/tinder.json", JSON.stringify(tinder))
+    fs.writeFileSync("../database/tinder.json", JSON.stringify(tinder))
     return res.json({semft: false, message: "✅ A idade foi registrada para o seu perfil!\n\nDigite o comando novamente e insira o seu gênero ao lado dele como parâmetro com uma das opções aceitas *masculino*, *feminino* e *ocultar* seguindo a forma de uso: \`#pc# <seu gênero>\`."})
   }
   if(tinder[AB].gene == 0) {
     if(rg.toLowerCase() != "masculino" && rg.toLowerCase() != "feminino" && rg.toLowerCase() != "ocultar") return res.json({semft: false, message: "❗ O gênero informado é inválido! Certifique-se de inserir *masculino*, *feminino* ou *ocultar* ao lado do comando!"})
     tinder[AB].gene = rg
-    fs.writeFileSync("./database/tinder.json", JSON.stringify(tinder))
+    fs.writeFileSync("../database/tinder.json", JSON.stringify(tinder))
     return res.json({semft: false, message: "✅ O gênero foi registrado para o seu perfil!\n\nDigite o comando novamente e insira a sua identidade de gênero ao lado dele como parâmetro (exemplos: heterossexual, homossexual, bissexual, assexual, pansexual) seguindo a forma de uso: \`#pc# <sua identidade de gênero>\`."})
   }
   if(tinder[AB].sexualidade == 0) {
     tinder[AB].sexualidade = rg
-    fs.writeFileSync("./database/tinder.json", JSON.stringify(tinder))
+    fs.writeFileSync("../database/tinder.json", JSON.stringify(tinder))
     return res.json({semft: false, message: "✅ A identidade de gênero foi registrada para o seu perfil!\n\nDigite o comando novamente e insira um filtro de busca ao lado dele como parâmetro sendo *1* para mulheres, *2* para homens e *3* para todos seguindo a forma de uso: \`#pc# <filtro de busca>\`."})
   }
   if(tinder[AB].filtro == 0) {
     if(Number(rg) < 1 && Number(rg) > 3) return res.json({semft: false, message: "❗ O filtro de busca é inválido! Certifique-se de inserir *1* para homens, *2* para mulheres ou *3* para todos ao lado do comando!"})
     tinder[AB].filtro = Number(rg)
-    fs.writeFileSync("./database/tinder.json", JSON.stringify(tinder))
+    fs.writeFileSync("../database/tinder.json", JSON.stringify(tinder))
     return res.json({semft: false, message: "✅ O filtro de busca foi adicionado!\n\nDigite o comando novamente e insira a sua biografia ao lado dele como parâmetro seguindo a forma de uso: \`#pc# <sua biografia>\`."})
   }
   if(tinder[AB].bio == 0) {
     tinder[AB].bio = rg
-    fs.writeFileSync("./database/tinder.json", JSON.stringify(tinder))
+    fs.writeFileSync("../database/tinder.json", JSON.stringify(tinder))
     return res.json({semft: false, message: "✅ A biografia foi registrada para o seu perfil!\n\nPara finalizar, marque uma imagem com o comando #pc# para ser a sua foto de perfil."})
   }
   if(tinder[AB].foto == 0) {
@@ -5182,7 +5182,7 @@ app.get('/api/tinder/registro',(req, res) => {
     tinder[AB].foto = rg
     tinder[AB].dataRG = moment.tz('America/Sao_Paulo').format('DD/MM/20YY')
     tinder[AB].horaRG = sla
-    fs.writeFileSync("./database/tinder.json", JSON.stringify(tinder))
+    fs.writeFileSync("../database/tinder.json", JSON.stringify(tinder))
     RegistrarUser(token, req);
     return res.json({message: `✅ Seu registro foi finalizado!\n\nSeja bem-vind${tinder[AB].gene == "masculino" ? 'o' : tinder[AB].gene == "feminino" ? 'a' : 'x'} ao #nomebot2# Tinder ${tinder[AB].nome}! 😝
 
@@ -5198,7 +5198,7 @@ token = req.query.token
 if(tinder.length <= 0) return res.json({message: "Nenhum usuário registrado..."})
 if(!usuario) return res.json({message: "Faltando o parâmetro usuario"})
 if(!token) return res.json({message: "Faltando o parâmetro token"})
-if(!key.map(i => i.token)?.includes(token)) return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token)) return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Token inválido ou requests esgotados!"})
 AB = tinder.map(i => i.id).indexOf(usuario)
 if(!JSON.stringify(tinder).includes(usuario)) return res.json({message: "❗ Você não está registrado no #nomebot2# Tinder! Digite \`#p#rgtinder\` para se registrar!"})
@@ -5232,7 +5232,7 @@ if(!q) {
   if(mod == "setfiltrotinder") return res.json({message: "Você precisa inserir o filtro de busca sendo *1* para mulheres, *2* para homens ou *3* para todos ao lado do comando."})
   }
 if(!token) return res.json({message: "Faltando o parâmetro token"})
-if(!key.map(i => i.token)?.includes(token)) return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token)) return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Token inválido ou requests esgotados!"})
 if(!JSON.stringify(tinder).includes(usuario)) return res.json({message: "❗ Você não está registrado no #nomebot2# Tinder! Digite \`#p#rgtinder\` para se registrar!"})
 AB = tinder.map(i => i.id).indexOf(usuario)
@@ -5240,7 +5240,7 @@ if(tinder[AB].nome == 0 || tinder[AB].idade == 0 || tinder[AB].gene == 0 || tind
 RegistrarUser(token, req);
   if(mod == "tindernome") {
     tinder[AB].nome = q
-    fs.writeFileSync("./database/tinder.json", JSON.stringify(tinder))
+    fs.writeFileSync("../database/tinder.json", JSON.stringify(tinder))
     return res.json({message: "✅ O novo nome foi atualizado para o seu perfil!"})
   }
   if(mod == "tinderidade") {
@@ -5249,34 +5249,34 @@ RegistrarUser(token, req);
     if(Number(q) > 70) return res.json({message: "❗ Não é permitido Usuários com mais de 70 anos no #nomebot2# Tinder!"})
     if(q.includes(".")) return res.json({message: "❗ Sua idade está incorreta! Você usou números decimais!"})
     tinder[AB].idade = q
-    fs.writeFileSync("./database/tinder.json", JSON.stringify(tinder))
+    fs.writeFileSync("../database/tinder.json", JSON.stringify(tinder))
     return res.json({semft: false, message: "✅ A nova idade foi atualizada para o seu perfil!"})
   }
   if(mod == "setgene") {
     if(q.toLowerCase() != "masculino" && q.toLowerCase() != "feminino" && q.toLowerCase() != "ocultar") return res.json({message: "❗ O gênero informado é inválido! Certifique-se de inserir *masculino*, *feminino* ou *ocultar* ao lado do comando!"})
     tinder[AB].gene = q
-    fs.writeFileSync("./database/tinder.json", JSON.stringify(tinder))
+    fs.writeFileSync("../database/tinder.json", JSON.stringify(tinder))
     return res.json({message: "✅ O novo gênero foi atualizado para o seu perfil!"})
   }
   if(mod == "setsex") {
     tinder[AB].gene = q
-    fs.writeFileSync("./database/tinder.json", JSON.stringify(tinder))
+    fs.writeFileSync("../database/tinder.json", JSON.stringify(tinder))
     return res.json({message: "✅ A nova identidade de gênero foi atualizada para o seu perfil!"})
   }
   if(mod == "setfiltro") {
     if(Number(q) < 1 && Number(q) > 3) return res.json({semft: false, message: "❗ O filtro de busca é inválido! Certifique-se de inserir *1* para homens, *2* para mulheres ou *3* para todos ao lado do comando!"})
     tinder[AB].filtro = Number(q)
-    fs.writeFileSync("./database/tinder.json", JSON.stringify(tinder))
+    fs.writeFileSync("../database/tinder.json", JSON.stringify(tinder))
 return res.json({message: `✅ O filtro de busca foi atualizado! Agora buscarei ${Number(q) === 3 ? `por todos os usuários!` : `apenas por ${Number(q) === 1 ? "homens!" : "mulheres!"}`}`})
   }
   if(mod == "tinderbio") {
     tinder[AB].bio = q
-    fs.writeFileSync("./database/tinder.json", JSON.stringify(tinder))
+    fs.writeFileSync("../database/tinder.json", JSON.stringify(tinder))
     return res.json({message: "✅ A nova biografia foi atualizada para o seu perfil!"})
   }
   if(mod == "tinderfoto") {
     tinder[AB].foto = q
-    fs.writeFileSync("./database/tinder.json", JSON.stringify(tinder))
+    fs.writeFileSync("../database/tinder.json", JSON.stringify(tinder))
     return res.json({message: "✅ A nova foto foi atualizada para o seu perfil!"})
   }
 })
@@ -5285,7 +5285,7 @@ app.get('/api/tinder/perfil', async (req, res) => {
 var { usuario, token } = req.query
 if(!usuario) return res.json({message: "Faltando o parâmetro usuario"})
 if(!token) return res.json({message: "Faltando o parâmetro token"})
-if(!key.map(i => i.token)?.includes(token)) return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token)) return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Token inválido ou requests esgotados!"})
 if(!JSON.stringify(tinder).includes(usuario)) return res.json({message: "ID do usuário não encontrado ou inexistente..."})
 AB = tinder.map(i => i.id).indexOf(usuario)
@@ -5299,12 +5299,12 @@ try {
 var { usuario, token } = req.query
 if(!usuario) return res.json({message: "Faltando o parâmetro usuario"})
 if(!token) return res.json({message: "Faltando o parâmetro token"})
-if(!key.map(i => i.token)?.includes(token)) return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token)) return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Token inválido ou requests esgotados!"})
 if(!JSON.stringify(tinder).includes(usuario)) return res.json({message: "ID do usuário não encontrado ou inexistente..."})
 AB = tinder.map(i => i.id).indexOf(usuario)
 tinder.splice(AB, 1)
-fs.writeFileSync("./database/tinder.json", JSON.stringify(tinder))
+fs.writeFileSync("../database/tinder.json", JSON.stringify(tinder))
 RegistrarUser(token, req);
 return res.json({message: "✅ Seu registro no #nomebot# foi apagado! Volte sempre! 😉"})
 } catch(e) {
@@ -5317,7 +5317,7 @@ token = req.query.token;
 img = req.query.img;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!img)return res.json({status:false,message:'- Cadê o parâmetro img?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 auu = await Kibar(`https://xzn.wtf/api/aitoonme?url=${img}&token=darkzy_7`)
@@ -5332,12 +5332,12 @@ url_imagem: `${auu.url}`
 router.get('/api/figurinhas/emoji/apple', async (req, res, next) => {
 token = req.query.token
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	var emj = req.query.emj	
 	if (!emj) return res.json({ status : false, message : "[!] parâmetros de entrada emj"})
-	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	emoji.get(emj)
@@ -5354,7 +5354,7 @@ RegistrarUser(token, req);
 router.get('/api/figurinhas/emoji/google', async (req, res, next) => {
 token = req.query.token
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 	var emj = req.query.emj
 	if (!emj) return res.json({ status : false, message : "[!] parâmetros de entrada  emj"})
@@ -5375,7 +5375,7 @@ router.get('/api/figurinhas/emoji/samsung', async (req, res, next) => {
 	if (!emj) return res.json({ status : false, message : "[!] parâmetros de entrada  emj"})
 token = req.query.token
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	emoji.get(emj)
@@ -5394,7 +5394,7 @@ router.get('/api/figurinhas/emoji/microsoft', async (req, res, next) => {
 	if (!emj) return res.json({ status : false, message : "[!] parâmetros de entrada  emj"})
 		token = req.query.token
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	emoji.get(emj)
@@ -5413,7 +5413,7 @@ router.get('/api/figurinhas/emoji/whatsapp', async (req, res, next) => {
 	if (!emj) return res.json({ status : false, message : "[!] parâmetros de entrada  emj"})
 	token = req.query.token
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	emoji.get(emj) 
@@ -5432,7 +5432,7 @@ router.get('/api/figurinhas/emoji/x', async (req, res, next) => {
 	if (!emj) return res.json({ status : false, message : "[!] parâmetros de entrada  emj"})
 		token = req.query.token
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	emoji.get(emj) 
@@ -5451,7 +5451,7 @@ router.get('/api/figurinhas/emoji/facebook', async (req, res, next) => {
 	if (!emj) return res.json({ status : false, message : "[!] parâmetros de entrada  emj"})
 		token = req.query.token
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	emoji.get(emj) 
@@ -5470,7 +5470,7 @@ router.get('/api/figurinhas/emoji/skype', async (req, res, next) => {
 	if (!emj) return res.json({ status : false, message : "[!] parâmetros de entrada  emj"})
 		token = req.query.token
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+	if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	emoji.get(emj) 
@@ -5525,7 +5525,7 @@ status:false,
 motivo:'nao_tem_url'
 })
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 fetch(`https://nsfw-demo.sashido.io/api/image/classify?url=${url}`).then(e => {
@@ -5538,7 +5538,7 @@ url = req.query.url
 if(!url)return res.json({status:false, motivo:'Cadê o parâmetro url?'})
 token = req.query.token
 if(!token)return res.json({status:false,message:'Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5554,7 +5554,7 @@ RegistrarUser(token, req);
 router.get('/api/figurinhas/pack/emoji', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5571,7 +5571,7 @@ hasil = `https://raw.githubusercontent.com/Scheyot2/media/master/packs/emoji/${r
 router.get('/api/figurinhas/pack/flork', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5588,7 +5588,7 @@ hasil = `https://raw.githubusercontent.com/Scheyot2/anya-bot/master/Figurinhas/f
 router.get('/api/figurinhas/pack/memes', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5605,7 +5605,7 @@ var rnd = Math.floor(Math.random() * 109)
 router.get('/api/figurinhas/pack/anime', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5622,7 +5622,7 @@ var rnd = Math.floor(Math.random() * 109)
 router.get('/api/figurinhas/pack/coreana', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5639,7 +5639,7 @@ var rnd = Math.floor(Math.random() * 43)
 router.get('/api/figurinhas/pack/bebe', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5656,7 +5656,7 @@ var rnd = Math.floor(Math.random() * 17)
 router.get('/api/figurinhas/pack/desenho', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5673,7 +5673,7 @@ var rnd = Math.floor(Math.random() * 109)
 router.get('/api/figurinhas/pack/animais', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5690,7 +5690,7 @@ var rnd = Math.floor(Math.random() * 46)
 router.get('api/figurinhas/pack/engracado', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5707,7 +5707,7 @@ var rnd = Math.floor(Math.random() * 25)
 router.get('/api/figurinhas/pack/raiva', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5724,7 +5724,7 @@ var rnd = Math.floor(Math.random() * 29)
 router.get('/api/figurinhas/pack/roblox', async (req, res, next) => {
 var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5741,7 +5741,7 @@ var rnd = Math.floor(Math.random() * 21)
 router.get('/api/nsfw/ahegao', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5759,7 +5759,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/ass', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5777,7 +5777,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/bdsm', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5795,7 +5795,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/blowjob', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5813,7 +5813,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/cuckold', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5831,7 +5831,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/cum', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5849,7 +5849,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/ero', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5867,7 +5867,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/femdom', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5885,7 +5885,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/foot', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5903,7 +5903,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/gangbang', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5921,7 +5921,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/glasses', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5939,7 +5939,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/hentai', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5957,7 +5957,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/gifs', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5974,7 +5974,7 @@ RegistrarUser(token, req);
 router.get('/api/stickera', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -5991,7 +5991,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/jahy', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6009,7 +6009,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/manga', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6027,7 +6027,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/masturbation', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6045,7 +6045,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/neko', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6063,7 +6063,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/orgy', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6081,7 +6081,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/panties', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6099,7 +6099,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/pussy', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6117,7 +6117,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/neko2', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6135,7 +6135,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/tentacles', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6153,7 +6153,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/thighs', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6171,7 +6171,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/yuri', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6189,7 +6189,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/zettai', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6207,7 +6207,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/keneki', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6225,7 +6225,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/megumin', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6243,7 +6243,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/yotsuba', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6261,7 +6261,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/shinomiya', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6279,7 +6279,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/yumeko', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6297,7 +6297,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/tejina', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6315,7 +6315,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/chiho', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6333,7 +6333,7 @@ RegistrarUser(token, req);
 router.get('/wallpaper/cyberspace', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6351,7 +6351,7 @@ RegistrarUser(token, req);
 router.get('/wallpaper/gaming', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6369,7 +6369,7 @@ RegistrarUser(token, req);
 router.get('/wallpaper/programing', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6387,7 +6387,7 @@ RegistrarUser(token, req);
 router.get('/wallpaper/wallpapertec', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6405,7 +6405,7 @@ RegistrarUser(token, req);
 router.get('/wallpaper/mountain', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6425,7 +6425,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/toukachan', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6443,7 +6443,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/akira', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6461,7 +6461,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/itori', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6479,7 +6479,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/kurumi', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6497,7 +6497,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/miku', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6515,7 +6515,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/pokemon', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6533,7 +6533,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/ryujin', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6551,7 +6551,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/rose', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6569,7 +6569,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/kaori', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6587,7 +6587,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/shizuka', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6605,7 +6605,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/kaga', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6623,7 +6623,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/kotori', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6641,7 +6641,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/mikasa', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6659,7 +6659,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/akiyama', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6677,7 +6677,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/gremory', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6695,7 +6695,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/isuzu', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6713,7 +6713,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/cosplay', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6731,7 +6731,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/shina', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6749,7 +6749,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/kagura', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6767,7 +6767,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/shinka', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6785,7 +6785,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/eba', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6803,7 +6803,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/deidara', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 if(key.map(i => i.token)?.includes(token)){    
@@ -6822,7 +6822,7 @@ res.json({erro:'Erro no Servidor Interno'})
 router.get('/api/animes/jeni', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6841,7 +6841,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/meme', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6859,7 +6859,7 @@ RegistrarUser(token, req);
 router.get('/wallpaper/satanic', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6879,7 +6879,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/itachi', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6897,7 +6897,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/madara', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6915,7 +6915,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/yuki', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6933,7 +6933,7 @@ RegistrarUser(token, req);
 router.get('/wallpaper/asuna', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6951,7 +6951,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/ayuzawa', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6969,7 +6969,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/chitoge', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -6987,7 +6987,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/emilia', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7005,7 +7005,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/hestia', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7023,7 +7023,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/inori', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7041,7 +7041,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/ana', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7059,7 +7059,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/boruto', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7077,7 +7077,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/erza', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7095,7 +7095,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/kakashi', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7113,7 +7113,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/sagiri', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7131,7 +7131,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/minato', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7149,7 +7149,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/naruto', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7167,7 +7167,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/nezuko', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7185,7 +7185,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/onepiece', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7203,7 +7203,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/rize', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7221,7 +7221,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/sakura', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7239,7 +7239,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/sasuke', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7257,7 +7257,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/tsunade', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7275,7 +7275,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/montor', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7293,7 +7293,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/mobil', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7312,7 +7312,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/anime', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7331,7 +7331,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/wallhp', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7349,7 +7349,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/waifu2', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7367,7 +7367,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/waifu', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7386,7 +7386,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/hekel', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7404,7 +7404,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/kucing', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7422,7 +7422,7 @@ RegistrarUser(token, req);
 router.get('/wallpaper/pubg', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7440,7 +7440,7 @@ RegistrarUser(token, req);
 router.get('/wallpaper/ppcouple', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7458,7 +7458,7 @@ RegistrarUser(token, req);
 router.get('/wallpaper/anjing', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7476,7 +7476,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/doraemon', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7495,7 +7495,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/elaina', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7514,7 +7514,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/loli', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7533,7 +7533,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/yuri', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7552,7 +7552,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/cecan', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7571,7 +7571,7 @@ RegistrarUser(token, req);
 router.get('/wallpaper/aesthetic', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7591,7 +7591,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/sagiri', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7609,7 +7609,7 @@ RegistrarUser(token, req);
 router.get('/api/animes/shota', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7627,7 +7627,7 @@ RegistrarUser(token, req);
 router.get('/api/nsfw/hinata', async (req, res, next) => {
       var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 	if(key.map(i => i.token)?.includes(token)){    
@@ -7644,7 +7644,7 @@ RegistrarUser(token, req);
  app.get('/api/downloaders/soundcloud', async(req, res, next) => {
  token = req.query.token;
  url = req.query.url
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message: "Coloque o parametro: url"})
 RegistrarUser(token, req);
@@ -7660,7 +7660,7 @@ res.json({
  app.get('/api/nsfw/manga', async(req, res, next) => {
  token = req.query.token;
 q = req.query.q
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!q) return res.json({ status : false,  message: "Coloque o parametro: q"})
 RegistrarUser(token, req);
@@ -7676,7 +7676,7 @@ res.json({
  app.get('/api/nsfw/hentaistube', async(req, res, next) => {
  token = req.query.token;
 q = req.query.q
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!q) return res.json({ status : false,  message: "Coloque o parametro: q"})
 RegistrarUser(token, req);
@@ -7692,7 +7692,7 @@ res.json({
 app.get('/api/icms', async(req, res, next) => {
 var { token, valor, ddd } = req.query
 if(!token) return res.json({status:false,message:'cade o parametro token'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!valor) return res.json({ status : false,  message: "Coloque o parametro: valor"})
 if (!ddd) return res.json({ status : false,  message: "Coloque o parametro: ddd"})
@@ -7708,7 +7708,7 @@ message: `Erro no Servidor Interno`
 
 app.get('/api/noticias/brasileirao', async(req, res, next) => {
 var { token } = req.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 BrasileirãoFutebol().then((data) => {
@@ -7727,7 +7727,7 @@ status:false,
 message:'Cade o parametro texto??'
 })
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 cor = ["f702ff","ff0202","00ff2e","efff00","00ecff","3100ff","ffb400","ff00b0","00ff95","efff00"] //CORES COLOQUE QUALQUER UMA MAS EM CODE
@@ -7746,7 +7746,7 @@ status:false,
 message:'Cade o parametro url??'
 })
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 down.fbdown(url)
@@ -7771,7 +7771,7 @@ status:false,
 message:'Cade o parametro text??'
 })
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 photooxy(url, text)
@@ -7787,7 +7787,7 @@ res.json({erro:'Erro no Servidor Interno'})
 app.get('/api/wallpaperanime',(req,res) => {
 token = req.query.token
 q = 'Wallpaper anime'
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 gis(q, async (error, results) => {
@@ -7813,7 +7813,7 @@ token = req.query.token
 nome = req.query.nome
 if(!nome) return res.json({message: "Faltando o parametro nome"})
 if(!token)return res.json({message:'cade o parametro token'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 await gis(nome, logResults);
@@ -7861,7 +7861,7 @@ status:false,
 motivo:'nao_tem_texto_2'
 })
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 bala = await getBuffer(`https://api.memegen.link/images/custom/${texto1}/${texto2}.png?background=${url}`)
@@ -7876,7 +7876,7 @@ status:false,
 motivo:'cade_o_usuario'
 })
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 fetch(encodeURI(`https://api.github.com/users/`+pessoa))
@@ -7919,7 +7919,7 @@ status:false,
 message:'Cade o parametro texto??'
 })
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 wiki.search(`${texto}`, 'pt')
@@ -7940,7 +7940,7 @@ app.get('/api/downloaders/twitter2',(req,res) => {
 url = req.query.url
 if(!url)return res.json({status:false, message:'Cade o parametro url??'})
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 fetchTwitterMedia(url).then(data => {
@@ -7957,7 +7957,7 @@ status:false,
 message:'Cade o parametro q??'
 })
 token = req.query.token
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 ytSearch(q)
@@ -7974,7 +7974,7 @@ res.json({erro:'Erro no Servidor Interno'})
 app.get('/api/downloaders/youtube/play', async(req, res, next) => {
 token = req.query.token;
 text = req.query.query
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!text) return res.json({ status : false,  message: "Coloque o parametro: query"})
 var searchYoutube = await yts(text)
@@ -8014,7 +8014,7 @@ message: `Erro no Servidor Interno`
 app.get('/api/downloaders/ytdl', async(req, res, next) => {
 token = req.query.token;
 text = req.query.url
- if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!text) return res.json({ status : false,  message: "Coloque o parametro: url"})
 var mp3 = await Mp3Download(text)
@@ -8051,7 +8051,7 @@ var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 var query = req.query.query;
 if(!query)return res.json({status:false,message:'- Cadê o parâmetro query?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 if(key.map(i => i.token)?.includes(token)){    
@@ -8066,7 +8066,7 @@ res.sendFile(bla + '/assets/Tempo/gostosinha.jpg')
 
 app.get('/api/ia/toanime', async(req, res, next) => {
 var { token, link } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!link) return res.json({ status : false,  message: "faltando o parametro: link"})
 RegistrarUser(token, req);
@@ -8079,7 +8079,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 
 app.get('/api/ia/tozombie', async(req, res, next) => {
 var { token, link } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!link) return res.json({ status : false,  message: "faltando o parametro: link"})
 RegistrarUser(token, req);
@@ -8092,7 +8092,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 
 app.get('/api/ia/remini', async(req, res, next) => {
 var { token, link } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!link) return res.json({ status : false,  message: "faltando o parametro: link"})
 RegistrarUser(token, req);
@@ -8105,7 +8105,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 
 app.get('/api/ia/removebg', async(req, res, next) => {
 var { token, link } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!link) return res.json({ status : false,  message: "faltando o parametro: link"})
 RegistrarUser(token, req);
@@ -8121,7 +8121,7 @@ var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 var link = req.query.link;
 if(!link)return res.json({status:false,message:'- Cadê o parâmetro link?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 var islink = isUrl(link)
 if (!islink) return res.json({ status : false, message : "[!] insira uma url válido"})  
@@ -8137,7 +8137,7 @@ var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 var link = req.query.link;
 if(!link)return res.json({status:false,message:'- Cadê o parâmetro link?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 var islink = isUrl(link)
 if (!islink) return res.json({ status : false, message : "[!] insira uma url válido"})  
@@ -8154,7 +8154,7 @@ var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 var link = req.query.link;
 if(!link)return res.json({status:false,message:'- Cadê o parâmetro link?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 var islink = isUrl(link)
 if (!islink) return res.json({ status : false, message : "[!] insira uma url válido"})  
@@ -8175,7 +8175,7 @@ var token = req.query.token;
 if(!token)return res.json({status:false,message:'- Cadê o parâmetro token?'})
 if(!alias)return res.json({status:false,message:'- Cadê o parâmetro alias?'})
 if(!link)return res.json({status:false,message:'- Cadê o parâmetro link?'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 var islink = isUrl(link)
 if (!islink) return res.json({ status : false, message : "[!] insira parâmetros de URL"})  
@@ -8193,7 +8193,7 @@ token = req.query.token;
 if (token === undefined) return res.status(404).send({status: 404, message: `insira o parâmetro token`});
 	if (!text ) return res.json({ status : false, message : "digite o parâmetro de texto."})  
 	if (!ling ) return res.json({ status : false, message : "parâmetro de entrada: ling. Você pode ver a lista de idiomas em https://cloud.google.com/translate/docs/languages"})  
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 defaultLang = 'en'
@@ -8218,14 +8218,14 @@ result: result[0]
 app.get('/api/animes/edits/video', async(req, res, next) => {
 var { token, categoria } = req.query
 if (!categoria) return res.json({ status : false,  message : "cade o parametro categoria"}) 
-var EDT_ALEATORIOS = JSON.parse(fs.readFileSync("./base de dados/random/EDIT-ANIMES/ALEATORIOS.json").toString())
-var EDT_BLEACH = JSON.parse(fs.readFileSync("./base de dados/random/EDIT-ANIMES/BLEACH.json").toString())
-var EDT_CHAINSAW = JSON.parse(fs.readFileSync("./base de dados/random/EDIT-ANIMES/CHAINSAW.json").toString())
-var EDT_DEMON_SLAYER = JSON.parse(fs.readFileSync("./base de dados/random/EDIT-ANIMES/DEMON_SLAYER.json").toString())
-var EDT_DRAGONBALL = JSON.parse(fs.readFileSync("./base de dados/random/EDIT-ANIMES/DRAGONBALL.json").toString())
-var EDT_HUNTER_X = JSON.parse(fs.readFileSync("./base de dados/random/EDIT-ANIMES/HUNTER_X.json").toString())
-var EDT_JUJUTSU_KAISEN = JSON.parse(fs.readFileSync("./base de dados/random/EDIT-ANIMES/JUJUTSU_KAISEN.json").toString())
-var EDT_NARUTO = JSON.parse(fs.readFileSync("./base de dados/random/EDIT-ANIMES/NARUTO.json").toString())
+var EDT_ALEATORIOS = JSON.parse(fs.readFileSync("../base de dados/random/EDIT-ANIMES/ALEATORIOS.json").toString())
+var EDT_BLEACH = JSON.parse(fs.readFileSync("../base de dados/random/EDIT-ANIMES/BLEACH.json").toString())
+var EDT_CHAINSAW = JSON.parse(fs.readFileSync("../base de dados/random/EDIT-ANIMES/CHAINSAW.json").toString())
+var EDT_DEMON_SLAYER = JSON.parse(fs.readFileSync("../base de dados/random/EDIT-ANIMES/DEMON_SLAYER.json").toString())
+var EDT_DRAGONBALL = JSON.parse(fs.readFileSync("../base de dados/random/EDIT-ANIMES/DRAGONBALL.json").toString())
+var EDT_HUNTER_X = JSON.parse(fs.readFileSync("../base de dados/random/EDIT-ANIMES/HUNTER_X.json").toString())
+var EDT_JUJUTSU_KAISEN = JSON.parse(fs.readFileSync("../base de dados/random/EDIT-ANIMES/JUJUTSU_KAISEN.json").toString())
+var EDT_NARUTO = JSON.parse(fs.readFileSync("../base de dados/random/EDIT-ANIMES/NARUTO.json").toString())
 RST_CTRG = [
 {NAME: "aleatorios", RANDOM: EDT_ALEATORIOS[Math.floor(Math.random() * EDT_ALEATORIOS.length)]}, 
 {NAME: "bleach", RANDOM: EDT_BLEACH[Math.floor(Math.random() * EDT_BLEACH.length)]},
@@ -8238,7 +8238,7 @@ RST_CTRG = [
 ]
 var EDT = RST_CTRG.map(i => i.NAME).indexOf(categoria)
 if(EDT < 0) return res.json({message: "categoria indisponível."})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 if(key.map(i => i.token)?.includes(token)){
@@ -8256,7 +8256,7 @@ res.json({status: false, resultado:'⏳️ Tempo de resposta esgotado!'})
 app.get('/api/downloaders/youtube/audio', async (req, res, next) => {
 token = req.query.token
 url = req.query.url
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message : "Cade o parametro url?"})
 RegistrarUser(token, req);
@@ -8274,7 +8274,7 @@ console.log(err)
 app.get('/api/downloaders/youtube/video', async (req, res, next) => {
 token = req.query.token
 url = req.query.url
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message : "Cade o parametro url?"})
 RegistrarUser(token, req);
@@ -8291,7 +8291,7 @@ console.log(err)
 
 app.get('/api/downloaders/y2bs', (req, res) => {
 var { token, url, type } = req.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message : "Cade o parametro url?"})
 if (!type) return res.json({ status : false,  message : "Cade o parametro type?"})
@@ -8305,7 +8305,7 @@ res.json({erro: "Erro: "+e})
 
 app.get('/api/downloaders/savefrom', (req, res) => {
 var { token, url, type } = req.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message : "Cade o parametro url?"})
 if (!type) return res.json({ status : false,  message : "Cade o parametro type?"})
@@ -8320,7 +8320,7 @@ res.json({erro: "Erro: "+e})
 app.get('/api/downloaders/audiomeme', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message: "Coloque o parametro: query"})
 RegistrarUser(token, req);
@@ -8334,7 +8334,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 app.get('/api/downloaders/tuna', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message: "Coloque o parametro: query"})
 RegistrarUser(token, req);
@@ -8348,7 +8348,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 app.get('/api/downloaders/drive', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message: "Coloque o parametro: url"})
 RegistrarUser(token, req);
@@ -8362,7 +8362,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 app.get('/api/downloaders/mediafire', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message: "Coloque o parametro: url"})
 RegistrarUser(token, req);
@@ -8376,7 +8376,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 app.get('/api/downloaders/instagram/story', async(req, res, next) => {
 token = req.query.token;
 usuario = req.query.usuario
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!usuario) return res.json({ status : false,  message: "cade o parametro usuario?"})
 RegistrarUser(token, req);
@@ -8390,7 +8390,7 @@ res.json({status: 404, message: `Erro no Servidor Interno`})
 app.get('/api/downloaders/multidownload', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message: "cade o parametro url?"})
 RegistrarUser(token, req);
@@ -8404,7 +8404,7 @@ res.json({status: 404, message: `Erro no Servidor Interno`})
 app.get('/api/pesquisas/imdb/busca', async(req, res, next) => {
 token = req.query.token;
 query = req.query.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message: "cade o parametro query?"})
 RegistrarUser(token, req);
@@ -8418,7 +8418,7 @@ res.json({status: 404, message: `Erro no Servidor Interno`})
 app.get('/api/pesquisas/imdb/info', async(req, res, next) => {
 token = req.query.token;
 url = req.query.url
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message: "cade o parametro url?"})
 RegistrarUser(token, req);
@@ -8431,7 +8431,7 @@ res.json({status: 404, message: `Erro no Servidor Interno`})
 
 app.get('/api/outros/rastreio', async(req, res, next) => {
 var { token, code } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!code) return res.json({ status : false,  message: "faltando o parametro: code"})
 RegistrarUser(token, req);
@@ -8445,7 +8445,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 
 app.get('/api/pesquisas/pensador', async(req, res, next) => {
 var { token, text } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!text) return res.json({ status : false,  message: "faltando o parametro: text"})
 RegistrarUser(token, req);
@@ -8459,7 +8459,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 
 app.get('/api/pesquisas/spotify', async(req, res, next) => {
 var { token, query } = req.query
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message: "faltando o parametro: query"})
 searchSpotify(query).then((resolve) => { 
@@ -8471,7 +8471,7 @@ res.json({message: "Erro no Servidor Interno"})
 
 app.get('/api/downloaders/spotify', async(req, res, next) => {
 var { token, url } = req.query;
-if(!key.map(i => i.token)?.includes(token)) return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token)) return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message: "faltando o parametro: url"})
 RegistrarUser(token, req);
@@ -8484,7 +8484,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 
 app.get('/api/downloaders/capcut', async(req, res, next) => {
 var { token, url } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message: "faltando o parametro: url"})
 RegistrarUser(token, req);
@@ -8497,7 +8497,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 
 app.get('/api/downloaders/threads', async(req, res, next) => {
 var { token, url } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message: "faltando o parametro: url"})
 RegistrarUser(token, req);
@@ -8510,7 +8510,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 
 app.get('/api/downloaders/x', async(req, res, next) => {
 var { token, url } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message: "faltando o parametro: url"})
 RegistrarUser(token, req);
@@ -8523,7 +8523,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 
 app.get('/api/ia/simih', async(req, res, next) => {
 var { text, language, token } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!text) return res.json({ status : false,  message: "faltando o parametro: text"})
 RegistrarUser(token, req);
@@ -8536,7 +8536,7 @@ res.json({status: 404, resultado: "Não entendi, por favor me ensine!"});
 
 app.get('/api/consultas/ddd', async(req, res, next) => {
 var { ddd, token } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!Number(ddd)) return res.json({ status : false, message: "faltando o parametro: ddd"})
 RegistrarUser(token, req);
@@ -8551,7 +8551,7 @@ app.get('/api/consultas/ddi', async (req, res, next) => {
   const { ddi, token } = req.query;
   try {
     if (!key.map(i => i.token)?.includes(token)) {
-      return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"));
+      return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"));
     }
     if (key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) {
       return res.json({ message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções." });
@@ -8574,7 +8574,7 @@ app.get('/api/consultas/ddi', async (req, res, next) => {
 
 app.get('/api/pesquisas/cybercook/info', async(req, res, next) => {
 var { token, url } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message: "faltando o parametro: url"})
 RegistrarUser(token, req);
@@ -8587,7 +8587,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 
 app.get('/api/pesquisas/cybercook/busca', async(req, res, next) => {
 var { token, query } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message: "faltando o parametro: query"})
 RegistrarUser(token, req);
@@ -8600,7 +8600,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 
 app.get('/api/pesquisas/uptodown/info', async(req, res, next) => {
 var { token, url } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!url) return res.json({ status : false,  message: "faltando o parametro: url"})
 RegistrarUser(token, req);
@@ -8613,7 +8613,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 
 app.get('/api/pesquisas/uptodown/busca', async(req, res, next) => {p
 var { token, query } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message: "faltando o parametro: query"})
 RegistrarUser(token, req);
@@ -8626,7 +8626,7 @@ res.json({status: 404, message: `Erro no Servidor Interno.`})
 
 app.get('/api/consultas/cnpj', async(req, res, next) => {
 var { cnpj, token } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!cnpj) return res.json({ status : false, message: "faltando o parametro: cnpj"})
 RegistrarUser(token, req);
@@ -8639,7 +8639,7 @@ res.json({status: 404, message: error})
 
 app.get('/api/consultas/feriados', async(req, res, next) => {
 var { ano, token } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!Number(ano)) return res.json({ status : false, message: "faltando o parametro: ano"})
 RegistrarUser(token, req);
@@ -8652,7 +8652,7 @@ res.json({status: 404, message: error})
 
 app.get('/api/consultas/municipios', async(req, res, next) => {
 var { sigla_uf, token } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!sigla_uf) return res.json({ status : false, message: "faltando o parametro: sigla_uf"})
 RegistrarUser(token, req);
@@ -8665,7 +8665,7 @@ res.json({status: 404, message: error})
 
 app.get('/api/consultas/dominio', async(req, res, next) => {
 var { domain, token } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!domain) return res.json({ status : false, message: "faltando o parametro: domain"})
 RegistrarUser(token, req);
@@ -8678,7 +8678,7 @@ res.json({status: 404, message: error})
 
 app.get('/api/consultas/ispb', async(req, res, next) => {
 var { code, token } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!code) return res.json({ status : false, message: "faltando o parametro: code"})
 RegistrarUser(token, req);
@@ -8691,7 +8691,7 @@ res.json({status: 404, message: error})
 
 app.get('/api/consultas/bancos', async(req, res, next) => {
 var { token } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 axios.get(`https://brasilapi.com.br/api/banks/v1`).then(bankList => {
@@ -8703,7 +8703,7 @@ res.json({status: 404, message: error})
 
 app.get('/api/consultas/cep', async(req, res, next) => {
 var { code, token } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"));
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"));
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!code) return res.json({ status : false, message: "faltando o parametro: code"})
 RegistrarUser(token, req);
@@ -8716,7 +8716,7 @@ res.json({status: 404, message: error})
 
 app.get('/api/pesquisas/stalker/instagram', async(req, res, next) => {
 var { usuario, token } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!usuario) return res.json({ status : false, message: "faltando o parametro: usuario"})
 RegistrarUser(token, req);
@@ -8743,7 +8743,7 @@ res.json({resultado: `${msgerro}`})
 
 app.get('/api/pesquisas/stalker/tiktok', async(req, res, next) => {
 var { usuario, token } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!usuario) return res.json({ status : false, message: "faltando o parametro: usuario"})
 RegistrarUser(token, req);
@@ -8777,7 +8777,7 @@ message:'Cadê o parâmetro: query'
 })
 token = req.query.token
 if(!token)return res.json({status:false,message:'Cadê o parâmetro: token'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 const ly = new Lyrics(query)
@@ -8793,7 +8793,7 @@ app.get('/api/outros/rastreio/aliexpress',(req,res) => {
 var { id, token } = req.query
 if(!id)return res.json({status:false, message:'Cadê o parâmetro: id'})
 if(!token)return res.json({status:false,message:'Cadê o parâmetro: token'})
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 RegistrarUser(token, req);
 aliexpress(id).then(hasil => {
@@ -8806,7 +8806,7 @@ res.json({erro:'Erro no Servidor Interno'})
 
 app.get('/api/pesquisas/stickerly', async(req, res, next) => {
 var { token, text } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!text) return res.json({ status : false,  message: "faltando o parametro: text"})
 RegistrarUser(token, req);
@@ -8825,7 +8825,7 @@ scrapper.SearchStickerLy(text)
 // Desde já, não faça spam de solicitações.
 app.get('/api/pesquisas/grupos', async(req, res, next) => {
 var { token, text } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!text) return res.json({ status : false,  message: "faltando o parametro: text"})
 RegistrarUser(token, req);
@@ -8842,7 +8842,7 @@ res.json({error: "Ocorreu um erro ao filtrar os resultados, contrate o adminstra
 
 app.get('/api/ia/ocr', async(req, res, next) => {
 var { token, image } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!image) return res.json({ status : false,  message: "faltando o parametro: image"})
 RegistrarUser(token, req);
@@ -8858,7 +8858,7 @@ res.json({error: "Ocorreu um erro ao filtrar os resultados, contrate o adminstra
 
 app.get('/api/nsfw/xvideos/pesquisa', async(req, res, next) => {
 var { token, query } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message: "faltando o parametro: query"})
 RegistrarUser(token, req);
@@ -8871,7 +8871,7 @@ res.json({error: "Ocorreu um erro ao filtrar os resultados, contrate o adminstra
 
 app.get('/api/nsfw/xnxx/pesquisa', async(req, res, next) => {
 var { token, query } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message: "faltando o parametro: query"})
 RegistrarUser(token, req);
@@ -8884,7 +8884,7 @@ res.json({error: "Ocorreu um erro ao filtrar os resultados, contrate o adminstra
 
 app.get('/api/nsfw/xnxx/download', async(req, res, next) => {
 var { token, link } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!link) return res.json({ status : false,  message: "faltando o parametro: link"})
 RegistrarUser(token, req);
@@ -8897,7 +8897,7 @@ res.json({error: "Ocorreu um erro ao filtrar os resultados, contrate o adminstra
 
 app.get('/api/nsfw/xvideos/download', async(req, res, next) => {
 var { token, link } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!link) return res.json({ status : false,  message: "faltando o parametro: link"})
 RegistrarUser(token, req);
@@ -8910,7 +8910,7 @@ res.json({error: "Ocorreu um erro ao filtrar os resultados, contrate o adminstra
 
 app.get('/api/ia/langdetect', async(req, res, next) => {
 var { token, text } = req.query;
-if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "../public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!text) return res.json({ status : false,  message: "faltando o parametro: text"})
 RegistrarUser(token, req);
