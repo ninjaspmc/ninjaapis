@@ -4974,6 +4974,9 @@ if (!query) return res.json({ status : false,  message: "Preencha ou adicione o 
 RegistrarUser(token, req);
 try {
 auu = await fetchJson(`https://datahunter.enigmaweb.com.br/api/full/telefone/${query}`)
+if (auu.errorMessage) {
+resultado = `${auu.errorMessage.error}`
+}
 if (auu.data[0].basic) {
 resultado += `• CPF: ${auu.data[0].basic.cpf}\n• Nome: ${auu.data[0].basic.nome}\n• Sexo: ${auu.data[0].basic.sexo}\n• Nascimento: ${auu.data[0].basic.nascimento}\n\n`
 }
