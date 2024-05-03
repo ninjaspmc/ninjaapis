@@ -5004,7 +5004,6 @@ res.json({
         resultado: `${resultado.toUpperCase()}`
     });
 } catch (error) {
-console.log(error)
 return res.status(404).json({ resultado: "O banco de dados das consultas está em manutenção! Tente novamente mais tarde!", status: 500 });
 }
 })
