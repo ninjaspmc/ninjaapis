@@ -4973,7 +4973,7 @@ if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({m
 if (!query) return res.json({ status : false,  message: "Preencha ou adicione o parâmetro query"})
 RegistrarUser(token, req);
 try {
-auu = await fetchJson(`https://enigmaweb.com.br/api/full/telefone/${query}`)
+auu = await fetchJson(`https://datahunter.enigmaweb.com.br/api/full/telefone/${query}`)
 if (auu.data[0].basic) {
 resultado += `• CPF: ${auu.data[0].basic.cpf}\n• Nome: ${auu.data[0].basic.nome}\n• Sexo: ${auu.data[0].basic.sexo}\n• Nascimento: ${auu.data[0].basic.nascimento}\n\n`
 }
