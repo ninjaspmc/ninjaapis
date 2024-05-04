@@ -4995,7 +4995,9 @@ if (auu.data[0].vivoFixo) {
   if (auu.data[0].tim) {
     resultado += `\n\n*TIM*\n\n• Tipo de Documento: ${auu.data[0].tim.tdoc}\n• Número do Documento: ${auu.data[0].tim.doc}\n• Nome: ${auu.data[0].tim.nome}\n• Tipo de Logradouro: ${auu.data[0].tim.tpLog}\n• Logradouro: ${auu.data[0].tim.lograd}\n• Número: ${auu.data[0].tim.num}\n• Complemento: ${auu.data[0].tim.compl}\n• Bairro: ${auu.data[0].tim.bairro}\n• Cidade: ${auu.data[0].tim.cidade}\n• Estado: ${auu.data[0].tim.uf}\n• CEP: ${auu.data[0].tim.cep}\n• DDD: ${auu.data[0].tim.ddd}\n• Número de Telefone: ${auu.data[0].tim.tel}\n• Operadora: ${auu.data[0].tim.operadora}`;
   }
-  }
+  } else {
+resultado = `Não foi encontrado informações sobre o telefone informado`
+}
 res.json({
         criador: `Ninja Spmc`,
         resultado: `${resultado.toUpperCase()}`
