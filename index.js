@@ -1,7 +1,7 @@
 bla = process.cwd()
 __path = process.cwd()
 //=>=>=>=>=>=>=>=[@]=<=<=<=<=<=<=<=<=//
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 8080
 //=>=>=>=>=>=>=>=[@]=<=<=<=<=<=<=<=<=//
 const ffmpeg = require('fluent-ffmpeg');
 const uuid = require('uuid').v4
@@ -10,6 +10,7 @@ const hx = require('hxz-api');
 const axios = require('axios')
 const zrapi = require('zrapi')
 const jpeg = require('jpeg-js')
+const { GoogleGenerativeAI } = require("@google/generative-ai")
 const { GOOGLE_IMG_SCRAP , GOOGLE_QUERY } = require('google-img-scrap');
 const moment = require('moment-timezone')
 const yts = require('yt-search')
@@ -166,6 +167,8 @@ fs.writeFileSync("./database/usuarios.json", JSON.stringify(usus_r, null, 2));
 usus_r[i3].IP.push(IP?.split(":")[3])
 fs.writeFileSync("./database/usuarios.json", JSON.stringify(usus_r, null, 2));
 }}}
+
+const genAI = new GoogleGenerativeAI('AIzaSyDFqUTT5a3dyHji5RQmdsZGFcE7yU0q8Ec');
 
 //-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-\\
 
@@ -1261,6 +1264,52 @@ chatgpt = await fetchJson(`https://aemt.me/gpt4?text=${query}`)
              res.json({
                  criador: `Ninja Spmc`,
                  resultado: `${chatgpt.result}`
+             })
+      } catch (error) {
+    res.json({ error: error });
+  }
+})
+
+app.get('/ia/gemini/text', async(req, res, next) => {
+token = req.query.token
+query = req.query.query
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
+if (!query) return res.json({ status : false,  message : "Cade o parametro query?"}) 
+RegistrarUser(token, req);
+try {
+const { response } = await genAI.getGenerativeModel({ model: 'gemini-pro' }).generateContent(`$${encodeURIComponent(query)}`)
+const textogem = response.text()
+             res.json({
+                 criador: `Ninja Spmc`,
+                 resultado: `${textogem}`
+             })
+      } catch (error) {
+    res.json({ error: error });
+  }
+})
+
+app.get('/ia/gemini/image', async(req, res, next) => {
+token = req.query.token
+query = req.query.query
+url = req.query.url
+if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
+if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
+if (!query) return res.json({ status : false,  message : "Cade o parametro query?"})
+if (!url) return res.json({ status : false,  message : "Cade o parametro url?"}) 
+RegistrarUser(token, req);
+try {
+let imageGem = await getBuffer(url)
+imageData = {
+inlineData: {
+data: imageGem.toString('base64'),
+mimeType: "image/png",
+},
+const { response } = await genAI.getGenerativeModel({ model: 'gemini-pro' }).generateContent(`$${encodeURIComponent(query)}`)
+const textogem = response.text()
+             res.json({
+                 criador: `Ninja Spmc`,
+                 resultado: `${textogem}`
              })
       } catch (error) {
     res.json({ error: error });
