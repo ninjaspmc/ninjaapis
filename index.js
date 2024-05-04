@@ -1256,22 +1256,13 @@ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirna
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message : "Cade o parametro query?"}) 
 RegistrarUser(token, req);
-  if(key.map(i => i.token)?.includes(token)){
-    fetch(encodeURI(`https://vihangayt.me/tools/chatgpt4?q=${query}`))
-    .then(response => response.json())
-        .then(hasil => {
-        var resultado = hasil.data;
+chatgpt = `https://aemt.me/gpt4?text=${query}`
              res.json({
-                 status: true,
-                 resultado
-             })
-         })
-         .catch(e => {
+                 criador: `Ninja Spmc`,
+                 resultado: `${chatgpt.result}`
+             }).catch(e => {
          	res.json({erro:'Erro no Servidor Interno'})
 })
-} else {
-  res.json({erro:'Erro no Servidor Interno'})
-}
 })
 
 app.get('/pesquisas/pesquisaagora', async(req, res, next) => {
