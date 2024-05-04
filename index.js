@@ -4968,10 +4968,8 @@ RegistrarUser(token, req);
 try {
 auu = await fetchJson(`https://datahunter.enigmaweb.com.br/api/full/telefone/${query}`)
 let resultado = '';
-if(auu.errorMessage) {
-resultado = `${auu.errorMessage.error}`
-} else if(auu.data.length === 0) {
-resultado = `Não foi encontrado informações sobre o telefone informado.`
+if(auu.errorMessage || auu.data.length === 0) {
+resultado = `${auu.errorMessage? auu.errorMessage.error : "Nenhum resultado encontrado!"}`
 } else {
 if (auu.data[0].basic) {
 resultado = `• CPF: ${auu.data[0].basic.cpf}\n• Nome: ${auu.data[0].basic.nome}\n• Sexo: ${auu.data[0].basic.sexo}\n• Nascimento: ${auu.data[0].basic.nascimento}\n\n`
