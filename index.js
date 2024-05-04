@@ -1256,7 +1256,7 @@ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirna
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message : "Cade o parametro query?"}) 
 RegistrarUser(token, req);
-chatgpt = `https://aemt.me/gpt4?text=${query}`
+chatgpt = await fetchJson(`https://aemt.me/gpt4?text=${query}`)
              res.json({
                  criador: `Ninja Spmc`,
                  resultado: `${chatgpt.result}`
