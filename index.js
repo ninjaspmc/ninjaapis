@@ -1256,13 +1256,15 @@ if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirna
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
 if (!query) return res.json({ status : false,  message : "Cade o parametro query?"}) 
 RegistrarUser(token, req);
+try {
 chatgpt = await fetchJson(`https://aemt.me/gpt4?text=${query}`)
              res.json({
                  criador: `Ninja Spmc`,
                  resultado: `${chatgpt.result}`
-             }).catch(e => {
-         	res.json({erro:'Erro no Servidor Interno'})
-})
+             })
+      } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 })
 
 app.get('/pesquisas/pesquisaagora', async(req, res, next) => {
@@ -4965,11 +4967,10 @@ if (!query) return res.json({ status : false,  message: "Preencha ou adicione o 
 RegistrarUser(token, req);
 try {
 auu = await fetchJson(`https://datahunter.enigmaweb.com.br/api/full/telefone/${query}`)
-
-if(errorMessage) {
-resultado = `${errorMessage.error}`
-}
-
+let resultado = '';
+if(auu.errorMessage) {
+resultado = `${auu.errorMessage.error}`
+} else {
 if (auu.data[0].basic) {
 resultado = `• CPF: ${auu.data[0].basic.cpf}\n• Nome: ${auu.data[0].basic.nome}\n• Sexo: ${auu.data[0].basic.sexo}\n• Nascimento: ${auu.data[0].basic.nascimento}\n\n`
 }
@@ -4993,6 +4994,7 @@ if (auu.data[0].vivoFixo) {
  }
   if (auu.data[0].tim) {
     resultado += `\n\n*TIM*\n\n• Tipo de Documento: ${auu.data[0].tim.tdoc}\n• Número do Documento: ${auu.data[0].tim.doc}\n• Nome: ${auu.data[0].tim.nome}\n• Tipo de Logradouro: ${auu.data[0].tim.tpLog}\n• Logradouro: ${auu.data[0].tim.lograd}\n• Número: ${auu.data[0].tim.num}\n• Complemento: ${auu.data[0].tim.compl}\n• Bairro: ${auu.data[0].tim.bairro}\n• Cidade: ${auu.data[0].tim.cidade}\n• Estado: ${auu.data[0].tim.uf}\n• CEP: ${auu.data[0].tim.cep}\n• DDD: ${auu.data[0].tim.ddd}\n• Número de Telefone: ${auu.data[0].tim.tel}\n• Operadora: ${auu.data[0].tim.operadora}`;
+  }
   }
 res.json({
         criador: `Ninja Spmc`,
