@@ -1305,6 +1305,7 @@ inlineData: {
 data: imageGem.toString('base64'),
 mimeType: "image/png",
 },
+};
 const { response } = await genAI.getGenerativeModel({ model: 'gemini-pro' }).generateContent(`$${encodeURIComponent(query)}`)
 const textogem = response.text()
              res.json({
