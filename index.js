@@ -4975,8 +4975,12 @@ RegistrarUser(token, req);
 try {
 auu = await fetchJson(`https://datahunter.enigmaweb.com.br/api/full/telefone/${query}`)
 
+if(errorMessage) {
+resultado = `${errorMessage.error}`
+}
+
 if (auu.data[0].basic) {
-resultado += `• CPF: ${auu.data[0].basic.cpf}\n• Nome: ${auu.data[0].basic.nome}\n• Sexo: ${auu.data[0].basic.sexo}\n• Nascimento: ${auu.data[0].basic.nascimento}\n\n`
+resultado = `• CPF: ${auu.data[0].basic.cpf}\n• Nome: ${auu.data[0].basic.nome}\n• Sexo: ${auu.data[0].basic.sexo}\n• Nascimento: ${auu.data[0].basic.nascimento}\n\n`
 }
  if (auu.data[0].datasus) {
  resultado += `\n\n• Pai: ${auu.data[0].datasus.pai}\n• Mãe: ${auu.data[0].datasus.mae}\n• Local de Nascimento: ${auu.data[0].datasus.muniNasc}\n• Município: ${auu.data[0].datasus.municipio}\n• Logradouro: ${auu.data[0].datasus.logradouro}\n• Número: ${auu.data[0].datasus.numero}\n• Bairro: ${auu.data[0].datasus.bairro}\n• CEP: ${auu.data[0].datasus.cep}\n• Número do RG: ${auu.data[0].datasus.rgNumero}\n• Órgão Emissor do RG: ${auu.data[0].datasus.rgEmissora}\n• UF de Emissão do RG: ${auu.data[0].datasus.rgUf}\n• Data de emissão do RG: ${auu.data[0].datasus.rgDataEmissao}\n• CNS: ${auu.data[0].datasus.cns}\n• Telefone: ${auu.data[0].datasus.telefone}\n• Outros telefones: ${auu.data[0].datasus.telefones}`;
