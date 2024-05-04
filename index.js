@@ -4970,7 +4970,7 @@ auu = await fetchJson(`https://datahunter.enigmaweb.com.br/api/full/telefone/${q
 let resultado = '';
 if(auu.errorMessage) {
 resultado = `${auu.errorMessage.error}`
-} else if(data.length === 0) {
+} else if(auu.data.length === 0) {
 resultado = `Não foi encontrado informações sobre o telefone informado.`
 } else {
 if (auu.data[0].basic) {
