@@ -1263,7 +1263,7 @@ chatgpt = await fetchJson(`https://aemt.me/gpt4?text=${query}`)
                  resultado: `${chatgpt.result}`
              })
       } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.json({ error: error });
   }
 })
 
@@ -5002,7 +5002,7 @@ res.json({
     });
 } catch (error) {
 console.log(error)
-return res.status(404).json({ resultado: "O banco de dados das consultas está em manutenção! Tente novamente mais tarde!", status: 500 });
+return res.status(404).json({ resultado: `${error}`, status: 500 });
 }
 })
 
