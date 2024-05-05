@@ -1293,7 +1293,6 @@ app.get('/ia/gemini/image', async(req, res, next) => {
 var { url, query, token } = req.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
-var { url, query } = req.query
 if (!url) return res.json({ status : false,  message : "Cade o parametro url?"}) 
 if (!query) return res.json({ status : false,  message : "Cade o parametro query?"}) 
 try {
