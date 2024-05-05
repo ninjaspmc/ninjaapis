@@ -1290,13 +1290,9 @@ const textogem = response.text()
 })
 
 app.get('/ia/gemini/image', async(req, res, next) => {
-token = req.query.token
-query = req.query.query
-url = req.query.url
+{ url, query, token } = req.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
-if (!query) return res.json({ status : false,  message : "Cade o parametro query?"})
-if (!url) return res.json({ status : false,  message : "Cade o parametro url?"}) 
 RegistrarUser(token, req);
 try {
 let imageGem = await getBuffer(url)
