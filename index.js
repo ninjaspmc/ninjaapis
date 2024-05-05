@@ -1306,7 +1306,7 @@ const result = await model.generateContent([query, imageData]);
 const textogen = result.response.text();
              res.json({
                  criador: `Ninja Spmc`,
-                 resultado: `${textogem}`
+                 resultado: `${textogen}`
              })
       } catch (error) {
     res.json({ error: error });
