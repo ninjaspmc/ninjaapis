@@ -1293,19 +1293,19 @@ app.get('/ia/gemini/image', async(req, res, next) => {
 var { url, query, token } = req.query
 if(!key.map(i => i.token)?.includes(token))return res.sendFile(path.join(__dirname, "./public/", "token-invalido.html"))
 if(key[key.map(i => i?.token)?.indexOf(token)]?.request <= 0) return res.json({message: "Parece que suas requisições acabaram, recarregue e comece a usar novamente sem interrupções."})
-RegistrarUser(token, req);
+var { url, query } = req.query
+if (!url) return res.json({ status : false,  message : "Cade o parametro url?"}) 
+if (!query) return res.json({ status : false,  message : "Cade o parametro query?"}) 
 try {
 const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
-const prompty = query
-img = url
-let imageGem = await getBuffer(img)
+let imageGem = await getBuffer(url)
 imageData = {
 inlineData: {
 data: imageGem.toString('base64'),
 mimeType: "image/png",
 },
 };
-const result = await model.generateContent([prompty, imageData]);
+const result = await model.generateContent([query, imageData]);
 const textogen = result.response.text();
              res.json({
                  criador: `Ninja Spmc`,
