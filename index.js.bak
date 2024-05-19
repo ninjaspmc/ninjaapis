@@ -402,71 +402,50 @@ return res.json({status: true, resposta: "Token funcionando perfeitamente!", lim
 }
 })
 
-app.get('/canvas/boasvindas', async (req, res) => {
-  try {
-    var {
-      username,
-      discriminador,
-      titulo,
-      mensagem,
-      contador,
-      perfil,
-      fundo,
-      cor_borda,
-      cor_caixa_username,
-      cor_caixa_discriminador,
-      cor_caixa_mensagem,
-      cor_username,
-      cor_discriminador,
-      cor_titulo,
-      cor_mensagem,
-      cor_contador,
-      cor_perfil,
-      cor_hashtag
-    } = req.query;
-    
-    const requiredParams = [
-      'username', 'discriminador', 'titulo', 'mensagem', 'contador', 'perfil',
-      'fundo', 'cor_borda', 'cor_caixa_username', 'cor_caixa_discriminador',
-      'cor_caixa_mensagem', 'cor_username', 'cor_discriminador', 'cor_titulo',
-      'cor_mensagem', 'cor_contador', 'cor_perfil', 'cor_hashtag'
-    ];
-    for (const param of requiredParams) {
-      if (!req.query[param]) {
-        return res.json({ status: 404, error: `Insira o parametro: ${param}` });
-      }
-    }
-
-    let welcomer = await new canvasx.Welcome()
-      .setUsername(username)
-      .setDiscriminator(discriminador)
-      .setText("title", titulo)
-      .setText("message", mensagem)
-      .setText("member-count", contador)
-      .setAvatar(perfil)
-      .setBackground(fundo)
-      .setColor('border', cor_borda)
-      .setColor('username-box', cor_caixa_username)
-      .setColor('discriminator-box', cor_caixa_discriminador)
-      .setColor('message-box', cor_caixa_mensagem)
-      .setColor('username', cor_username)
-      .setColor('discriminator', cor_discriminador)
-      .setColor('title', cor_titulo)
-      .setColor('message', cor_mensagem)
-      .setColor('member-count', cor_contador)
-      .setColor('avatar', cor_perfil)
-      .setColor('hashtag', cor_hashtag)
-      .toAttachment();
-
-    const outputPath = path.join(__dirname, 'assets/Tempo/welkom.png');
-    fs.writeFileSync(outputPath, welcomer.toBuffer());
-
-    res.sendFile(outputPath);
-  } catch (error) {
-    console.error('Error generating welcome image:', error);
-    res.status(500).json({ status: 500, error: 'Internal Server Error' });
-  }
-});
+app.get('/canvas/boasvindas', async (req, res, next) => {
+var { username, discriminador, titulo, mensagem, contador, perfil, fundo, cor_borda, cor_caixa_username, cor_caixa_discriminador, cor_caixa_mensagem, cor_username, cor_discriminador, cor_titulo, cor_mensagem, cor_contador, cor_perfil, cor_hashtag } = req.query
+if (!username) return res.json({ status: 404, error: 'Insira o parametro: username'})
+if (!discriminador) return res.json({ status: 404, error: 'Insira o parametro: discriminador'})
+if (!titulo) return res.json({ status: 404, error: 'Insira o parametro: titulo'})
+if (!mensagem) return res.json({ status: 404, error: 'Insira o parametro: mensagem'})
+if (!contador) return res.json({ status: 404, error: 'Insira o parametro: contador'})
+if (!perfil) return res.json({ status: 404, error: 'Insira o parametro: perfil'})
+if (!fundo) return res.json({ status: 404, error: 'Insira o parametro: fundo'})
+if (!cor_borda) return res.json({ status: 404, error: 'Insira o parametro: cor_borda'})
+if (!cor_caixa_username) return res.json({ status: 404, error: 'Insira o parametro: cor_caixa_username'})
+if (!cor_caixa_discriminador) return res.json({ status: 404, error: 'Insira o parametro: cor_caixa_discriminador'})
+if (!cor_caixa_mensagem) return res.json({ status: 404, error: 'Insira o parametro: cor_caixa_mensagem'})
+if (!cor_username) return res.json({ status: 404, error: 'Insira o parametro: cor_username'})
+if (!cor_discriminador) return res.json({ status: 404, error: 'Insira o parametro: cor_discriminador'})
+if (!cor_titulo) return res.json({ status: 404, error: 'Insira o parametro: cor_titulo'})
+if (!cor_mensagem) return res.json({ status: 404, error: 'Insira o parametro: cor_mensagem'})
+if (!cor_contador) return res.json({ status: 404, error: 'Insira o parametro: cor_contador'})
+if (!cor_perfil) return res.json({ status: 404, error: 'Insira o parametro: cor_perfil'})
+if (!cor_hashtag) return res.json({ status: 404, error: 'Insira o parametro: cor_hashtag'})
+let welcomer = await new canvasx.Welcome()
+.setUsername(username)
+.setDiscriminator(discriminador)
+.setText("title", titulo)
+.setText("message", mensagem)
+.setText("member-count", contador)
+.setAvatar(perfil)
+.setBackground(fundo)
+.setColor('border', cor_borda)
+.setColor('username-box', cor_caixa_username)
+.setColor('discriminator-box', cor_caixa_discriminador)
+.setColor('message-box', cor_caixa_mensagem)
+.setColor('username', cor_username)
+.setColor('discriminator', cor_discriminador)
+.setColor('title', cor_titulo)
+.setColor('message', cor_mensagem)
+.setColor('member-count', cor_contador)
+.setColor('avatar', cor_perfil)
+.setColor('hashtag', cor_hashtag)
+.toAttachment()
+let base64 = `${welcomer.toBuffer().toString('base64')}`
+require('fs').writeFileSync(bla + '/assets/Tempo/welkom.png', base64, 'base64')
+res.sendFile(bla + '/assets/Tempo/welkom.png')
+})
 
 app.get('/canvas/duelo', async(req, res) => {
 var { foto1, foto2, fundo } = req.query
