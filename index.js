@@ -405,19 +405,19 @@ return res.json({status: true, resposta: "Token funcionando perfeitamente!", lim
 app.get('/canvas/boasvindas', async (req, res) => {
   try {
     var {
-      username,
-      discriminador,
+      numero,
+      ano,
       titulo,
       mensagem,
       contador,
       perfil,
       fundo,
       cor_borda,
-      cor_caixa_username,
-      cor_caixa_discriminador,
+      cor_caixa_numero,
+      cor_caixa_ano,
       cor_caixa_mensagem,
-      cor_username,
-      cor_discriminador,
+      cor_numero,
+      cor_ano,
       cor_titulo,
       cor_mensagem,
       cor_contador,
@@ -426,9 +426,9 @@ app.get('/canvas/boasvindas', async (req, res) => {
     } = req.query;
     
     const requiredParams = [
-      'username', 'discriminador', 'titulo', 'mensagem', 'contador', 'perfil',
-      'fundo', 'cor_borda', 'cor_caixa_username', 'cor_caixa_discriminador',
-      'cor_caixa_mensagem', 'cor_username', 'cor_discriminador', 'cor_titulo',
+      'numero', 'ano', 'titulo', 'mensagem', 'contador', 'perfil',
+      'fundo', 'cor_borda', 'cor_caixa_numero', 'cor_caixa_ano',
+      'cor_caixa_mensagem', 'cor_numero', 'cor_ano', 'cor_titulo',
       'cor_mensagem', 'cor_contador', 'cor_perfil', 'cor_hashtag'
     ];
     for (const param of requiredParams) {
@@ -438,19 +438,19 @@ app.get('/canvas/boasvindas', async (req, res) => {
     }
 
     let welcomer = await new canvasx.Welcome()
-      .setUsername(username)
-      .setDiscriminator(discriminador)
+      .setUsername(numero)
+      .setDiscriminator(ano)
       .setText("title", titulo)
       .setText("message", mensagem)
       .setText("member-count", contador)
       .setAvatar(perfil)
       .setBackground(fundo)
       .setColor('border', "#"+cor_borda)
-      .setColor('username-box', "#"+cor_caixa_username)
-      .setColor('discriminator-box', "#"+cor_caixa_discriminador)
+      .setColor('username-box', "#"+cor_caixa_numero)
+      .setColor('discriminator-box', "#"+cor_caixa_ano)
       .setColor('message-box', "#"+cor_caixa_mensagem)
-      .setColor('username', "#"+cor_username)
-      .setColor('discriminator', "#"+cor_discriminador)
+      .setColor('username', "#"+cor_numero)
+      .setColor('discriminator', "#"+cor_ano)
       .setColor('title', "#"+cor_titulo)
       .setColor('message', "#"+cor_mensagem)
       .setColor('member-count', "#"+cor_contador)
