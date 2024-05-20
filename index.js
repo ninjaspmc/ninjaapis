@@ -402,7 +402,7 @@ return res.json({status: true, resposta: "Token funcionando perfeitamente!", lim
 }
 })
 
-app.get('/canvas/welcome-and-goodbye', async (req, res) => {
+app.get('/canvas/welcome_and_goodbye', async (req, res) => {
   try {
     var {
       numero,
@@ -412,25 +412,25 @@ app.get('/canvas/welcome-and-goodbye', async (req, res) => {
       contador,
       perfil,
       fundo,
-      cor-borda,
-      cor-caixa-numero,
-      cor-caixa-ano,
-      cor-borda-titulo,
-      cor-caixa-mensagem,
-      cor-numero,
-      cor-ano,
-      cor-titulo,
-      cor-mensagem,
-      cor-contador,
-      cor-perfil,
-      cor-hashtag
+      cor_borda,
+      cor_caixa_numero,
+      cor_caixa_ano,
+      cor_borda_titulo,
+      cor_caixa_mensagem,
+      cor_numero,
+      cor_ano,
+      cor_titulo,
+      cor_mensagem,
+      cor_contador,
+      cor_perfil,
+      cor_hashtag
     } = req.query;
     
     const requiredParams = [
       'numero', 'ano', 'titulo', 'mensagem', 'contador', 'perfil',
-      'fundo', 'cor-borda', 'cor-caixa-numero', 'cor-caixa-ano', 'cor-borda-titulo', 
-      'cor-caixa-mensagem', 'cor-numero', 'cor-ano', 'cor-titulo',
-      'cor-mensagem', 'cor-contador', 'cor-perfil', 'cor-hashtag'
+      'fundo', 'cor_borda', 'cor_caixa_numero', 'cor_caixa_ano', 'cor_borda_titulo', 
+      'cor_caixa_mensagem', 'cor_numero', 'cor_ano', 'cor_titulo',
+      'cor_mensagem', 'cor_contador', 'cor_perfil', 'cor_hashtag'
     ];
     for (const param of requiredParams) {
       if (!req.query[param]) {
@@ -446,18 +446,18 @@ app.get('/canvas/welcome-and-goodbye', async (req, res) => {
       .setText("member-count", contador)
       .setAvatar(perfil)
       .setBackground(fundo)
-      .setColor('border', "#"+cor-borda)
-      .setColor('username-box', "#"+cor-caixa-numero)
-      .setColor('discriminator-box', "#"+cor-caixa-ano)
-      .setColor('title-border', "#"+cor-borda-titulo)
-      .setColor('message-box', "#"+cor-caixa-mensagem)
-      .setColor('username', "#"+cor-numero)
-      .setColor('discriminator', "#"+cor-ano)
-      .setColor('title', "#"+cor-titulo)
-      .setColor('message', "#"+cor-mensagem)
-      .setColor('member-count', "#"+cor-contador)
-      .setColor('avatar', "#"+cor-perfil)
-      .setColor('hashtag', "#"+cor-hashtag)
+      .setColor('border', "#"+cor_borda)
+      .setColor('username-box', "#"+cor_caixa_numero)
+      .setColor('discriminator-box', "#"+cor_caixa_ano)
+      .setColor('title-border', "#"+cor_borda_titulo)
+      .setColor('message-box', "#"+cor_caixa_mensagem)
+      .setColor('username', "#"+cor_numero)
+      .setColor('discriminator', "#"+cor_ano)
+      .setColor('title', "#"+cor_titulo)
+      .setColor('message', "#"+cor_mensagem)
+      .setColor('member-count', "#"+cor_contador)
+      .setColor('avatar', "#"+cor_perfil)
+      .setColor('hashtag', "#"+cor_hashtag)
       .toAttachment();
 
     const outputPath = path.join(__dirname, 'assets/Tempo/welkom.png');
