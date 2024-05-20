@@ -415,6 +415,7 @@ app.get('/canvas/boasvindas', async (req, res) => {
       cor_borda,
       cor_caixa_numero,
       cor_caixa_ano,
+      cor_borda_titulo,
       cor_caixa_mensagem,
       cor_numero,
       cor_ano,
@@ -427,7 +428,7 @@ app.get('/canvas/boasvindas', async (req, res) => {
     
     const requiredParams = [
       'numero', 'ano', 'titulo', 'mensagem', 'contador', 'perfil',
-      'fundo', 'cor_borda', 'cor_caixa_numero', 'cor_caixa_ano',
+      'fundo', 'cor_borda', 'cor_caixa_numero', 'cor_caixa_ano', 'cor_borda_titulo', 
       'cor_caixa_mensagem', 'cor_numero', 'cor_ano', 'cor_titulo',
       'cor_mensagem', 'cor_contador', 'cor_perfil', 'cor_hashtag'
     ];
@@ -448,6 +449,7 @@ app.get('/canvas/boasvindas', async (req, res) => {
       .setColor('border', "#"+cor_borda)
       .setColor('username-box', "#"+cor_caixa_numero)
       .setColor('discriminator-box', "#"+cor_caixa_ano)
+      .setColor('title-border', "#"+cor_borda_titulo)
       .setColor('message-box', "#"+cor_caixa_mensagem)
       .setColor('username', "#"+cor_numero)
       .setColor('discriminator', "#"+cor_ano)
