@@ -472,19 +472,24 @@ app.get('/canvas/welcome_and_goodbye', async (req, res) => {
 
 app.get('/canvas/perfil', async (req, res) => {
   try {
+    console.log('Request received for /canvas/perfil');
+
     let perfil = await new canvasx.RankCard()
       .setUsername("Ninja Spmc")
-      .setReputation(1)  // Aqui não precisa de aspas, deve ser um número
-      .setLevel(3)  // Aqui também deve ser um número
-      .setRank(2)  // Aqui também deve ser um número
+      .setReputation(1)
+      .setLevel(3)
+      .setRank(2)
       .setAvatar("https://telegra.ph/file/9d892cf9d4fcdcce26e9e.jpg")
       .setRankName("secso")
       .setBackground("https://telegra.ph/file/492586d746062718692de.jpg")
-      .setXP(1000)  // Aqui também deve ser um número
-      .setText("meukkkkkk");
+      .setXP(1000);
+
+    console.log('RankCard generated successfully');
 
     const outputPath = path.join(__dirname, 'assets/Tempo/perfil.png');
     fs.writeFileSync(outputPath, perfil.toBuffer());
+
+    console.log('Image written to', outputPath);
 
     res.sendFile(outputPath);
   } catch (error) {
