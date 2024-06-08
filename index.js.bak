@@ -472,28 +472,24 @@ app.get('/canvas/welcome_and_goodbye', async (req, res) => {
 
 app.get('/canvas/perfil', async (req, res) => {
   try {
-    let currentXP = 50;
-    let neededXP = 100;
-    let xpText = `${currentXP}/${neededXP} para o próximo nível`;
-
-    let perfil = await new canvasx.RankCard()
-      .setAddon("xp", false)
-      .setAddon("rank", false)
-      .setAvatar("https://telegra.ph/file/9d892cf9d4fcdcce26e9e.jpg")
-      .setRank(10)
-      .setRankName("professional")
-      .setUsername("xixi52")
-      .setText("reputation", "100 CASH")
-      .setText("level", "Nível 9")
-      .setXP("current", currentXP)
-      .setXP("needed", neededXP)
-      .setText("xp-needed", xpText)
-      .setBadge(1, "gold")
-      .setBadge(3, "diamond")
-      .setBadge(5, "silver")
-      .setBadge(6, "bronze")
-      .setBackground("https://telegra.ph/file/492586d746062718692de.jpg")
-      .toAttachment();
+let perfil = await new canvasx.RankCard()
+.setAddon("xp", false)
+.setAddon("rank", false)
+.setAvatar("https://telegra.ph/file/9d892cf9d4fcdcce26e9e.jpg")
+.setRank(10)
+.setRankName("professional")
+.setUsername("xixi52")
+.setText("reputation", "100 CASH")
+.setText("level", "Nível 9")
+.setXP("current", 50)
+.setXP("needed", 100)
+.setText("xp-needed", "{current}/{needed} para o próximo nível")
+.setBadge(1, "gold")
+.setBadge(3, "diamond")
+.setBadge(5, "silver")
+.setBadge(6, "bronze")
+.setBackground("https://telegra.ph/file/492586d746062718692de.jpg")
+.toAttachment();
 
     const outputPath = path.join(__dirname, 'assets/Tempo/perfil.png');
     fs.writeFileSync(outputPath, perfil.toBuffer());
