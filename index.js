@@ -470,6 +470,29 @@ app.get('/canvas/welcome_and_goodbye', async (req, res) => {
   }
 });
 
+app.get('/canvas/perfil', async (req, res) => {
+  try {
+    let perfill = await new canvasx.RankCard()
+      .setUsername("Ninja Spmc")
+      .setReputation("1")
+      .setLevel("3")
+      .setRank("2")
+      .setAvatar("https://telegra.ph/file/9d892cf9d4fcdcce26e9e.jpg")
+      .setRankName("secso")
+      .setBackground("https://telegra.ph/file/492586d746062718692de.jpg")
+     .setXP("1000")
+     .setText("meukkkkkk")
+
+    const outputPah = path.join(__dirname, 'assets/Tempo/perfil.png');
+    fs.writeFileSync(outputPah, perfill.toBuffer());
+
+    res.sendFile(outputPah);
+  } catch (error) {
+    console.error('Error generating welcome image:', error);
+    res.status(500).json({ status: 500, error: 'Internal Server Error' });
+  }
+});
+
 app.get('/canvas/duelo', async(req, res) => {
 var { foto1, foto2, fundo } = req.query
 if (!foto1) return res.status(408).send({status: 408, message: 'Coloque o foto1 no parâmetro.'})
