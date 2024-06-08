@@ -475,14 +475,6 @@ app.get('/canvas/perfil', async (req, res) => {
     console.log('Request received for /canvas/perfil');
 
     let perfil = await new canvasx.RankCard()
-      .setUsername("Ninja Spmc")
-      .setReputation(1)
-      .setLevel(3)
-      .setRank(2)
-      .setAvatar("https://telegra.ph/file/9d892cf9d4fcdcce26e9e.jpg")
-      .setRankName("secso")
-      .setBackground("https://telegra.ph/file/492586d746062718692de.jpg")
-      .setXP(1000);
 
     console.log('RankCard generated successfully');
 
@@ -494,7 +486,6 @@ app.get('/canvas/perfil', async (req, res) => {
     res.sendFile(outputPath);
   } catch (error) {
     console.error('Error generating profile image:', error);
-    res.status(500).json({ status: 500, error: 'Internal Server Error' });
   }
 });
 
