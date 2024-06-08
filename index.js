@@ -487,7 +487,7 @@ app.get('/canvas/perfil', async (req, res) => {
       .setText("level", "Nível 9")
       .setXP("current", currentXP)
       .setXP("needed", neededXP)
-      .setText("xp-needed", xpText)
+      .setText("needed-xp", xpText)
       .setBadge(1, "gold")
       .setBadge(3, "diamond")
       .setBadge(5, "silver")
