@@ -472,7 +472,7 @@ app.get('/canvas/welcome_and_goodbye', async (req, res) => {
 
 app.get('/canvas/perfil', async (req, res) => {
   try {
-let image = await new canvasx.RankCard()
+let perfil = await new canvasx.RankCard()
 .setAddon("xp", false)
 .setAddon("rank", false)
 .setAvatar("https://telegra.ph/file/9d892cf9d4fcdcce26e9e.jpg")
