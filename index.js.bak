@@ -480,7 +480,7 @@ app.get('/canvas/perfil', async (req, res) => {
       .setAddon("xp", false)
       .setAddon("rank", false)
       .setAvatar(perfil)
-      .setRank(posicaorank)
+      .setRank(posicao)
       .setRankName(patente)
       .setUsername(usuario)
       .setText("reputation", cash)

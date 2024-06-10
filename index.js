@@ -483,7 +483,7 @@ app.get('/canvas/perfil', async (req, res) => {
     if(!req.query.posicao) return res.json({message: "Faltando o parâmetro posicao"})
 
     let currentXP = xp_atual;
-    let neededXP = próximo_xp;
+    let neededXP = proximo_xp;
     let xpText = `${currentXP}/${neededXP} para o próximo nível`;
 
     let perfil = await new canvasx.RankCard()
