@@ -482,19 +482,19 @@ app.get('/canvas/perfil', async (req, res) => {
    if(!req.query.proximo_xp) return res.json({message: "Faltando o parâmetro proximo_xp"})
     if(!req.query.posicao) return res.json({message: "Faltando o parâmetro posicao"})
 
-    let currentXP = xp_atual;
-    let neededXP = proximo_xp;
+    let currentXP = req.query.xp_atual;
+    let neededXP = req.query.proximo_xp;
     let xpText = `${currentXP}/${neededXP} para o próximo nível`;
 
     let perfil = await new canvasx.RankCard()
       .setAddon("xp", false)
       .setAddon("rank", false)
-      .setAvatar(perfil)
-      .setRank(posicao)
-      .setRankName(patente)
-      .setUsername(usuario)
-      .setText("reputation", cash)
-      .setText("level", nivel)
+      .setAvatar(req.query.perfil)
+      .setRank(req.query.posicao)
+      .setRankName(req.query.patente)
+      .setUsername(req.query.usuario)
+      .setText("reputation", req.query.cash)
+      .setText("level", req.query.nivel)
       .setXP("current", currentXP)
       .setXP("needed", neededXP)
       .setText("needed-xp", xpText)
@@ -502,7 +502,7 @@ app.get('/canvas/perfil', async (req, res) => {
       .setBadge(3, "diamond")
       .setBadge(5, "silver")
       .setBadge(6, "bronze")
-      .setBackground(fundo)
+      .setBackground(req.query.fundo)
       .toAttachment();
 
     const outputPath = path.join(__dirname, 'assets/Tempo/perfil.png');
