@@ -472,16 +472,6 @@ app.get('/canvas/welcome_and_goodbye', async (req, res) => {
 
 app.get('/canvas/perfil', async (req, res) => {
   try {
- if(!req.query.usuario) return res.json({message: "Faltando o parâmetro senha"})
- if(!req.query.perfil) return res.json({message: "Faltando o parâmetro perfil"})
- if(!req.query.fundo) return res.json({message: "Faltando o parâmetro fundo"})
-  if(!req.query.cash) return res.json({message: "Faltando o parâmetro cash"})
-   if(!req.query.nivel) return res.json({message: "Faltando o parâmetro nivel"})
-    if(!req.query.patente) return res.json({message: "Faltando o parâmetro patente"})
-    if(!req.query.xp_atual) return res.json({message: "Faltando o parâmetro xp_atual"})
-   if(!req.query.proximo_xp) return res.json({message: "Faltando o parâmetro proximo_xp"})
-    if(!req.query.posicao) return res.json({message: "Faltando o parâmetro posicao"})
-
     let currentXP = xp_atual;
     let neededXP = próximo_xp;
     let xpText = `${currentXP}/${neededXP} para o próximo nível`;
@@ -490,7 +480,7 @@ app.get('/canvas/perfil', async (req, res) => {
       .setAddon("xp", false)
       .setAddon("rank", false)
       .setAvatar(perfil)
-      .setRank(posicao)
+      .setRank(posicaorank)
       .setRankName(patente)
       .setUsername(usuario)
       .setText("reputation", cash)
